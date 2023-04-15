@@ -1,0 +1,289 @@
+{
+  "vim.leader": ";",
+  "vim.useSystemClipboard": true,
+  "vim.normalModeKeyBindings": [
+    {
+      "before": [
+        "<tab>"
+      ],
+      "commands": [
+        "workbench.action.nextEditorInGroup"
+      ]
+    },
+    {
+      "before": [
+        "<S-tab>"
+      ],
+      "commands": [
+        "workbench.action.previousEditorInGroup"
+      ]
+    }
+  ],
+  "vim.visualModeKeyBindings": [
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        ">"
+      ],
+      "after": [
+        ">",
+        "g",
+        "v"
+      ]
+    },
+    {
+      "before": [
+        "<"
+      ],
+      "after": [
+        "<",
+        "g",
+        "v"
+      ]
+    }
+  ],
+  "vim.normalModeKeyBindingsNonRecursive": [
+    {
+      "before": [
+        "<leader>",
+        "v"
+      ],
+      "commands": [
+        "workbench.action.splitEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "s"
+      ],
+      "commands": [
+        "workbench.action.splitEditorDown"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "e"
+      ],
+      "commands": [
+        "workbench.action.toggleSidebarVisibility"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "f"
+      ],
+      "commands": [
+        "revealInExplorer"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "h"
+      ],
+      "after": [
+        "_"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "l"
+      ],
+      "after": [
+        "$"
+      ]
+    },
+    {
+      "before": [
+        "ctrl",
+        "l"
+      ],
+      "commands": [
+        "workbench.action.focusRightGroup"
+      ]
+    },
+    {
+      "before": [
+        "ctrl",
+        "h"
+      ],
+      "commands": [
+        "workbench.action.focusLeftGroup"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "c"
+      ],
+      "commands": [
+        "workbench.action.closeActiveEditor"
+      ]
+    },
+    {
+      "before": [
+        "<leader>",
+        "q"
+      ],
+      "commands": [
+        "workbench.action.closeEditorsInGroup"
+      ]
+    }
+  ],
+  "vim.handleKeys": {
+    "<C-k>": false,
+    "<C-c>": false,
+    "<C-a>": false,
+    "<C-s>": false,
+    "<C-z>": false,
+    "<C-w>": false,
+    "<C-k-w>": false,
+    "<C-b>": false,
+    "<C-x>": false,
+    "<C-y>": false
+  },
+  "emmet.triggerExpansionOnTab": true,
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact",
+    "vue-html": "html",
+    "razor": "html",
+    "plaintext": "jade",
+    "css": "css",
+    "json": "json"
+  },
+  "workbench.startupEditor": "none",
+  "editor.fontLigatures": true,
+  "terminal.integrated.fontFamily": "Hack Nerd Font",
+  "terminal.integrated.fontWeight": 500,
+  "terminal.integrated.fontSize": 12,
+  "editor.fontFamily": "'JetBrainsMono Nerd Font' , 'Courier New', monospace",
+  "editor.fontSize": 14,
+  "liveServer.settings.donotShowInfoMsg": true,
+  "editor.linkedEditing": true,
+  "editor.suggestSelection": "first",
+  "files.exclude": {
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
+  },
+  "debug.onTaskErrors": "showErrors",
+  "security.workspace.trust.untrustedFiles": "open",
+  "editor.accessibilityPageSize": 12,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "prettier.tabWidth": 2,
+  "prettier.singleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.printWidth": 80,
+  "prettier.bracketSpacing": true,
+  "prettier.arrowParens": "always",
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  // configure format python
+  "[python]": {
+    "editor.defaultFormatter": null,
+    "editor.formatOnType": true
+  },
+  "python.formatting.blackArgs": [
+    "--line-length",
+    "120"
+  ],
+  "python.formatting.provider": "black",
+  "liveServer.settings.donotVerifyTags": true,
+  "terminal.integrated.gpuAcceleration": "off",
+  "cSpell.userWords": [
+    "authen",
+    "Breault",
+    "browserslist",
+    "Cascadia",
+    "CBOW",
+    "Chương",
+    "clsx",
+    "cslx",
+    "donot",
+    "fortawesome",
+    "iconscout",
+    "imgs",
+    "Infor",
+    "keras",
+    "listitem",
+    "Markunread",
+    "medusajs",
+    "middlewares",
+    "Mybutton",
+    "Parens",
+    "reduxjs",
+    "Signout",
+    "tailwindcss",
+    "tiktok",
+    "toastify",
+    "unicons",
+    "webp"
+  ],
+  "editor.lineHeight": 24,
+  "editor.cursorSmoothCaretAnimation": "on",
+  "workbench.list.smoothScrolling": true,
+  "editor.smoothScrolling": true,
+  "editor.cursorBlinking": "phase",
+  "editor.tabSize": 2,
+  "workbench.sash.size": 6,
+  "debug.disassemblyView.showSourceCode": false,
+  "git.ignoreMissingGitWarning": true,
+  "workbench.productIconTheme": "developer-icons",
+  "editor.formatOnPaste": true,
+  "editor.minimap.maxColumn": 80,
+  "workbench.statusBar.visible": true,
+  "errorLens.gutterIconSet": "circle",
+  "search.defaultViewMode": "tree",
+  "explorer.incrementalNaming": "smart",
+  "explorer.compactFolders": false,
+  "editor.stickyScroll.enabled": true,
+  "git.openRepositoryInParentFolders": "prompt",
+  "cSpell.language": "en,en-GB,vi",
+  "cSpell.enableFiletypes": [
+    "!git-commit"
+  ],
+  "editor.guides.bracketPairs": "active",
+  "workbench.colorTheme": "Evondev Dracula Darker Text",
+  "workbench.editor.untitled.hint": "hidden",
+  "files.autoSave": "onFocusChange",
+  "editor.lineNumbers": "relative",
+  "workbench.iconTheme": "vscode-icons",
+  "workbench.editor.wrapTabs": true,
+  "workbench.sideBar.location": "right",
+  "window.menuBarVisibility": "toggle",
+  "extensions.experimental.affinity": {
+    "vscodevim.vim": 1,
+    "asvetliakov.vscode-neovim": 1
+  },
+  "editor.formatOnSave": true,
+  "notebook.formatOnSave.enabled": true,
+  "workbench.colorCustomizations": {
+    "statusBar.background": "#7f5cdf"
+  },
+  "editor.minimap.showSlider": "always",
+  "editor.minimap.renderCharacters": false
+}

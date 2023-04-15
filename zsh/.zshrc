@@ -1,9 +1,21 @@
 # If you come from bash you might have to change your $PATH.
-export PATH=$HOME/bin:/usr/local/bin:$PATH
 
+export GTK_IM_MODULE=ibus
+export XMODIFIERS=@im=ibus
+export QT_IM_MODULE=ibus
+
+export ANDROID_HOME="/mnt/DATA/Applications/Android/Sdk"
+export JAVA_HOME="/mnt/DATA/Applications/jdk-11.0.17"
+export BROWSER="/usr/bin/google-chrome-stable"
+
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
+export PATH=$JAVA_HOME/bin:$PATH
+#/var/lib/snapd/snap/android-studio/125/android-studio/jre
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
 
+alias vg="lvim-gui"
 alias v="lvim"
 alias g="git"
 alias reload="source ~/.zshrc"
@@ -14,8 +26,9 @@ alias reload="source ~/.zshrc"
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 #ZSH_THEME="robbyrussell"
 # ZSH_THEME="archcraft-dwm"
-ZSH_THEME="gianu"
-# ZSH_THEME="refined"
+# ZSH_THEME="gianu"
+# ZSH_THEME="fletcherm"
+ZSH_THEME="node"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load

@@ -1,20 +1,4 @@
 --general
---Neovide
-vim.opt.guifont = "Hack Nerd Font:h10"
-vim.opt.linespace = 3
-vim.g.neovide_scale_factor = 1.0
-vim.g.neovide_background_color = "#001B26"
-vim.g.neovide_refresh_rate_idle = 5
-vim.g.transparency = 0
-vim.g.neovide_transparency = 0.8
-vim.g.neovide_fullscreen = true
-vim.g.neovide_padding_top = 12
-vim.g.neovide_padding_bottom = 12
-vim.g.neovide_padding_right = 12
-vim.g.neovide_padding_left = 12
-vim.g.neovide_refresh_rate = 60
-vim.g.neovide_cursor_animate_in_insert_mode = true
-
 vim.g.neovide_floating_blur_amount_x = 2.0
 vim.g.neovide_floating_blur_amount_y = 2.0
 
@@ -196,36 +180,6 @@ lvim.plugins = {
       }
     end,
   },
-  -- {
-  --   'projekt0n/github-nvim-theme',
-  --   tag = 'v0.0.7',
-  --   config = function()
-  --     require("github-theme").setup(
-  --       {
-  --         theme_style = "dark",
-  --         comment_style = "italic",
-  --         keyword_style = "italic",
-  --         function_style = "italic",
-  --         variable_style = "italic",
-  --         transparent = true,
-  --         hide_inactive_statusline = true,
-  --         -- sidebars = { "qf", "vista_kind", "terminal", "packer" },
-  --         -- sidebars = {},
-  --         -- Change the "hint" color to the "orange" color, and make the "error" color bright red
-  --         colors = { hint = "orange", error = "#ff0000" },
-  --         -- Overwrite the highlight groups
-  --         overrides = function(c)
-  --           return {
-  --             htmlTag = { fg = c.red, bg = "#282c34", sp = c.hint, style = "underline" },
-  --             DiagnosticHint = { link = "LspDiagnosticsDefaultHint" },
-  --             -- this will remove the highlight groups
-  --             TSField = {},
-  --           }
-  --         end
-  --       }
-  --     )
-  --   end,
-  -- },
   {
     'Mofiqul/dracula.nvim',
     config = function()

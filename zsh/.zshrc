@@ -1,16 +1,27 @@
 # If you come from bash you might have to change your $PATH.
 
+# Config
+# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting 
+# git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
-export ANDROID_HOME="/mnt/DATA/Applications/Android/Sdk"
-export JAVA_HOME="/mnt/DATA/Applications/jdk-11.0.17"
-export BROWSER="/usr/bin/google-chrome-stable"
+export ANDROID_HOME="/mnt/DATA/Dev/AndroidTools/sdk"
+export JAVA_HOME="/usr/lib/jvm/java-11-openjdk-amd64"
 
+export PATH="$PATH:$ANDROID_HOME/emulator"
+export PATH="$PATH:$ANDROID_HOME/platform-tools"
+export PATH="$PATH:$ANDROID_HOME/tools"
+export PATH="$PATH:$ANDROID_HOME/tools/bin"
+export PATH="$PATH:$ANDROID_HOME/cmdline-tools/latest/bin"
+export PATH="$PATH:$ANDROID_HOME/emulator"
+
+export BROWSER="/usr/bin/google-chrome-stable"
 export PATH=$HOME/bin:/usr/local/bin:$PATH
-export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
-export PATH=$JAVA_HOME/bin:$PATH
+
+# export PATH=$ANDROID_HOME/cmdline-tools/latest/bin:$ANDROID_HOME/platform-tools:$PATH
 #/var/lib/snapd/snap/android-studio/125/android-studio/jre
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.oh-my-zsh"
@@ -120,10 +131,13 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
-source /usr/share/nvm/nvm.sh
-source /usr/share/nvm/bash_completion
-source /usr/share/nvm/install-nvm-exec
+#[ -z "$NVM_DIR" ] && export NVM_DIR="$HOME/.nvm"
+#source /usr/share/nvm/nvm.sh
+#source /usr/share/nvm/bash_completion
+#source /usr/share/nvm/install-nvm-exec
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 . /mnt/DATA/d0tfile/zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.sh
 
@@ -132,3 +146,4 @@ if [ -f '/home/gin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/gin/google-cl
 
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/gin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/gin/google-cloud-sdk/completion.zsh.inc'; fi
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

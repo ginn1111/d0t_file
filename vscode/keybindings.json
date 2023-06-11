@@ -33,17 +33,8 @@
     "command": "workbench.action.previousEditor"
   },
   {
-    "key": "ctrl+n",
-    "command": "extension.advancedNewFile"
-  },
-  {
     "key": "capslock",
     "command": "extension.vim_escape",
-    "when": "editorTextFocus && vim.active && !inDebugRepl"
-  },
-  {
-    "key": "escape",
-    "command": "-extension.vim_escape",
     "when": "editorTextFocus && vim.active && !inDebugRepl"
   },
   {

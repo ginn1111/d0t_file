@@ -147,3 +147,5 @@ if [ -f '/home/gin/google-cloud-sdk/path.zsh.inc' ]; then . '/home/gin/google-cl
 # The next line enables shell command completion for gcloud.
 if [ -f '/home/gin/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/gin/google-cloud-sdk/completion.zsh.inc'; fi
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+eval "$(starship init zsh)"

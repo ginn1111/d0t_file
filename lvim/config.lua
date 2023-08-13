@@ -106,10 +106,6 @@ lvim.plugins = {
   'terryma/vim-multiple-cursors'
 },
   {
-    'terror/chatgpt.nvim',
-    run = 'pip3 install -r requirements.txt'
-  },
-  {
     'prettier/vim-prettier'
   },
   {
@@ -123,7 +119,7 @@ lvim.plugins = {
   },
   {
     "iamcco/markdown-preview.nvim",
-    run = "cd app && npm install",
+    build = "cd app && npm install",
     ft = "markdown",
     config = function()
       vim.g.mkdp_auto_start = 1
@@ -326,7 +322,6 @@ lvim.builtin.treesitter.highlight.enable = true
 
 -- --make sure server will always be installed even if the server is in skipped_servers list
 lvim.lsp.installer.setup.ensure_installed = {
-  "sumneko_lua",
   "jsonls",
   "tsserver",
   "tailwindcss"

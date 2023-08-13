@@ -4,7 +4,7 @@ CYAN="%{$fg_bold[cyan]%}"
 RED="%{$fg_bold[red]%}"
 RESET="%{$reset_color%}"
 
-PROMPT='$GREEN⬢  $YELLOW%c $(git_prompt_info) $RESET'
+PROMPT='$GREEN⬢  $YELLOW%c $(git_prompt_info) $RESET '
 
 ZSH_THEME_GIT_PROMPT_PREFIX=" $CYAN"
 ZSH_THEME_GIT_PROMPT_SUFFIX=""

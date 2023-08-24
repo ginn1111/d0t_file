@@ -5,7 +5,7 @@ vim.g.neovide_floating_blur_amount_y = 2.0
 vim.opt.termguicolors = true
 vim.opt.relativenumber = true
 lvim.log.level = "warn"
-lvim.transparent_window = true
+-- lvim.transparent_window = true
 lvim.format_on_save.enabled = true
 lvim.colorscheme = "dracula"
 vim.api.nvim_exec([[

@@ -20,10 +20,21 @@ alias v lvim
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
+set -gx ANDROID_HOME /mnt/DATA/Dev/android
+set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
+
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+
+set -gx PATH $JAVA_HOME/bin $PATH
+
+set -gx PATH $ANDROID_HOME/emulator $PATH
+set -gx PATH $ANDROID_HOME/platform-tools $PATH
+set -gx PATH $ANDROID_HOME/tools $PATH
+set -gx PATH $ANDROID_HOME/tools/bin $PATH
+set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH

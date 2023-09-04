@@ -5,9 +5,9 @@ vim.g.neovide_floating_blur_amount_y = 2.0
 vim.opt.termguicolors = true
 vim.opt.relativenumber = true
 lvim.log.level = "warn"
--- lvim.transparent_window = true
+lvim.transparent_window = true
 lvim.format_on_save.enabled = true
-lvim.colorscheme = "NeoSolarized"
+lvim.colorscheme = "monokai"
 vim.api.nvim_exec([[
   augroup TelescopeColors
     autocmd!
@@ -26,9 +26,11 @@ vim.scriptencoding = 'utf-8'
 vim.opt.encoding = 'utf-8'
 vim.opt.clipboard:append { 'unnamedplus' }
 vim.opt.clipboard:prepend { 'unnamed', 'unnamedplus' }
+
 vim.keymap.set('n', 'dw', 'viw d')
 vim.keymap.set('n', 'cw', 'viw c')
 vim.keymap.set('n', 'vw', 'viw')
+
 vim.g.nvim_tree_auto_close = '1'
 lvim.builtin.nvimtree.setup.renderer.indent_markers.enable = true
 
@@ -85,6 +87,10 @@ vim.g["prettier#exec_cmd_path"] = "~/.prettierrc"
 --Plugin
 lvim.plugins = {
   {
+    "tanvirtin/monokai.nvim"
+  },
+
+  {
     "karb94/neoscroll.nvim",
     event = "WinScrolled",
     config = function()
@@ -137,19 +143,19 @@ lvim.plugins = {
         height = 50,             --Height of the floating window
         default_mappings = true, --Bind default mappings
         border = { "↖", "─", "┐", "│", "┘", "─", "└", "│" },
-        winblend = 10,
+        -- winblend = 10,
         post_open_hook = nil, --A function taking two arguments, a buffer and a window to be ran as a hook.
         focus_on_open = true,
-        references = {        -- Configure the telescope UI for slowing the references cycling window.
-          telescope = require("telescope.themes").get_dropdown({ hide_preview = false })
-        },
+        -- references = {        -- Configure the telescope UI for slowing the references cycling window.
+        --   telescope = require("telescope.themes").get_dropdown({ hide_preview = false })
+        -- },
         bufhidden = "wipe"
       }
     end
   },
-  -- {
-  --   "p00f/nvim-ts-rainbow",
-  -- },
+  {
+    "p00f/nvim-ts-rainbow",
+  },
   {
     'norcalli/nvim-colorizer.lua',
     config = function()
@@ -178,12 +184,12 @@ lvim.plugins = {
   },
   {
     "overcache/NeoSolarized"
-  }
+  },
 }
 --to disable icons and use a minimalist setup, uncomment the following
 --lvim.use_icons = true
 
---keymappings[view all the defaults by pressing < leader > Lk]
+
 lvim.leader = ";"
 --add your own keymapping
 lvim.keys.normal_mode["<C-s>"] = ":w<cr>"

@@ -1,6 +1,2 @@
-require('base')
-require('highlights')
-require('macos')
-require('maps')
-require('windows')
-require('plugins')
+-- bootstrap lazy.nvim, LazyVim and your plugins
+require("config.lazy")

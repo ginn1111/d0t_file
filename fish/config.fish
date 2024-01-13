@@ -1,7 +1,11 @@
 set fish_greeting ""
+nvm use 18 set fish_greeting ""
+export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
 set -gx TERM xterm-256color
 
+set -gx MSSQL_SCRIPTER_CONNECTION_STRING  "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
+set -gx MSSQL_SCRIPTER_PASSWORD Thu@n12312
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
@@ -10,6 +14,7 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
+alias python "python3.11"
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
@@ -25,15 +30,16 @@ alias v nvim
 command -qv nvim && alias vim nvim
 
 set -gx EDITOR nvim
-set -gx ANDROID_HOME /mnt/DATA/Dev/android
-set -gx JAVA_HOME /usr/lib/jvm/java-17-openjdk-amd64
+set -gx ANDROID_HOME ~/tools/android/sdk
+set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+set -gx GOPATH /usr/local/go
 
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 
-set -gx PATH $JAVA_HOME/bin $PATH
+# set -gx PATH $JAVA_HOME/bin $PATH
 
 set -gx PATH $ANDROID_HOME/emulator $PATH
 set -gx PATH $ANDROID_HOME/platform-tools $PATH
@@ -41,11 +47,12 @@ set -gx PATH $ANDROID_HOME/tools $PATH
 set -gx PATH $ANDROID_HOME/tools/bin $PATH
 set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
 
+set -gx PATH $MSSQL_SCRIPTER_CONNECTION_STRING $PATH
+set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
 # Go
-set -g GOPATH $HOME/go
 set -gx PATH $GOPATH/bin $PATH
 
 # NVM

@@ -4,7 +4,7 @@ export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/
 
 set -gx TERM xterm-256color
 
-set -gx MSSQL_SCRIPTER_CONNECTION_STRING  "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
+set -gx MSSQL_SCRIPTER_CONNECTION_STRING "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
 set -gx MSSQL_SCRIPTER_PASSWORD Thu@n12312
 # theme
 set -g theme_color_scheme terminal-dark
@@ -26,6 +26,8 @@ alias gpull "git pull"
 alias lzg lazygit
 alias g git
 alias v nvim
+alias ll "exa -l -g --icons --git"
+alias llt "exa -l -icons --tree --git-ignore"
 
 command -qv nvim && alias vim nvim
 

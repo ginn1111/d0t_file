@@ -1,5 +1,4 @@
 set fish_greeting ""
-nvm use 18 set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
 set -gx TERM xterm-256color
@@ -27,7 +26,7 @@ alias lzg lazygit
 alias g git
 alias v nvim
 alias ll "exa -l -g --icons --git"
-alias llt "exa -l -icons --tree --git-ignore"
+alias llt "exa -l --icons --tree --git-ignore"
 
 command -qv nvim && alias vim nvim
 
@@ -80,3 +79,7 @@ set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
 if test -f $LOCAL_CONFIG
     source $LOCAL_CONFIG
 end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH

@@ -22,5 +22,3 @@ opt.foldmethod = "indent"
 -- split window
 opt.splitright = true
 opt.splitbelow = true
-
-opt.iskeyword:append("-")

@@ -1,1 +1,1 @@
-/Users/gin/.local/share/omf/themes/sashimi/fish_prompt.fish
+/Users/gin/.local/share/omf/themes/dmorrell/fish_prompt.fish

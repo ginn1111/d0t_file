@@ -5,8 +5,7 @@ return {
       width = "30",
       position = "right",
       mappings = {
-        ["l"] = "toggle_node",
-        ["L"] = "open",
+        ["l"] = "open",
       },
     },
   },

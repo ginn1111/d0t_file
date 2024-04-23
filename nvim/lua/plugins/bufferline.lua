@@ -7,11 +7,16 @@ return {
   },
   opts = {
     options = {
-      separator_style = "slope",
-      -- stylua: ignore
-      close_command = function(n) require("mini.bufremove").delete(n, false) end,
-      -- stylua: ignore
-      right_mouse_command = function(n) require("mini.bufremove").delete(n, false) end,
+      separator_style = { "", "" },
+      buffer_close_icon = " ",
+      max_name_length = 18,
+      indicator = { style = "icon", icon = " " },
+      close_command = function(n)
+        require("mini.bufremove").delete(n, false)
+      end,
+      right_mouse_command = function(n)
+        require("mini.bufremove").delete(n, false)
+      end,
       diagnostics = "nvim_lsp",
       always_show_bufferline = false,
       diagnostics_indicator = function(_, _, diag)

@@ -10,7 +10,7 @@ return {
       separator_style = { "", "" },
       buffer_close_icon = " ",
       max_name_length = 18,
-      indicator = { style = "icon", icon = " " },
+      -- indicator = { style = "icon", icon = " " },
       close_command = function(n)
         require("mini.bufremove").delete(n, false)
       end,

@@ -1,7 +1,8 @@
 set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
-set -gx TERM xterm-256color
+#set -gx TERM xterm-256color
+set -gx TERM xterm-kitty
 
 set -gx MSSQL_SCRIPTER_CONNECTION_STRING "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
 set -gx MSSQL_SCRIPTER_PASSWORD Thu@n12312
@@ -83,3 +84,10 @@ end
 # bun
 set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
+
+# pnpm
+set -gx PNPM_HOME /Users/gin/Library/pnpm
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end

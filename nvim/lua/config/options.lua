@@ -1,7 +1,7 @@
 vim.g.mapleader = ";"
 
 local opt = vim.opt
-opt.winbar = "%=%m %f"
+-- opt.winbar = "%=%m %f"
 opt.spell = true
 opt.spelllang = { "en_us" }
 
@@ -16,3 +16,6 @@ opt.foldmethod = "indent"
 -- split window
 opt.splitright = true
 opt.splitbelow = true
+vim.g["signify_sign_add"] = "┃"
+vim.g["signify_sign_change"] = "┃"
+vim.g["signify_sign_delete"] = "•"

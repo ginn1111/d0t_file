@@ -4,11 +4,11 @@ return {
   priority = 1000,
   config = function()
     require("onedark").setup({
-      style = "deep",
+      style = "cool",
       transparent = true,
-      lualine = {
-        transparent = true,
-      },
+      -- lualine = {
+      --   transparent = true,
+      -- },
     })
     vim.cmd([[colorscheme onedark]])
   end,

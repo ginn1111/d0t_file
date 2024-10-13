@@ -3,8 +3,50 @@ return {
   "telescope.nvim",
   dependencies = {
     "nvim-telescope/telescope-file-browser.nvim",
+
+    {
+      "debugloop/telescope-undo.nvim",
+      keys = { { "<leader>U", "<cmd>Telescope undo<cr>" } },
+      config = function()
+        require("telescope").load_extension("undo")
+      end,
+    },
   },
   keys = {
+    {
+      "<leader>fn",
+      function()
+        local telescope = require("telescope")
+        telescope.extensions.notify.notify({
+          layout_strategy = "center",
+          layout_config = {
+            prompt_position = "top",
+          },
+        })
+      end,
+    },
+    {
+      "<leader>fl",
+      function()
+        local files = {} ---@type table<string, string>
+        for _, plugin in pairs(require("lazy.core.config").plugins) do
+          repeat
+            if plugin._.module then
+              local info = vim.loader.find(plugin._.module)[1]
+              if info then
+                files[info.modpath] = info.modpath
+              end
+            end
+            plugin = plugin._.super
+          until not plugin
+        end
+        require("telescope.builtin").live_grep({
+          default_text = "/",
+          search_dirs = vim.tbl_values(files),
+        })
+      end,
+      desc = "Find Lazy Plugin Spec",
+    },
     {
       "<leader>fP",
       function()
@@ -137,5 +179,6 @@ return {
     telescope.setup(opts)
     require("telescope").load_extension("fzf")
     require("telescope").load_extension("file_browser")
+    require("telescope").load_extension("notify")
   end,
 }

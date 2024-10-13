@@ -40,6 +40,7 @@ set -gx GOPATH /usr/local/go
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
 
 # set -gx PATH $JAVA_HOME/bin $PATH
 
@@ -91,3 +92,5 @@ if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
 # pnpm end
+
+starship init fish | source

@@ -1,1 +1,0 @@
-/Users/gin/.local/share/omf/themes/dmorrell/fish_prompt.fish

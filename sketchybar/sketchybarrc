@@ -1,0 +1,62 @@
+
+PLUGIN_DIR="$CONFIG_DIR/plugins"
+ITEM_DIR="$CONFIG_DIR/items"
+
+source "$CONFIG_DIR/colors.sh"
+
+ITEM_PD_INLINE=8
+ITEM_HEIGHT=20
+ITEM_RD=5
+FONT="JetBrainsMono Nerd Font"
+FONT_SIZE_ICON=14.0
+FONT_SIZE_LABEL=10.0
+
+sketchybar --bar height=30        \
+                 blur_radius=30   \
+                 position=top     \
+                 sticky=off       \
+                 padding_left=10  \
+                 padding_right=10 \
+                 color=$BAR_COLOR
+
+default=(
+  icon.font="$FONT:Bold:$FONT_SIZE_ICON"
+  label.font="$FONT:Bold:$FONT_SIZE_LABEL" 
+
+  icon.color=$WHITE
+  label.color=$WHITE
+
+  padding_left=5
+  padding_right=5
+
+  label.padding_left=4
+  label.padding_right=$ITEM_PD_INLINE
+
+  icon.padding_left=$ITEM_PD_INLINE
+  icon.padding_right=4
+
+  background.color=$ITEM_BG_COLOR
+  background.corner_radius=$ITEM_RD
+  background.height=$ITEM_HEIGHT
+)
+
+sketchybar --default "${default[@]}"
+
+
+# -- LEFT SIDE ITEMS --
+
+source "$ITEM_DIR/spaces.sh"
+source "$ITEM_DIR/front_app.sh"
+
+
+# -- RIGHT SIDE ITEMS --
+source "$ITEM_DIR/calendar.sh"
+
+# TODO: add slider
+source "$ITEM_DIR/volume.sh"
+
+source "$ITEM_DIR/battery.sh"
+
+source "$ITEM_DIR/cpu.sh"
+
+sketchybar --update

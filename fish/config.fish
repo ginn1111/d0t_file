@@ -31,6 +31,7 @@ alias llt "exa -l --icons --tree --git-ignore"
 
 command -qv nvim && alias vim nvim
 
+set -gx ZK_NOTEBOOK_DIR ~/note-taking-system
 set -gx EDITOR nvim
 set -gx ANDROID_HOME ~/tools/android/sdk
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home

@@ -1,16 +1,20 @@
 #!/bin/bash
+sketchybar --add event aerospace_workspace_change
 
-SPACE_SIDS=(1 2 3 4 5 6 7 8 9 10)
+MONITORS=$(aerospace list-monitors | awk '{print $1}')
 
-for sid in "${SPACE_SIDS[@]}"; do
-  sketchybar --add space space.$sid left \
-    --set space.$sid space=$sid \
-    icon=$sid \
-    icon.font="$FONT:Regular:$FONT_SIZE_LABEL" \
-    label.font="sketchybar-app-font:Regular:$FONT_SIZE_LABEL" \
-    label.padding_right=10 \
-    label.y_offset=-1 \
-    script="$PLUGIN_DIR/space.sh"
+for m in ${MONITORS[@]}; do
+  for sid in $(aerospace list-workspaces --monitor $m); do
+    sketchybar --add space space.$sid left \
+      --set space.$sid space=$sid \
+      icon=$sid \
+      icon.font="$FONT:Regular:12.0" \
+      label.font="sketchybar-app-font:Regular:12.0" \
+      label.padding_right=20 \
+      label.y_offset=-1 \
+      script="$PLUGIN_DIR/space.sh $sid" \
+      --subscribe space.$sid space_windows_change aerospace_workspace_change
+  done
 done
 
 sketchybar --add item space_separator left \
@@ -20,4 +24,4 @@ sketchybar --add item space_separator left \
   label.drawing=off \
   background.drawing=off \
   script="$PLUGIN_DIR/space_windows.sh" \
-  --subscribe space_separator space_windows_change
+  --subscribe space_separator space_windows_change aerospace_workspace_change

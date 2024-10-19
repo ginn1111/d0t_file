@@ -1,6 +1,0 @@
-require('base')
-require('highlights')
-require('macos')
-require('maps')
-require('windows')
-require('plugins')

@@ -19,3 +19,18 @@ opt.splitbelow = true
 vim.g["signify_sign_add"] = "┃"
 vim.g["signify_sign_change"] = "┃"
 vim.g["signify_sign_delete"] = "•"
+
+-- cursor
+
+vim.opt.guicursor =
+  "n-v-c:block,i-ci-ve:hor20,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+
+function hiCursor()
+  vim.api.nvim_set_hl(0, "Cursor", { fg = "#cc9900", bg = "#22C7A8" })
+  vim.api.nvim_set_hl(0, "CursorReset", { fg = "white", bg = "white" })
+end
+
+vim.api.nvim_create_autocmd("ColorScheme", {
+  pattern = "*",
+  callback = hiCursor,
+})

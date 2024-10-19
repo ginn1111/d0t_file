@@ -164,6 +164,14 @@ return {
         },
       },
     }
+    opts.pickers = {
+      find_files = {
+        initial_mode = "insert",
+      },
+      live_grep = {
+        initial_mode = "insert",
+      },
+    }
     opts.extensions = {
       file_browser = {
         layout_strategy = "horizontal",

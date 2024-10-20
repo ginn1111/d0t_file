@@ -6,8 +6,7 @@
 
 source "$CONFIG_DIR/colors.sh" # Loads all defined colors
 
-# test
-if [ $1 = $FOCUSED_WORKSPACE ]; then
+if [ $SELECTED = true ]; then
   sketchybar --set $NAME background.drawing=on \
     background.color=$ACCENT_COLOR \
     label.color=$BAR_COLOR \

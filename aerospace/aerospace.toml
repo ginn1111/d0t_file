@@ -11,6 +11,8 @@ after-login-command = []
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
  'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+ 'exec-and-forget /opt/homebrew/opt/borders/bin/borders',
+ 'exec-and-forget /opt/homebrew/opt/borders/bin/Scroll\ Reverser.app'
 ]
 
 exec-on-workspace-change = ['/bin/bash', '-c',
@@ -70,12 +72,12 @@ preset = 'qwerty'
 # 5 = 'chat'
 
 [gaps]
-inner.horizontal = 5
-inner.vertical =   5
-outer.left =       5
-outer.bottom =     5
+inner.horizontal = 10
+inner.vertical =   10
+outer.left =       7
+outer.bottom =     7
 outer.top =        37
-outer.right =      5
+outer.right =      7
 
 # 'main' binding mode declaration
 # See: https://nikitabobko.github.io/AeroSpace/guide#binding-modes
@@ -127,7 +129,8 @@ alt-shift-l = 'move right'
 alt-shift-minus = 'resize smart -50'
 alt-shift-equal = 'resize smart +50'
 
-alt-shift-r = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload']
+alt-shift-f = ['macos-native-fullscreen']
+alt-shift-r = ['exec-and-forget /opt/homebrew/bin/sketchybar --reload', 'exec-and-forget brew services restart borders']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace
 alt-1 = 'workspace 1'
@@ -158,6 +161,7 @@ alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
+alt-t = 'exec-and-forget /opt/homebrew/bin/kitty ~'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 

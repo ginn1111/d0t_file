@@ -8,10 +8,11 @@ for m in ${MONITORS[@]}; do
     sketchybar --add space space.$sid left \
       --set space.$sid space=$sid \
       icon=$sid \
-      icon.font="$FONT:Regular:12.0" \
+      icon.font="$FONT:Semibold:12.0" \
       label.font="sketchybar-app-font:Regular:12.0" \
-      label.padding_right=20 \
+      label.padding_right=16 \
       label.y_offset=-1 \
+      icon.padding_right=0 \
       script="$PLUGIN_DIR/space.sh $sid" \
       --subscribe space.$sid space_windows_change aerospace_workspace_change
   done

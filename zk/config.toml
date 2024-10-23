@@ -50,6 +50,13 @@ filename = "{{format-date now '%d-%m-%Y'}}-task-yrism"
 template = "task-yrism.md"
 
 
+[group.cornell]
+paths = ["cornell/*"]
+
+[group.cornell.note]
+filename = "{{format-date now 'timestamp'}}.{{slug title}}"
+template = "cornell.md"
+
 [group.idea]
 paths = ["idea/*"]
 
@@ -88,6 +95,7 @@ fzf-option = "--height 40% --border"
 recents = "--sort created- --created-after 'last two weeks'"
 idea = "--sort created idea"
 task = "--sort created task"
+cornell = "--sort created cornell"
 
 # COMMAND ALIASES
 [alias]
@@ -105,6 +113,7 @@ recent = "zk edit --sort created- --created-after 'last two weeks' --interactive
 # Tasks
 nt = "zk new --no-input $ZK_NOTEBOOK_DIR/task --group task"
 ni = "zk new --title $argv $ZK_NOTEBOOK_DIR/idea --group idea"
+nn = "zk new --title $argv $ZK_NOTEBOOK_DIR/cornell --group cornell"
 
 # Listing
 t = "zk list --tag $argv"

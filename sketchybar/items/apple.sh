@@ -5,17 +5,12 @@ POPUP_CLICK_SCRIPT='sketchybar --set $NAME popup.drawing=toggle popup.y_offset=1
 
 apple_logo=(
   icon=$APPLE
-  icon.font="$FONT:Black:16.0"
-  icon.padding_right=6
-  icon.padding_left=6
-  background.height=24
-  icon.y_offset=1
-  icon.color=$WHITE
+  icon.font="$FONT:Black:14.0"
+  icon.y_offset=0
+  icon.padding_right=0
+  icon.color=$ACCENT_COLOR
   label.drawing=off
-  background.corner_radius=6
-  background.drawing=on
-  background.border_width=1
-  background.border_color=$ACCENT_COLOR
+  background.drawing=off
   click_script="$POPUP_CLICK_SCRIPT"
   popup.height=35
 )

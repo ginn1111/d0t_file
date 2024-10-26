@@ -8,6 +8,8 @@ export BAR_COLOR_OP=0xcf001f30
 export ITEM_BG_COLOR=0xff003547
 export ACCENT_COLOR=0xff2cf9ed
 export YELLOW=0xfff7fc17
+export RED=0xffff2453
+export ORANGE=0xfff97716
 
 # -- Gray Scheme --
 # export BAR_COLOR=0xff101314

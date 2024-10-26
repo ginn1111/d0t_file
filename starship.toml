@@ -86,16 +86,16 @@ tag_symbol = '🔖 '
 [git_status]
 style = "bg:gray"
 format = '[[\[($all_status$ahead_behind\] )](fg:primary bg:gray)]($style)'
-conflicted = '🏳'
-ahead = '🏎💨'
+conflicted = '🏳️'
+ahead = '🚀'
 behind = '😰'
 diverged = '😵'
-up_to_date = '✓'
+up_to_date = '🌱'
 untracked = '🤷'
 stashed = '📦'
 modified = '📝'
 staged = '[[++\($count\)](fg:primary bg:gray)]($style)'
 renamed = '👅'
-deleted = '🗑'
+deleted = '🗑️'
 
 

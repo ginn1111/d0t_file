@@ -1,49 +1,101 @@
-format = """\
-[](fg:#7DF9AA)\
-[ ](bold bg:#7DF9AA fg:#090c0c)\
-[](fg:#7DF9AA bg:#3B76F0)\
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+add_newline = true
+
+
+format = """
+[](primary2)\
+[ ](bg:primary2 fg:black)\
+[](bg:primary fg:primary2)\
 $directory\
-[](fg:#3B76F0 bg:#FCF392)\
+[](fg:primary bg:gray)\
 $git_branch\
 $git_status\
-$git_metrics\
-[](fg:#FCF392)\
-$character\
+[](fg:gray bg:neutral2)\
+[](fg:neutral2 bg:neutral)\
+$time\
+[ ](fg:neutral)\
 """
 
+right_format="""
+([](neutral2)$nodejs$rust$golang$hosename[](neutral2))
+ 
+([](neutral2)$hostname[](neutral2))
+"""
+
+palette = "nightfly"
+
+[palettes.nightfly]
+primary="#22C7A8"
+primary2="#7fdbca"
+neutral="#1d2230"
+neutral2="#212736"
+gray="#394260"
+text="#e3e5e5"
+black="#090c0c"
+combine=""
+
 [directory]
-format = "[ ﱮ $path ]($style)"
-style = "fg:#E4E4E4 bg:#3B76F0"
+style = "fg:black bg:primary bold"
+format = "[ $path ]($style)"
+truncation_length = 3
+truncation_symbol = "…/"
+
+[directory.substitutions]
+"Documents" = "󰈙 "
+"Downloads" = " "
+"Music" = " "
+"Pictures" = " "
+
+
+# [nodejs]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+#
+# [rust]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+#
+# [golang]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+#
+# [php]
+# symbol = ""
+# style = "bg:#212736"
+# format = '[[ $symbol ($version) ](fg:#769ff0 bg:#212736)]($style)'
+
+[nodejs]
+detect_files = ['package.json', '.nvmrc', '.node-version', '!bunfig.toml', '!bun.lockb']
+style="bg:primary"
+symbol = " "
+format = '[[ $symbol($version) ](fg:primary bg:neutral2)]($style)'
 
 [git_branch]
-format = '[ $symbol$branch(:$remote_branch) ]($style)'
-symbol = "  "
-style = "fg:#1C3A5E bg:#FCF392"
+symbol='󰮠 '
+style = "bg:gray"
+format = '[[ $symbol $branch ](fg:primary bg:gray)]($style)'
+
+[git_commit]
+commit_hash_length = 4
+tag_symbol = '🔖 '
 
 [git_status]
-format = '[$all_status]($style)'
-style = "fg:#1C3A5E bg:#FCF392"
+style = "bg:gray"
+format = '[[\[($all_status$ahead_behind\] )](fg:primary bg:gray)]($style)'
+conflicted = '🏳'
+ahead = '🏎💨'
+behind = '😰'
+diverged = '😵'
+up_to_date = '✓'
+untracked = '🤷'
+stashed = '📦'
+modified = '📝'
+staged = '[[++\($count\)](fg:primary bg:gray)]($style)'
+renamed = '👅'
+deleted = '🗑'
 
-[git_metrics]
-format = "([+$added ]($added_style))[]($added_style)"
-added_style = "fg:#1C3A5E bg:#FCF392"
-deleted_style = "fg:bright-red bg:235"
-disabled = false
 
-[hg_branch]
-format = "[ $symbol$branch ]($style)"
-symbol = " "
-
-[cmd_duration]
-format = "[  $duration ]($style)"
-style = "fg:bright-white bg:18"
-
-[character]
-success_symbol = '[ ](bold green)'
-error_symbol = '[ ✗ ](#E84D44) '
-
-[time]
-disabled = false
-time_format = "%R" # Hour:Minute Format
-style = "bg:#1d2230"
-format = '[[ 󱑍 $time ](bg:#1C3A5E fg:#8DFBD2)]($style)'

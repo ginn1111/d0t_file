@@ -125,10 +125,41 @@ return {
     local telescope = require("telescope")
     local actions = require("telescope.actions")
     local fb_actions = require("telescope").extensions.file_browser.actions
+
+    local colors = {
+      surface0 = "#1d3b53",
+      surface1 = "#2d5d84",
+      mantle = "#011627",
+      primary = "#22C7A8",
+      accent = "#2d5d84",
+      text = "#011627",
+    }
+
+    local TelescopeColor = {
+      TelescopeMatching = { fg = colors.text, bg = colors.primary },
+      TelescopeSelection = { bg = colors.accent },
+
+      TelescopePromptPrefix = { bg = colors.surface1 },
+      TelescopePromptNormal = { bg = colors.surface1 },
+      TelescopeResultsNormal = { bg = colors.surface0 },
+      TelescopePreviewNormal = { bg = colors.surface0 },
+      TelescopePromptBorder = { bg = colors.surface1, fg = colors.surface1 },
+      TelescopeResultsBorder = { bg = colors.surface0, fg = colors.surface0 },
+      TelescopePreviewBorder = { bg = colors.surface0, fg = colors.surface0 },
+      TelescopePromptTitle = { bg = colors.primary, fg = colors.text },
+      TelescopeResultsTitle = { fg = colors.primary },
+      TelescopePreviewTitle = { bg = colors.primary, fg = colors.text },
+      TelescopePreviewLine = { bg = colors.accent },
+    }
+
+    for hl, col in pairs(TelescopeColor) do
+      vim.api.nvim_set_hl(0, hl, col)
+    end
+
     opts.defaults = {
       borderchars = { "─", "│", "─", "│", "┌", "┐", "┘", "└" },
       prompt_prefix = "󰜴 ",
-      selection_caret = "󱖘 ",
+      -- selection_caret = "  ",
       wrap_results = true,
       layout_strategy = "horizontal",
       layout_config = {

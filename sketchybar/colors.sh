@@ -10,6 +10,7 @@ export ACCENT_COLOR=0xff2cf9ed
 export YELLOW=0xfff7fc17
 export RED=0xffff2453
 export ORANGE=0xfff97716
+export GREEN=0xff1dfca1
 
 # -- Gray Scheme --
 # export BAR_COLOR=0xff101314

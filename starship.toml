@@ -94,7 +94,7 @@ up_to_date = '🌱'
 untracked = '🤷'
 stashed = '📦'
 modified = '📝'
-staged = '[[++\($count\)](fg:primary bg:gray)]($style)'
+staged = '[([++\($count\)])(fg:primary bg:gray)]($style)'
 renamed = '👅'
 deleted = '🗑️'
 

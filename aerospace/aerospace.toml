@@ -10,7 +10,7 @@ after-login-command = []
 # 'after-startup-command' is run after 'after-login-command'
 # Available commands : https://nikitabobko.github.io/AeroSpace/commands
 after-startup-command = [
- 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
+ # 'exec-and-forget /opt/homebrew/opt/sketchybar/bin/sketchybar',
  'exec-and-forget /opt/homebrew/opt/borders/bin/borders',
  'exec-and-forget /opt/homebrew/opt/borders/bin/Scroll\ Reverser.app'
 ]
@@ -76,7 +76,7 @@ inner.horizontal = 15
 inner.vertical =   15
 outer.left =       7
 outer.bottom =     7
-outer.top =        10
+outer.top =        7
 outer.right =      7
 
 # 'main' binding mode declaration

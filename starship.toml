@@ -23,7 +23,17 @@ right_format="""
 ([](neutral2)$hostname[](neutral2))
 """
 
-palette = "nightfly"
+palette = "onedark"
+
+[palettes.onedark]
+primary="#A5E075"
+primary2="#98C379"
+neutral="#1d2230"
+neutral2="#212736"
+gray="#394260"
+text="#e3e5e5"
+black="#090c0c"
+combine=""
 
 [palettes.nightfly]
 primary="#22C7A8"

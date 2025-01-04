@@ -5,7 +5,7 @@ options=(
   width=4.0
   hidpi=off
   background_color=0xcf1d3b53
-  active_color="glow(0xff22C7A8)"
+  active_color="glow(0xff36f499)"
   inactive_color=0xff414550
 )
 

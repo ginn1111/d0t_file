@@ -1,8 +1,8 @@
 #!/bin/bash
 
-sketchybar --add item media e \
+sketchybar --add item media c \
   --set media label.color=$ACCENT_COLOR \
-  label.max_chars=20 \
+  label.max_chars=30 \
   scroll_texts=on \
   icon=􀑪 \
   icon.color=$ACCENT_COLOR \

@@ -7,7 +7,7 @@ return {
   },
   opts = {
     options = {
-      -- separator_style = "slant",
+      separator_style = "thin",
       buffer_close_icon = "",
       max_name_length = 18,
       show_buffer_close_icons = false,

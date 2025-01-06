@@ -28,6 +28,7 @@ alias g git
 alias v nvim
 alias ll "exa -l -g --icons --git"
 alias llt "exa -l --icons --tree --git-ignore"
+alias yz yazi
 
 command -qv nvim && alias vim nvim
 
@@ -35,13 +36,14 @@ set -gx ZK_NOTEBOOK_DIR ~/note-taking-system
 set -gx EDITOR nvim
 set -gx ANDROID_HOME ~/tools/android/sdk
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
-set -gx GOPATH /usr/local/go
+set -gx GOPATH ~/.local/src/go
 
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
 set -gx PATH ~/.local/bin $PATH
 set -gx PATH ~/.cargo/bin $PATH
+set -gx PATH ~/.gvm/bin $PATH
 
 # set -gx PATH $JAVA_HOME/bin $PATH
 

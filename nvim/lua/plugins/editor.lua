@@ -3,12 +3,18 @@ return {
   "telescope.nvim",
   dependencies = {
     "nvim-telescope/telescope-file-browser.nvim",
-
     {
       "debugloop/telescope-undo.nvim",
       keys = { { "<leader>U", "<cmd>Telescope undo<cr>" } },
       config = function()
         require("telescope").load_extension("undo")
+      end,
+    },
+    {
+      "nvim-telescope/telescope-fzf-native.nvim",
+      build = "make",
+      config = function()
+        require("telescope").load_extension("fzf")
       end,
     },
   },
@@ -216,10 +222,8 @@ return {
       },
     }
     telescope.setup(opts)
-    require("telescope").load_extension("fzf")
     require("telescope").load_extension("file_browser")
     require("telescope").load_extension("notify")
     require("telescope").load_extension("undo")
-    require("telescope").load_extension("emoji")
   end,
 }

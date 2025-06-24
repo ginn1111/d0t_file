@@ -33,3 +33,5 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = hiCursor,
 })
+
+vim.g.lazyvim_prettier_needs_config = true

@@ -14,7 +14,9 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias python "python3.11"
+alias python "python3.13"
+alias dp docker-compose
+alias dk docker
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
@@ -29,6 +31,7 @@ alias v nvim
 alias ll "exa -l -g --icons --git"
 alias llt "exa -l --icons --tree --git-ignore"
 alias yz yazi
+alias vtt nvim1
 
 command -qv nvim && alias vim nvim
 
@@ -37,7 +40,6 @@ set -gx EDITOR nvim
 set -gx ANDROID_HOME ~/tools/android/sdk
 set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
 set -gx GOPATH ~/.local/src/go
-
 
 set -gx PATH bin $PATH
 set -gx PATH ~/bin $PATH
@@ -55,6 +57,7 @@ set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
 
 set -gx PATH $MSSQL_SCRIPTER_CONNECTION_STRING $PATH
 set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
+
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 

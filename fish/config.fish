@@ -17,6 +17,10 @@ set -g theme_hostname always
 alias python "python3.13"
 alias dp docker-compose
 alias dk docker
+alias y yarn
+alias n npm
+alias pnpm p
+alias b bun
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"

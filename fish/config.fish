@@ -36,6 +36,7 @@ alias ll "exa -l -g --icons --git"
 alias llt "exa -l --icons --tree --git-ignore"
 alias yz yazi
 alias vtt nvim1
+alias cl claude
 
 command -qv nvim && alias vim nvim
 

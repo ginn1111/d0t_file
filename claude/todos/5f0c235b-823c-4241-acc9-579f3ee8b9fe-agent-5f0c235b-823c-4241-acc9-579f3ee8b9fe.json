@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Explore project structure and identify main directories",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Read configuration files (package.json, README, etc.)",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze main source code structure and entry points",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Understand project dependencies and tech stack",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  }
+]

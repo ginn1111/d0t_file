@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Compress bo-payme-vn directory",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "1"
+  },
+  {
+    "content": "Compress lian-app directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Compress payme-ewallet-miniapp directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Compress payme-vn-pay directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Compress payme-vn-site directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Compress yrism directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  }
+]

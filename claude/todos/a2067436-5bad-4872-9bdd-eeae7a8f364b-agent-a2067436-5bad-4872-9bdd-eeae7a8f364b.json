@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Run the install.sh script",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Fix any problems that occur during installation",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Run install.sh with proper confirmation",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Fix gemini-wrapper.sh test failure",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]

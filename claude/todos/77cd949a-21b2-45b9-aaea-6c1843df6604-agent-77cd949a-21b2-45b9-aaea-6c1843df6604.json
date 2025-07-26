@@ -1,0 +1,38 @@
+[
+  {
+    "content": "Find all git repositories in the current directory",
+    "status": "in_progress",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Analyze commits from 'thuan' username in each repository",
+    "status": "pending",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Analyze commits from 'gin' username in each repository",
+    "status": "pending",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Categorize contributions by type (features, bugs, refactoring, etc.)",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Extract technical skills from code analysis",
+    "status": "pending",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Generate contribution analysis report",
+    "status": "pending",
+    "priority": "medium",
+    "id": "6"
+  }
+]

@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Remove node_modules from bo-payme-vn project",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Remove node_modules from lian-app project",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Remove node_modules from payme-ewallet-miniapp project",
+    "status": "completed",
+    "priority": "high",
+    "id": "3"
+  },
+  {
+    "content": "Remove node_modules from payme-vn-pay project",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  },
+  {
+    "content": "Remove node_modules from payme-vn-site project",
+    "status": "completed",
+    "priority": "high",
+    "id": "5"
+  },
+  {
+    "content": "Remove node_modules from yrism/Admin_FE project",
+    "status": "completed",
+    "priority": "high",
+    "id": "6"
+  },
+  {
+    "content": "Remove node_modules from yrism/FE project",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  }
+]

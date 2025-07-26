@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Compress completions/ directory",
+    "status": "in_progress",
+    "priority": "medium",
+    "id": "1"
+  },
+  {
+    "content": "Compress conf.d/ directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Compress functions/ directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Compress themes/ directory",
+    "status": "pending",
+    "priority": "medium",
+    "id": "4"
+  }
+]

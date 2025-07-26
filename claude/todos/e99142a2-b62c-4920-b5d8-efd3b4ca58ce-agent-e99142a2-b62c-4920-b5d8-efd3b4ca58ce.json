@@ -1,0 +1,26 @@
+[
+  {
+    "content": "Analyze yrism project structure (FE and Admin_FE)",
+    "status": "completed",
+    "priority": "high",
+    "id": "1"
+  },
+  {
+    "content": "Extract git contributions from 'thuan' and 'gin' usernames",
+    "status": "completed",
+    "priority": "high",
+    "id": "2"
+  },
+  {
+    "content": "Categorize contributions by type for yrism projects",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Generate comprehensive markdown analysis report",
+    "status": "completed",
+    "priority": "high",
+    "id": "4"
+  }
+]

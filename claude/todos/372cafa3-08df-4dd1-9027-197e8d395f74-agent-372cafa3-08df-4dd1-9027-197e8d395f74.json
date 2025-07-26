@@ -1,0 +1,44 @@
+[
+  {
+    "content": "Zip bo-payme-vn folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "1"
+  },
+  {
+    "content": "Zip lian-app folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "2"
+  },
+  {
+    "content": "Zip payme-ewallet-miniapp folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "3"
+  },
+  {
+    "content": "Zip payme-vn-pay folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "4"
+  },
+  {
+    "content": "Zip payme-vn-site folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "5"
+  },
+  {
+    "content": "Zip yrism folder with compression",
+    "status": "completed",
+    "priority": "medium",
+    "id": "6"
+  },
+  {
+    "content": "Verify zip files created successfully",
+    "status": "completed",
+    "priority": "high",
+    "id": "7"
+  }
+]

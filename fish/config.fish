@@ -21,6 +21,8 @@ alias y yarn
 alias n npm
 alias pnpm p
 alias b bun
+alias ge gemini
+alias cl claude
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"

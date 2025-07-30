@@ -6,7 +6,7 @@
         "hooks": [
           {
             "type": "command",
-            "command": "/Users/gin/claude-gemini-bridge/hooks/gemini-bridge.sh"
+            "command": "/Users/$USER/claude-gemini-bridge/hooks/gemini-bridge.sh"
           }
         ]
       }

@@ -1,0 +1,16 @@
+
+*.pid
+claude/ide
+claude/projects
+claude/shell-snapshots
+claude/statsig
+claude/todos
+
+fish/functions
+fish/fish_variables
+
+*.bak
+lazy-lock.json
+.DS_Store
+
+

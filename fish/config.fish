@@ -22,7 +22,7 @@ alias n npm
 alias pnpm p
 alias b bun
 alias ge gemini
-alias cl claude
+alias cc claude
 alias ls "ls -p -G"
 alias la "ls -A"
 alias ll "ls -l"
@@ -45,7 +45,7 @@ command -qv nvim && alias vim nvim
 set -gx ZK_NOTEBOOK_DIR ~/note-taking-system
 set -gx EDITOR nvim
 set -gx ANDROID_HOME ~/tools/android/sdk
-set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+# set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
 set -gx GOPATH ~/.local/src/go
 
 set -gx PATH bin $PATH
@@ -67,6 +67,8 @@ set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
+
+set -gx PATH /Users/gin/.local/src/go/bin/hello $PATH
 
 # Go
 set -gx PATH $GOPATH/bin $PATH
@@ -107,3 +109,21 @@ end
 # pnpm end
 
 starship init fish | source
+set -gx PATH '/Users/gin/.jenv/shims' $PATH
+set -gx JENV_SHELL fish
+set -gx JENV_LOADED 1
+set -e JAVA_HOME
+set -e JDK_HOME
+source '/opt/homebrew/Cellar/jenv/0.5.9/libexec/libexec/../completions/jenv.fish'
+jenv rehash 2>/dev/null
+jenv refresh-plugins
+function jenv
+    set command $argv[1]
+    set -e argv[1]
+    switch "$command"
+        case enable-plugin
+            rehash shell shell-options
+            jenv "sh-$command" $argv | source
+        case '*' command jenv "$command" $argv
+    end
+end

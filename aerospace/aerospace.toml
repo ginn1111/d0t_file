@@ -143,6 +143,11 @@ alt-7 = 'workspace 7'
 alt-8 = 'workspace 8'
 alt-9 = 'workspace 9'
 alt-0 = 'workspace 10'
+alt-b = 'workspace b'
+alt-t = 'workspace t'
+alt-s = 'workspace s'
+alt-d = 'workspace d'
+alt-i = 'workspace i'
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-node-to-workspace
 alt-shift-1 = ['move-node-to-workspace 1', 'workspace 1']
@@ -155,13 +160,18 @@ alt-shift-7 = ['move-node-to-workspace 7', 'workspace 7']
 alt-shift-8 = ['move-node-to-workspace 8', 'workspace 8']
 alt-shift-9 = ['move-node-to-workspace 9', 'workspace 9']
 alt-shift-0 = ['move-node-to-workspace 10', 'workspace 10']
+alt-shift-b = ['move-node-to-workspace b', 'workspace b']
+alt-shift-t = ['move-node-to-workspace t', 'workspace t']
+alt-shift-d = ['move-node-to-workspace d', 'workspace d']
+alt-shift-s = ['move-node-to-workspace s', 'workspace s']
+alt-shift-i = ['move-node-to-workspace i', 'workspace i']
 
 # See: https://nikitabobko.github.io/AeroSpace/commands#workspace-back-and-forth
 alt-tab = 'workspace-back-and-forth'
 # See: https://nikitabobko.github.io/AeroSpace/commands#move-workspace-to-monitor
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-alt-t = 'exec-and-forget /opt/homebrew/bin/kitty ~'
+# alt-t = 'exec-and-forget /opt/homebrew/bin/kitty ~'
 # See: https://nikitabobko.github.io/AeroSpace/commands#mode
 alt-shift-semicolon = 'mode service'
 
@@ -183,20 +193,32 @@ alt-shift-f = [ 'fullscreen', 'mode main' ]
 
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
-run = ['move-node-to-workspace 9']
+run = ['move-node-to-workspace b']
 
 [[on-window-detected]]
 if.app-id = 'org.mozilla.firefox'
-run = ['move-node-to-workspace 9']
+run = ['move-node-to-workspace b']
 
 [[on-window-detected]]
 if.app-id = 'company.thebrowser.Browser'
-run = ['move-node-to-workspace 0']
+run = ['move-node-to-workspace b']
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
-run = [ 'move-node-to-workspace 1' ]
+run = [ 'move-node-to-workspace t' ]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = ['move-node-to-workspace 4']
+
+[[on-window-detected]]
+if.app-id = 'com.figma.desktop'
+run = ['move-node-to-workspace d']
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.teams2'
+run = ['move-node-to-workspace s']
+
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = ['move-node-to-workspace i']

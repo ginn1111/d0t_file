@@ -1,3 +1,0 @@
-# This file require the AI agent to commit the changes
-
-YOU MUST JUST COMMIT THE FILES WITHOUT PUSHING THEM TO THE REMOTE REPOSITORY

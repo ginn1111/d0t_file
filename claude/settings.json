@@ -1,5 +1,8 @@
 {
-
+"statusLine": {
+  "type": "command",
+  "command": "input=$(cat); printf \"\\033[2m%s\\033[0m \\033[2m%s\\033[0m \\033[2m%s\\033[0m\" \"$(whoami)@$(hostname -s)\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\" \"$(echo \"$input\" | jq -r '.model.display_name')\""
+},
 "env": {
     "ANTHROPIC_AUTH_TOKEN": "sk-3nPaFEJBgQwFM8TG04z2c045SCo0LS2lrXVuzFPTfcGKMnZQ",
     "ANTHROPIC_BASE_URL": "https://aishopacc.com",

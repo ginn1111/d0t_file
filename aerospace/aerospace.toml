@@ -222,3 +222,16 @@ run = ['move-node-to-workspace s']
 [[on-window-detected]]
 if.app-id = 'com.todesktop.230313mzl4w4u92'
 run = ['move-node-to-workspace i']
+
+[[on-window-detected]]
+if.app-id = 'com.google.android.studio'
+run = ['move-node-to-workspace i']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.dt.Xcode '
+run = ['move-node-to-workspace i']
+
+[[on-window-detected]]
+if.app-id = 'com.apple.iphonesimulator'
+run = ['move-node-to-workspace t']
+

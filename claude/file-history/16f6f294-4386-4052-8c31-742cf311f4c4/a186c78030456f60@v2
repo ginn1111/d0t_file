@@ -1,0 +1,5 @@
+Include /Users/gin/.colima/ssh_config
+
+Host *
+  AddKeysToAgent yes
+  IdentityFile ~/.ssh/id_rsa

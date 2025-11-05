@@ -36,25 +36,25 @@ vim.api.nvim_create_autocmd("ColorScheme", {
 
 vim.g.lazyvim_prettier_needs_config = true
 
-vim.api.nvim_create_augroup("LogSitter", { clear = true })
-
-vim.api.nvim_create_autocmd("FileType", {
-  group = "LogSitter",
-  pattern = "javascript,typescript,typescriptreact,go,lua",
-  callback = function()
-    local logsitter = require("logsitter")
-
-    vim.keymap.set("n", "<leader>lg", function()
-      logsitter.log()
-    end, { desc = "LogSitter" })
-
-    -- experimental visual mode
-    vim.keymap.set("x", "<leader>lg", function()
-      logsitter.log_visual()
-    end)
-
-    vim.keymap.set("n", "<leader>lc", function()
-      logsitter.clear_buf()()
-    end)
-  end,
-})
+--vim.api.nvim_create_augroup("LogSitter", { clear = true })
+--
+--vim.api.nvim_create_autocmd("FileType", {
+--  group = "LogSitter",
+--  pattern = "javascript,typescript,typescriptreact,go,lua",
+--  callback = function()
+--    local logsitter = require("logsitter")
+--
+--    vim.keymap.set("n", "<leader>lg", function()
+--      logsitter.log()
+--    end, { desc = "LogSitter" })
+--
+--    -- experimental visual mode
+--    vim.keymap.set("x", "<leader>lg", function()
+--      logsitter.log_visual()
+--    end)
+--
+--    vim.keymap.set("n", "<leader>lc", function()
+--      logsitter.clear_buf()()
+--    end)
+--  end,
+--})

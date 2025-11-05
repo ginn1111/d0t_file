@@ -1,11 +1,5 @@
 {
-"statusLine": {
-  "type": "command",
-  "command": "input=$(cat); printf \"\\033[2m%s\\033[0m \\033[2m%s\\033[0m \\033[2m%s\\033[0m\" \"$(whoami)@$(hostname -s)\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\" \"$(echo \"$input\" | jq -r '.model.display_name')\""
-},
-"env": {
-    "ANTHROPIC_AUTH_TOKEN": "sk-3nPaFEJBgQwFM8TG04z2c045SCo0LS2lrXVuzFPTfcGKMnZQ",
-    "ANTHROPIC_BASE_URL": "https://aishopacc.com",
+  "env": {
     "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "32000",
     "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "API_TIMEOUT_MS": "600000",
@@ -39,5 +33,9 @@
       }
     ]
   },
-  "model": "sonnet"
+  "statusLine": {
+    "type": "command",
+    "command": "input=$(cat); printf \"\\033[2m%s\\033[0m \\033[2m%s\\033[0m \\033[2m%s\\033[0m\" \"$(whoami)@$(hostname -s)\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\" \"$(echo \"$input\" | jq -r '.model.display_name')\""
+  },
+  "alwaysThinkingEnabled": true
 }

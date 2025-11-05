@@ -1,7 +1,7 @@
 set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
-#set -gx TERM xterm-256color
+set -gx X_TERM xterm-256color
 set -gx TERM xterm-kitty
 
 set -gx MSSQL_SCRIPTER_CONNECTION_STRING "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
@@ -19,7 +19,6 @@ alias dp docker-compose
 alias dk docker
 alias y yarn
 alias n npm
-alias pnpm p
 alias b bun
 alias ge gemini
 alias cc claude

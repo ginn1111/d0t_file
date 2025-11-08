@@ -1,10 +1,7 @@
 
 *.pid
-claude/ide
-claude/projects
-claude/shell-snapshots
-claude/statsig
-claude/todos
+
+claude
 
 fish/functions
 fish/fish_variables

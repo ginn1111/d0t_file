@@ -23,10 +23,10 @@ vim.g["signify_sign_delete"] = "•"
 
 -- cursor
 vim.opt.guicursor =
-  "n-v-c:block,i-ci-ve:hor20,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
+  "n-v-c:block,i-ci-ve:ver20,r-cr:hor20,o:hor50,a:blinkwait700-blinkoff400-blinkon250-Cursor/lCursor,sm:block-blinkwait175-blinkoff150-blinkon175"
 
 function hiCursor()
-  vim.api.nvim_set_hl(0, "Cursor", { fg = "#cc9900", bg = "#f34a00" })
+  vim.api.nvim_set_hl(0, "Cursor", { fg = "#cc9900", bg = "#C678DD" })
   vim.api.nvim_set_hl(0, "CursorReset", { fg = "white", bg = "white" })
 end
 

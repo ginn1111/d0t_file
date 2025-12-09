@@ -8,6 +8,7 @@ return {
       log_templates = {
         default = {
           typescript = [[console.log("[%log_marker] LOG %log_target ON LINE %filename:%line_number", %log_target)]],
+          typescriptreact = [[console.log("[%log_marker] LOG %log_target ON LINE %filename:%line_number", %log_target)]],
         },
         plain = {
           typescript = [[console.log("[%log_marker] %log_target ON LINE %filename:%line_number", %log_target)]],

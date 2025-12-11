@@ -26,6 +26,6 @@ return {
         virtual_text = "italic",
       },
     })
-    vim.cmd("colorscheme onedark")
+    -- vim.cmd("colorscheme onedark")
   end,
 }

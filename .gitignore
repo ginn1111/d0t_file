@@ -1,8 +1,9 @@
 
 *.pid
 
-claude
 
+claude/
+!claude/commands
 fish/functions
 fish/fish_variables
 

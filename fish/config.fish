@@ -67,7 +67,7 @@ set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
 
-set -gx PATH /Users/gin/.local/src/go/bin/hello $PATH
+set -gx PATH //.local/src/go/bin/hello $PATH
 
 # Go
 set -gx PATH $GOPATH/bin $PATH
@@ -101,7 +101,7 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # pnpm
-set -gx PNPM_HOME /Users/gin/Library/pnpm
+set -gx PNPM_HOME /home/aioz/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end

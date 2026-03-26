@@ -205,7 +205,7 @@ run = ['move-node-to-workspace b']
 
 [[on-window-detected]]
 if.app-id = 'net.kovidgoyal.kitty'
-run = [ 'move-node-to-workspace t' ]
+run = [ 'move-node-to-workspace i' ]
 
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'

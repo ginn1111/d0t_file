@@ -2,8 +2,8 @@
 *.pid
 
 
-claude/
-!claude/commands
+claude/debug
+claude/statsig
 fish/functions
 fish/fish_variables
 
@@ -11,4 +11,4 @@ fish/fish_variables
 lazy-lock.json
 .DS_Store
 
-
+agents_tools/serena

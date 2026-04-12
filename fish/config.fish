@@ -1,11 +1,13 @@
 set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
+# get env-vars
+for line in (cat .env | grep -v '^#')
+    set -gx (string split -m 1 = $line)
+end
+
 set -gx X_TERM xterm-256color
 set -gx TERM xterm-kitty
-
-set -gx MSSQL_SCRIPTER_CONNECTION_STRING "sqlserver://localhost:1433;database=quan_ly_du_an;integratedSecurity=true;username=sa;password=Thu@n12312;trustServerCertificate=true;"
-set -gx MSSQL_SCRIPTER_PASSWORD Thu@n12312
 # theme
 set -g theme_color_scheme terminal-dark
 set -g fish_prompt_pwd_dir_length 1
@@ -14,6 +16,8 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
+alias ag agent-browser
+alias clawdock "docker compose run --rm openclaw-cli"
 alias python "python3.13"
 alias dp docker-compose
 alias dk docker
@@ -113,16 +117,26 @@ set -gx JENV_SHELL fish
 set -gx JENV_LOADED 1
 set -e JAVA_HOME
 set -e JDK_HOME
-source '/opt/homebrew/Cellar/jenv/0.5.9/libexec/libexec/../completions/jenv.fish'
-jenv rehash 2>/dev/null
-jenv refresh-plugins
-function jenv
-    set command $argv[1]
-    set -e argv[1]
-    switch "$command"
-        case enable-plugin
-            rehash shell shell-options
-            jenv "sh-$command" $argv | source
-        case '*' command jenv "$command" $argv
-    end
-end
+
+# source '/opt/homebrew/Cellar/jenv/0.5.9/libexec/libexec/../completions/jenv.fish'
+# jenv rehash 2>/dev/null
+# jenv refresh-plugins
+# function jenv
+#     set command $argv[1]
+#     set -e argv[1]
+#     switch "$command"
+#         case enable-plugin
+#             rehash shell shell-options
+#             jenv "sh-$command" $argv | source
+#         case '*' command jenv "$command" $argv
+#     end
+# end
+
+# opencode
+fish_add_path /Users/gin/.opencode/bin
+
+string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)
+
+# Added by Antigravity
+fish_add_path /Users/gin/.antigravity/antigravity/bin
+# Print an optspec for argparse to handle cmd's options that are independent of any subcommand.

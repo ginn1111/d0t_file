@@ -13,7 +13,7 @@
 ################################################################################
 
 # Primary model used by Codex. Recommended example for most users: "gpt-5.4".
-model = "gpt-5.4"
+model = "gpt-5.3-codex"
 
 # Communication style for supported models. Allowed values: none | friendly | pragmatic
 # personality = "pragmatic"
@@ -81,8 +81,8 @@ model_provider = "openai"
 # Notifications
 ################################################################################
 
-# External notifier program (argv array). When unset: disabled.
-# notify = ["notify-send", "Codex"]
+#External notifier program (argv array). When unset: disabled.
+notify = ["notify-send", "Codex"]
 
 ################################################################################
 # Approval & Sandbox
@@ -190,6 +190,9 @@ check_for_update_on_startup = true
 # If you use --yolo or another full access sandbox setting, web search defaults to live.
 web_search = "cached"
 service_tier = "fast"
+personality = "pragmatic"
+approvals_reviewer = "user"
+model_reasoning_effort = "medium"
 
 # Active profile name. When unset, no profile is applied.
 # profile = "default"
@@ -306,6 +309,9 @@ animations = true
 show_tooltips = true
 status_line = ["model-with-reasoning", "context-remaining", "current-dir", "context-used", "five-hour-limit", "weekly-limit", "context-window-size", "fast-mode"]
 
+[tui.model_availability_nux]
+"gpt-5.5" = 4
+
 # Control alternate screen usage (auto skips it in Zellij to preserve scrollback).
 # alternate_screen = "auto"
 
@@ -332,6 +338,9 @@ enabled = true
 
 # In-product notices (mostly set automatically by Codex).
 [notice]
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
 # hide_full_access_warning = true
 # hide_world_writable_warning = true
 # hide_rate_limit_model_nudge = true
@@ -344,14 +353,21 @@ enabled = true
 ################################################################################
 
 [features]
+plugin_hooks = true
 
 [mcp_servers.figma]
 url = "https://mcp.figma.com/mcp"
+enabled = false
 
-[mcp_servers.serena]
-command = "uvx"
-args = ["-p", "3.13", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--project-from-cwd", "--context", "codex"]
-startup_timeout_sec = 25.0
+[mcp_servers.chrome-devtools]
+command = "npx"
+args = ["-y", "chrome-devtools-mcp@latest"]
+enabled = false
+
+# [mcp_servers.serena]
+# command = "uvx"
+# args = ["-p", "3.13", "--from", "git+https://github.com/oraios/serena", "serena", "start-mcp-server", "--project-from-cwd", "--context", "codex"]
+# startup_timeout_sec = 25.0
 
 [mcp_servers.context7]
 command = "npx"
@@ -461,6 +477,15 @@ trust_level = "trusted"
 
 [projects."/Users/gin"]
 trust_level = "trusted"
+
+[projects."/home/aioz/workspace/aioz-global-map"]
+trust_level = "trusted"
+
+[projects."/home/aioz/personal/my-workflow"]
+trust_level = "trusted"
+
+[projects."/home/aioz/workspace/aioz-pin-proxy"]
+trust_level = "trusted"
 # Mark specific worktrees as trusted or untrusted.
 # [projects."/absolute/path/to/project"]
 # trust_level = "trusted"  # or "untrusted"
@@ -513,3 +538,8 @@ metrics_exporter = "statsig"
 [windows]
 # Native Windows sandbox mode (Windows only): unelevated | elevated
 sandbox = "unelevated"
+
+[marketplaces.claude-mem-local]
+last_updated = "2026-05-08T02:25:47Z"
+source_type = "local"
+source = "/home/aioz/tools/d0t_file/claude/plugins/marketplaces/thedotmack"

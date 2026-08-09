@@ -26,8 +26,8 @@ onboarding = false
 # red = "#ff6188"
 # green = "#a6e3a1"
 
-name = "solarized"
-auto_switch = true
+name = "one-dark"
+auto_switch = false
 light_name = "catppuccin-latte"
 dark_name = "solarized"
 

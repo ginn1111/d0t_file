@@ -1,0 +1,76 @@
+# Matrix theme aligned with configs/kitty/AlienBlood.conf
+# Install as $HERMES_HOME/skins/matrix.yaml.
+name: matrix
+description: AlienBlood palette — dark green surfaces with vivid terminal accents
+
+colors:
+  background: "#0f160f"
+  ui_accent: "#18e000"
+  banner_accent: "#18e000"
+  banner_title: "#73f990"
+  banner_text: "#637d75"
+  ui_text: "#637d75"
+  banner_dim: "#3c4711"
+  banner_border: "#2f7e25"
+  ui_border: "#2f7e25"
+  ui_ok: "#18e000"
+  ui_warn: "#bde000"
+  ui_error: "#df8008"
+  prompt: "#73f990"
+  input_rule: "#2f7e25"
+  response_border: "#18e000"
+  status_bar_bg: "#112615"
+  status_bar_text: "#637d75"
+  status_bar_good: "#18e000"
+  status_bar_warn: "#bde000"
+  status_bar_critical: "#df8008"
+  session_label: "#73f990"
+  session_border: "#2f7e25"
+  voice_status_bg: "#112615"
+  selection_bg: "#1d4025"
+  completion_menu_bg: "#112615"
+  completion_menu_current_bg: "#1d4025"
+  completion_menu_meta_bg: "#112615"
+  completion_menu_meta_current_bg: "#2f7e25"
+
+  # Diff line backgrounds stay dark; word-level text carries the bright signal.
+  diff_added: "#112615"
+  diff_removed: "#261414"
+  diff_added_word: "#73f990"
+  diff_removed_word: "#df8008"
+
+  syntax_string: "#18e000"
+  syntax_number: "#00dfc3"
+  syntax_keyword: "#00a9df"
+  syntax_comment: "#637d75"
+
+branding:
+  agent_name: Matrix Agent
+  prompt_symbol: "»"
+  help_header: "╔═ ALIENBLOOD LINK ═╗"
+
+spinner:
+  waiting_faces: ["[::]", "[::]", "[::]"]
+  thinking_faces: ["[>>]", "[<>]", "[<<]"]
+  thinking_verbs:
+    - decoding
+    - tracing the signal
+    - following the node
+    - compiling the construct
+
+tool_prefix: "»"
+
+banner_logo: |
+  [bold #73f990]███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗[/]
+  [bold #18e000]████╗ ████║██╔══██╗╚══██╔══╝██╔══██╗██║╚██╗██╔╝[/]
+  [bold #18e000]██╔████╔██║███████║   ██║   ██████╔╝██║ ╚███╔╝ [/]
+  [bold #2f7e25]██║╚██╔╝██║██╔══██║   ██║   ██╔══██╗██║ ██╔██╗ [/]
+  [bold #2f7e25]██║ ╚═╝ ██║██║  ██║   ██║   ██║  ██║██║██╔╝ ██╗[/]
+  [bold #3c4711]╚═╝     ╚═╝╚═╝  ╚═╝   ╚═╝   ╚═╝  ╚═╝╚═╝╚═╝  ╚═╝[/]
+
+banner_hero: |
+  [#2f7e25]│ 0 1 │ 1 0 │ 0 0 │ 1 1 │ 0 1 │ 1 0 │[/]
+  [#18e000]│ 1 0 │ 0 1 │ 1 1 │ 0 0 │ 1 0 │ 0 1 │[/]
+  [#73f990]│ 0 0 │ 1 1 │ 0 1 │ 1 0 │ 1 1 │ 0 0 │[/]
+  [#18e000]╰────┴────┴────┴────┴────┴────╯[/]
+  [dim #637d75]             signal acquired[/]

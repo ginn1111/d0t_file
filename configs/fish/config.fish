@@ -1,0 +1,154 @@
+set fish_greeting ""
+export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+
+# get env-vars
+for line in (cat .env | grep -v '^#')
+    set -gx (string split -m 1 = $line)
+end
+
+set -gx X_TERM xterm-256color
+set -gx TERM xterm-kitty
+# theme
+set -g theme_color_scheme terminal-dark
+set -g fish_prompt_pwd_dir_length 1
+set -g theme_display_user yes
+set -g theme_hide_hostname no
+set -g theme_hostname always
+
+# aliases
+alias ag agent-browser
+alias gintaryu "gintary --tui"
+alias ginbu "ginb --tui"
+alias clawdock "docker compose run --rm openclaw-cli"
+alias python "python3.13"
+alias dp docker-compose
+alias dk docker
+alias y yarn
+alias n npm
+alias b bun
+alias ge gemini
+alias cc claude
+alias ls "ls -p -G"
+alias la "ls -A"
+alias ll "ls -l"
+alias lla "ll -A"
+alias glo "git log --oneline"
+alias gl "git log"
+alias gp "git push"
+alias gpull "git pull"
+alias lzg lazygit
+alias g git
+alias v nvim
+alias ll "exa -l -g --icons --git"
+alias llt "exa -l --icons --tree --git-ignore"
+alias yz yazi
+alias vtt nvim1
+alias cl claude
+
+command -qv nvim && alias vim nvim
+
+set -gx ZK_NOTEBOOK_DIR ~/note-taking-system
+set -gx EDITOR nvim
+set -gx ANDROID_HOME ~/tools/android/sdk
+# set -gx JAVA_HOME /Library/Java/JavaVirtualMachines/jdk-11.jdk/Contents/Home
+set -gx GOPATH ~/.local/src/go
+
+set -gx PATH bin $PATH
+set -gx PATH ~/bin $PATH
+set -gx PATH ~/.local/bin $PATH
+set -gx PATH ~/.cargo/bin $PATH
+set -gx PATH ~/.gvm/bin $PATH
+set -gx PATH ~/Library/Python/3.11/bin $PATH
+
+# set -gx PATH $JAVA_HOME/bin $PATH
+
+set -gx PATH $ANDROID_HOME/emulator $PATH
+set -gx PATH $ANDROID_HOME/platform-tools $PATH
+set -gx PATH $ANDROID_HOME/tools $PATH
+set -gx PATH $ANDROID_HOME/tools/bin $PATH
+set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
+
+set -gx PATH $MSSQL_SCRIPTER_CONNECTION_STRING $PATH
+set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
+
+# NodeJS
+set -gx PATH node_modules/.bin $PATH
+
+set -gx PATH //.local/src/go/bin/hello $PATH
+
+# Go
+set -gx PATH $GOPATH/bin $PATH
+
+# NVM
+function __check_rvm --on-variable PWD --description 'Do nvm stuff'
+    status --is-command-substitution; and return
+
+    if test -f .nvmrc; and test -r .nvmrc
+        nvm use
+    else
+    end
+end
+
+switch (uname)
+    case Darwin
+        source (dirname (status --current-filename))/config-osx.fish
+    case Linux
+        source (dirname (status --current-filename))/config-linux.fish
+    case '*'
+        source (dirname (status --current-filename))/config-windows.fish
+end
+
+set LOCAL_CONFIG (dirname (status --current-filename))/config-local.fish
+if test -f $LOCAL_CONFIG
+    source $LOCAL_CONFIG
+end
+
+# bun
+set --export BUN_INSTALL "$HOME/.bun"
+set --export PATH $BUN_INSTALL/bin $PATH
+
+# pnpm
+set -gx PNPM_HOME /home/aioz/Library/pnpm
+if not string match -q -- $PNPM_HOME $PATH
+    set -gx PATH "$PNPM_HOME" $PATH
+end
+# pnpm end
+
+starship init fish | source
+set -gx PATH '/Users/gin/.jenv/shims' $PATH
+set -gx JENV_SHELL fish
+set -gx JENV_LOADED 1
+set -e JAVA_HOME
+set -e JDK_HOME
+
+# source '/opt/homebrew/Cellar/jenv/0.5.9/libexec/libexec/../completions/jenv.fish'
+# jenv rehash 2>/dev/null
+# jenv refresh-plugins
+# function jenv
+#     set command $argv[1]
+#     set -e argv[1]
+#     switch "$command"
+#         case enable-plugin
+#             rehash shell shell-options
+#             jenv "sh-$command" $argv | source
+#         case '*' command jenv "$command" $argv
+#     end
+# end
+
+# opencode
+fish_add_path /Users/gin/.opencode/bin
+
+# string match -q "$TERM_PROGRAM" kiro and . (kiro --locate-shell-integration-path fish)
+
+# Added by Antigravity
+fish_add_path /Users/gin/.antigravity/antigravity/bin
+# Print an optspec for argparse to handle cmd's options that are independent of any subcommand.
+
+# Hermes Agent — ensure ~/.local/bin is on PATH
+fish_add_path "$HOME/.local/bin"
+
+# Added by Antigravity CLI installer
+set -gx PATH "/Users/gin/.local/bin" $PATH
+
+# Added by Antigravity IDE
+fish_add_path /Users/gin/.antigravity-ide/antigravity-ide/bin

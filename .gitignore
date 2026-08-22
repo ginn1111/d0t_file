@@ -12,3 +12,8 @@ lazy-lock.json
 .DS_Store
 
 agents_tools/serena
+
+.obsidian/plugins/*/
+
+# Local codegraph artifacts
+.codegraph/

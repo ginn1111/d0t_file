@@ -1,5 +1,0 @@
-[plugin]
-deps = []
-
-[flavor]
-deps = [{ use = "muratoffalex/kanagawa-lotus", rev = "d84d61a" }]

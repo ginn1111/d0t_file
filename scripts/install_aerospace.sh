@@ -1,17 +1,17 @@
 #!/bin/sh
-echo "Install aerospace ..."
+printf '  → Installing aerospace dependencies\n'
 
-echo "Install dependencies ..."
+printf '  → Installing SF Pro font\n'
 
 brew install --cask font-sf-pro
 
-echo "Install dependencies done"
+printf '  ✓ SF Pro font installed\n'
 
-# borderszz
+printf '  → Installing borders\n'
 brew tap FelixKratz/formulae
 brew install borders
 
-# Aerospace
+printf '  → Installing aerospace\n'
 brew install --cask nikitabobko/tap/aerospace
 
-echo "Install aerospace done"
+printf '  ✓ Aerospace dependencies installed\n'

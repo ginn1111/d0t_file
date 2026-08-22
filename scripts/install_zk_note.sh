@@ -1,13 +1,12 @@
 #!/bin/sh
 
-# install dependencies
-echo 'Install zk dependencies ...'
+printf '  → Installing zk dependencies\n'
 
 brew install ripgrep fzf sqlite3 bat
 
-echo 'Installing zk dependencies done!'
+printf '  ✓ Zk dependencies installed\n'
 
-echo 'Checking zk environments ...'
+printf '  → Preparing note-taking directories\n'
 if [ ! -d ~/note-taking-system ]; then
   mkdir -p ~/note-taking-system
 fi
@@ -18,4 +17,4 @@ if [ -d ~/note-taking-system ]; then
   mkdir -p ~/note-taking-system/archive
   mkdir -p ~/note-taking-system/\$in
 fi
-echo 'Checking zk environments done!'
+printf '  ✓ Note-taking directories ready\n'

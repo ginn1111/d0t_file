@@ -1,0 +1,9 @@
+{
+  "theme": "system",
+  "cssTheme": "Matrix",
+  "interfaceFontFamily": "Roboto Condensed",
+  "textFontFamily": "PragmataPro Mono Liga,Apple Symbols",
+  "monospaceFontFamily": "PragmataPro Mono Liga",
+  "baseFontSize": 13,
+  "baseFontSizeAction": true
+}

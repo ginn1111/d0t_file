@@ -26,10 +26,29 @@ onboarding = false
 # red = "#ff6188"
 # green = "#a6e3a1"
 
-name = "one-dark"
+name = "vesper"
 auto_switch = false
 light_name = "catppuccin-latte"
 dark_name = "solarized"
+
+# Matrix custom theme: derived from the Yazi Matrix palette.
+[theme.custom]
+panel_bg = "#000000"
+surface0 = "#002200"
+surface1 = "#003311"
+surface_dim = "#001100"
+overlay0 = "#005522"
+overlay1 = "#008833"
+text = "#FFFFFF"
+subtext0 = "#66FFB2"
+mauve = "#39FF14"
+accent = "#00FF66"
+green = "#00CC55"
+yellow = "#FFCC00"
+red = "#FF5555"
+blue = "#66FFB2"
+teal = "#00CC55"
+peach = "#FFCC00"
 
 [terminal]
 # Executable used for new interactive panes.
@@ -131,6 +150,18 @@ type = "popup"
 command = "lazygit"
 width = "90%"
 height = "90%"
+
+[[keys.command]]
+key = "prefix+e"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.toggle"
+description = "nvim sidebar"
+
+[[keys.command]]
+key = "prefix+o"
+type = "plugin_action"
+command = "chmarax.herdr-nvim.pick-file"
+description = "open file from agent output"
 
 [[keys.command]]
 key = "prefix+cmd+r"
@@ -295,4 +326,3 @@ rows = [
   ["$summary"],
   ["workspace", "tab"],
 ]
-

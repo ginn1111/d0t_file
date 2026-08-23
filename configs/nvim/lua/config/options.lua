@@ -34,3 +34,14 @@ vim.api.nvim_create_autocmd("ColorScheme", {
   pattern = "*",
   callback = hiCursor,
 })
+-- Function to toggle background mode
+local function toggle_background()
+  if vim.o.background == "dark" then
+    vim.o.background = "light"
+  else
+    vim.o.background = "dark"
+  end
+end
+
+-- Create a user command :ToggleBg
+vim.api.nvim_create_user_command("ToggleBg", toggle_background, {})

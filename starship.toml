@@ -1,3 +1,35 @@
+format = """
+[╭─](bold bright-green)[◉](bold matrix_bright) $username$hostname $directory$git_branch$git_status
+[╰─](bold bright-green)$character """
+right_format = "$cmd_duration$time"
+palette = "matrix"
+
+[palettes.matrix]
+matrix_dim = "#267d69"
+matrix_green = "#18e000"
+matrix_bright = "#83f5c8"
+matrix_teal = "#1ad6b0"
+matrix_lime = "#bde000"
+matrix_amber = "#df8008"
+
+[character]
+success_symbol = "[➜](bold matrix_bright)"
+error_symbol = "[✗](bold matrix_amber)"
+vimcmd_symbol = "[◀](bold matrix_teal)"
+
+[hostname]
+ssh_only = false
+style = "matrix_dim"
+format = "[@$hostname]($style)"
+
+[directory]
+style = "bold matrix_teal"
+format = "[$path]($style)[$read_only]($read_only_style)"
+truncation_length = 3
+truncate_to_repo = false
+read_only = " "
+read_only_style = "matrix_amber"
+
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
 
@@ -12,6 +44,7 @@ format = '\[[$symbol($version)]($style)\]'
 
 [cmd_duration]
 format = '\[[⏱ $duration]($style)\]'
+style = "matrix_amber"
 
 [cobol]
 format = '\[[$symbol($version)]($style)\]'
@@ -57,9 +90,12 @@ format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
+symbol = " ◈ "
+style = "bold matrix_lime"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
+style = "bold matrix_amber"
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
@@ -173,10 +209,16 @@ format = '\[[$symbol($version)]($style)\]'
 format = '\[[$symbol$workspace]($style)\]'
 
 [time]
-format = '\[[$time]($style)\]'
+disabled = false
+time_format = "%H:%M"
+style = "matrix_dim"
+format = "[ $time ◇]($style)"
 
 [username]
-format = '\[[$user]($style)\]'
+style_user = "bold matrix_bright"
+style_root = "bold matrix_amber"
+show_always = true
+format = "[$user]($style)"
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'

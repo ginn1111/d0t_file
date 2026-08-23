@@ -4,8 +4,11 @@
 
 claude/debug
 claude/statsig
-fish/functions
-fish/fish_variables
+claude/hooks/
+claude/plugins/marketplaces/
+configs/fish/functions/
+configs/fish/completions/copilot.fish
+configs/fish/fish_variables
 
 *.bak
 lazy-lock.json
@@ -14,6 +17,21 @@ lazy-lock.json
 agents_tools/serena
 
 .obsidian/plugins/*/
+
+# Local application state and installed plugins
+.obsidian
+obsidian
+configs/herdr/.plugins.lock
+configs/herdr/herdr*.log
+configs/herdr/plugins.json
+configs/herdr/plugins/
+configs/herdr/release-notes.json
+configs/herdr/session*.json
+configs/obsidian/plugins/
+configs/obsidian/themes/Matrix/
+configs/tmux/plugins/tmux/
+configs/tmux/plugins/tpm/
+configs/tmux/plugins/tokyo-night-tmux/
 
 # Local codegraph artifacts
 .codegraph/

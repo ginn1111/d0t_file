@@ -2,9 +2,9 @@ set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
 
 # get env-vars
-for line in (cat .env | grep -v '^#')
-    set -gx (string split -m 1 = $line)
-end
+# for line in (cat .env | grep -v '^#')
+#     set -gx (string split -m 1 = $line)
+# end
 
 set -gx X_TERM xterm-256color
 set -gx TERM xterm-kitty
@@ -19,6 +19,8 @@ set -g theme_hostname always
 alias ag agent-browser
 alias gintaryu "gintary --tui"
 alias ginbu "ginb --tui"
+alias gindesignu "gindesign --tui"
+alias hr herdr
 alias clawdock "docker compose run --rm openclaw-cli"
 alias python "python3.13"
 alias dp docker-compose

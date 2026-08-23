@@ -1,44 +1,56 @@
 {
+  "alwaysThinkingEnabled": false,
   "env": {
-    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "32000",
-    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
     "API_TIMEOUT_MS": "600000",
     "BASH_DEFAULT_TIMEOUT_MS": "600000",
     "BASH_MAX_TIMEOUT_MS": "600000",
+    "CLAUDE_API_TIMEOUT": "600000",
+    "CLAUDE_CODE_DISABLE_NONESSENTIAL_TRAFFIC": "1",
+    "CLAUDE_CODE_MAX_OUTPUT_TOKENS": "32000",
     "MCP_TIMEOUT": "30000",
-    "MCP_TOOL_TIMEOUT": "600000",
-    "CLAUDE_API_TIMEOUT": "600000"
+    "MCP_TOOL_TIMEOUT": "600000"
+  },
+  "feedbackSurveyState": {
+    "lastShownTime": 1766507690694
   },
   "hooks": {
-    "PreToolUse": [
-      {
-        "matcher": "Read|Grep|Glob|Task",
-        "hooks": [
-          {
-            "type": "command",
-            "command": "/Users/$USER/claude-gemini-bridge/hooks/gemini-bridge.sh"
-          }
-        ]
-      }
-    ],
     "Notification": [
       {
-        "matcher": "",
         "hooks": [
           {
-            "type": "command",
-            "command": "notify-send 'Claude Code' 'Awaiting your input'"
+            "command": "notify-send 'Claude Code' 'Awaiting your input'",
+            "type": "command"
           }
-        ]
+        ],
+        "matcher": ""
+      }
+    ],
+    "PreToolUse": [
+      {
+        "hooks": [
+          {
+            "command": "/Users/$USER/claude-gemini-bridge/hooks/gemini-bridge.sh",
+            "type": "command"
+          }
+        ],
+        "matcher": "Read|Grep|Glob|Task"
+      }
+    ],
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "command": "bash '/Users/gin/.claude/hooks/herdr-agent-state.sh' session",
+            "timeout": 10,
+            "type": "command"
+          }
+        ],
+        "matcher": "*"
       }
     ]
   },
   "statusLine": {
-    "type": "command",
-    "command": "input=$(cat); printf \"\\033[2m%s\\033[0m \\033[2m%s\\033[0m \\033[2m%s\\033[0m\" \"$(whoami)@$(hostname -s)\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\" \"$(echo \"$input\" | jq -r '.model.display_name')\""
-  },
-  "alwaysThinkingEnabled": false,
-  "feedbackSurveyState": {
-    "lastShownTime": 1766507690694
+    "command": "input=$(cat); printf \"\\033[2m%s\\033[0m \\033[2m%s\\033[0m \\033[2m%s\\033[0m\" \"$(whoami)@$(hostname -s)\" \"$(basename \"$(echo \"$input\" | jq -r '.workspace.current_dir')\")\" \"$(echo \"$input\" | jq -r '.model.display_name')\"",
+    "type": "command"
   }
 }

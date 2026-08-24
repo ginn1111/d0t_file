@@ -7,21 +7,18 @@ return {
     -- Credit: glepnir
     local lualine = require("lualine")
 
--- Color table for highlights
--- stylua: ignore
-local colors = {
-  bg       = '#202328',
-  fg       = '#bbc2cf',
-  yellow   = '#ECBE7B',
-  cyan     = '#008080',
-  darkblue = '#081633',
-  green    = '#98be65',
-  orange   = '#FF8800',
-  violet   = '#a9a1e1',
-  magenta  = '#c678dd',
-  blue     = '#51afef',
-  red      = '#ec5f67',
-}
+    -- Keep the statusline in sync with the-matrix.nvim overrides.
+    -- stylua: ignore
+    local colors = {
+      bg       = "#0f160f",
+      fg       = "#83f5c8",
+      green    = "#18e000",
+      cyan     = "#1ad6b0",
+      blue     = "#00a9df",
+      lime     = "#bde000",
+      orange   = "#df8008",
+      muted    = "#5f887f",
+    }
 
     local conditions = {
       buffer_not_empty = function()
@@ -48,7 +45,7 @@ local colors = {
           -- right section. Both are highlighted by c theme .  So we
           -- are just setting default looks o statusline
           normal = { c = { fg = colors.fg, bg = colors.bg } },
-          inactive = { c = { fg = colors.fg, bg = colors.bg } },
+          inactive = { c = { fg = colors.muted, bg = colors.bg } },
         },
       },
       sections = {
@@ -86,7 +83,7 @@ local colors = {
       function()
         return "▊"
       end,
-      color = { fg = colors.blue }, -- Sets highlighting of component
+      color = { fg = colors.green }, -- Sets highlighting of component
       padding = { left = 0, right = 1 }, -- We don't need space before this
     })
 
@@ -98,26 +95,26 @@ local colors = {
       color = function()
         -- auto change color according to neovims mode
         local mode_color = {
-          n = colors.red,
-          i = colors.green,
+          n = colors.green,
+          i = colors.cyan,
           v = colors.blue,
           [""] = colors.blue,
           V = colors.blue,
-          c = colors.magenta,
-          no = colors.red,
+          c = colors.lime,
+          no = colors.green,
           s = colors.orange,
           S = colors.orange,
           [""] = colors.orange,
-          ic = colors.yellow,
-          R = colors.violet,
-          Rv = colors.violet,
-          cv = colors.red,
-          ce = colors.red,
+          ic = colors.lime,
+          R = colors.blue,
+          Rv = colors.blue,
+          cv = colors.green,
+          ce = colors.green,
           r = colors.cyan,
           rm = colors.cyan,
           ["r?"] = colors.cyan,
-          ["!"] = colors.red,
-          t = colors.red,
+          ["!"] = colors.orange,
+          t = colors.green,
         }
         return { fg = mode_color[vim.fn.mode()] }
       end,
@@ -133,21 +130,21 @@ local colors = {
     ins_left({
       "filename",
       cond = conditions.buffer_not_empty,
-      color = { fg = colors.magenta, gui = "bold" },
+      color = { fg = colors.green, gui = "bold" },
     })
 
     ins_left({ "location" })
 
-    ins_left({ "progress", color = { fg = colors.fg, gui = "bold" } })
+    ins_left({ "progress", color = { fg = colors.muted, gui = "bold" } })
 
     ins_left({
       "diagnostics",
       sources = { "nvim_diagnostic" },
       symbols = { error = " ", warn = " ", info = " " },
       diagnostics_color = {
-        error = { fg = colors.red },
-        warn = { fg = colors.yellow },
-        info = { fg = colors.cyan },
+        error = { fg = colors.orange },
+        warn = { fg = colors.lime },
+        info = { fg = colors.blue },
       },
     })
 
@@ -177,7 +174,7 @@ local colors = {
         return msg
       end,
       icon = " LSP:",
-      color = { fg = "#ffffff", gui = "bold" },
+      color = { fg = colors.cyan, gui = "bold" },
     })
 
     -- Add components to right sections
@@ -185,20 +182,20 @@ local colors = {
       "o:encoding", -- option component same as &encoding in viml
       fmt = string.upper, -- I'm not sure why it's upper case either ;)
       cond = conditions.hide_in_width,
-      color = { fg = colors.green, gui = "bold" },
+      color = { fg = colors.cyan, gui = "bold" },
     })
 
     ins_right({
       "fileformat",
       fmt = string.upper,
       icons_enabled = false, -- I think icons are cool but Eviline doesn't have them. sigh
-      color = { fg = colors.green, gui = "bold" },
+      color = { fg = colors.lime, gui = "bold" },
     })
 
     ins_right({
       "branch",
       icon = "",
-      color = { fg = colors.violet, gui = "bold" },
+      color = { fg = colors.cyan, gui = "bold" },
     })
 
     ins_right({
@@ -207,8 +204,8 @@ local colors = {
       symbols = { added = " ", modified = "󰝤 ", removed = " " },
       diff_color = {
         added = { fg = colors.green },
-        modified = { fg = colors.orange },
-        removed = { fg = colors.red },
+        modified = { fg = colors.lime },
+        removed = { fg = colors.orange },
       },
       cond = conditions.hide_in_width,
     })
@@ -217,7 +214,7 @@ local colors = {
       function()
         return "▊"
       end,
-      color = { fg = colors.blue },
+      color = { fg = colors.green },
       padding = { left = 1 },
     })
 

@@ -32,15 +32,19 @@ read_only_style = "matrix_amber"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
+symbol = " "
 
 [bun]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [c]
 format = '\[[$symbol($version(-$name))]($style)\]'
+symbol = " "
 
 [cmake]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [cmd_duration]
 format = '\[[⏱ $duration]($style)\]'
@@ -60,18 +64,23 @@ format = '\[[$symbol($version)]($style)\]'
 
 [dart]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [deno]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [docker_context]
 format = '\[[$symbol$context]($style)\]'
+symbol = " "
 
 [dotnet]
 format = '\[[$symbol($version)(🎯 $tfm)]($style)\]'
+symbol = " "
 
 [elixir]
 format = '\[[$symbol($version \(OTP $otp_version\))]($style)\]'
+symbol = " "
 
 [elm]
 format = '\[[$symbol($version)]($style)\]'
@@ -87,6 +96,7 @@ format = '\[[$symbol$branch]($style)\]'
 
 [gcloud]
 format = '\[[$symbol$account(@$domain)(\($region\))]($style)\]'
+symbol = " "
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
@@ -99,9 +109,11 @@ style = "bold matrix_amber"
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [gradle]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [guix_shell]
 format = '\[[$symbol]($style)\]'
@@ -120,18 +132,23 @@ format = '\[[$symbol$branch]($style)\]'
 
 [java]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [julia]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [kotlin]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [kubernetes]
 format = '\[[$symbol$context( \($namespace\))]($style)\]'
+symbol = "󱃾 "
 
 [lua]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [memory_usage]
 format = '\[$symbol[$ram( | $swap)]($style)\]'
@@ -147,6 +164,7 @@ format = '\[[$symbol$state( \($name\))]($style)\]'
 
 [nodejs]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [ocaml]
 format = '\[[$symbol($version)(\($switch_indicator$switch_name\))]($style)\]'
@@ -162,24 +180,28 @@ format = '\[[$symbol]($style)\]'
 
 [package]
 format = '\[[$symbol$version]($style)\]'
+symbol = "󰏗 "
 
 [perl]
 format = '\[[$symbol($version)]($style)\]'
 
 [php]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [pijul_channel]
 format = '\[[$symbol$channel]($style)\]'
 
 [pulumi]
 format = '\[[$symbol$stack]($style)\]'
+symbol = " "
 
 [purescript]
 format = '\[[$symbol($version)]($style)\]'
 
 [python]
 format = '\[[${symbol}${pyenv_prefix}(${version})(\($virtualenv\))]($style)\]'
+symbol = " "
 
 [raku]
 format = '\[[$symbol($version-$vm_version)]($style)\]'
@@ -189,12 +211,15 @@ format = '\[[$symbol($version)]($style)\]'
 
 [ruby]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [rust]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [scala]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [spack]
 format = '\[[$symbol$environment]($style)\]'
@@ -204,9 +229,11 @@ format = '\[[as $symbol]($style)\]'
 
 [swift]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [terraform]
 format = '\[[$symbol$workspace]($style)\]'
+symbol = " "
 
 [time]
 disabled = false
@@ -222,12 +249,14 @@ format = "[$user]($style)"
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [vlang]
 format = '\[[$symbol($version)]($style)\]'
 
 [zig]
 format = '\[[$symbol($version)]($style)\]'
+symbol = " "
 
 [solidity]
 format = '\[[$symbol($version)]($style)\]'

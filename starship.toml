@@ -1,31 +1,30 @@
-format = """
-[╭─](bold bright-green)[◉](bold matrix_bright) $username$hostname $directory$git_branch$git_status
-[╰─](bold bright-green)$character """
-right_format = "$cmd_duration$time"
+
+format = "(bold matrix_green)$username$hostname $directory$git_branch$git_status $character"
+right_format = "$nodejs$golang$python$rust$java$ruby$php$dotnet$elixir$haskell$kotlin$lua$swift$zig$cmd_duration$time"
 palette = "matrix"
 
 [palettes.matrix]
-matrix_dim = "#267d69"
-matrix_green = "#18e000"
-matrix_bright = "#83f5c8"
-matrix_teal = "#1ad6b0"
-matrix_lime = "#bde000"
-matrix_amber = "#df8008"
+matrix_dim = "#8FFFE0"
+matrix_green = "#39FF88"
+matrix_bright = "#E6FFF7"
+matrix_teal = "#00F5D4"
+matrix_lime = "#D7FF4F"
+matrix_amber = "#FFD166"
 
 [character]
-success_symbol = "[➜](bold matrix_bright)"
+success_symbol = "[◈](bold matrix_green)"
 error_symbol = "[✗](bold matrix_amber)"
-vimcmd_symbol = "[◀](bold matrix_teal)"
+vimcmd_symbol = "[◀](bold matrix_green)"
 
 [hostname]
 ssh_only = false
-style = "matrix_dim"
-format = "[@$hostname]($style)"
+style = "matrix_teal"
+format = "[\\[@$hostname\\]]($style)"
 
 [directory]
-style = "bold matrix_teal"
-format = "[$path]($style)[$read_only]($read_only_style)"
-truncation_length = 3
+style = "bold matrix_green"
+format = "[\\[$path\\]]($style)$read_only"
+truncation_length = 2
 truncate_to_repo = false
 read_only = " "
 read_only_style = "matrix_amber"
@@ -100,7 +99,7 @@ symbol = " "
 
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
-symbol = " ◈ "
+symbol = " "
 style = "bold matrix_lime"
 
 [git_status]
@@ -238,14 +237,14 @@ symbol = " "
 [time]
 disabled = false
 time_format = "%H:%M"
-style = "matrix_dim"
-format = "[ $time ◇]($style)"
+style = "matrix_green"
+format = "[\\[$time ◇\\]]($style)"
 
 [username]
-style_user = "bold matrix_bright"
+style_user = "bold matrix_green"
 style_root = "bold matrix_amber"
 show_always = true
-format = "[$user]($style)"
+format = "[\\[$user\\]]($style)"
 
 [vagrant]
 format = '\[[$symbol($version)]($style)\]'

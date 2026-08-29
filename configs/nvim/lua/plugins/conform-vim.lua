@@ -20,7 +20,7 @@ return {
       typescript = { "biome", "biome-organize-imports" },
       typescriptreact = { "biome", "biome-organize-imports" },
       go = { "goimports", "gofmt" },
-      rust = { "rustfmt" },
+      python = { "ruff_format" },
     },
     formatters = {
       my_formatter = {

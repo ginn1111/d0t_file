@@ -4,7 +4,7 @@ name: matrixtary
 description: Matrix-derived teal signal for the gintary profile
 
 colors:
-  background: "#0f160f"
+  background: "default"
   ui_accent: "#1ad6b0"
   banner_accent: "#1ad6b0"
   banner_title: "#83f5c8"
@@ -50,15 +50,16 @@ branding:
   help_header: "╔═ TEAL SIGNAL LINK ═╗"
 
 spinner:
-  waiting_faces: ["[::]", "[::]", "[::]"]
-  thinking_faces: ["[>>]", "[<>]", "[<<]"]
+  # Visual states: idle/waiting, then active analysis and execution.
+  waiting_faces: ["󱚟 ", "󱜙 ", "󱚣 "]
+  thinking_faces: ["󰚩 ", "󱚝 ", "󱚡 "]
   thinking_verbs:
-    - decoding
-    - tracing the signal
-    - following the node
-    - compiling the construct
+    - decoding the signal
+    - tracing the node
+    - following the construct
+    - compiling the pattern
 
-tool_prefix: "»"
+tool_prefix: "󱜙 "
 
 banner_logo: |
   [bold #83f5c8]███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗[/]

@@ -4,7 +4,7 @@ name: matrix
 description: AlienBlood palette — dark green surfaces with vivid terminal accents
 
 colors:
-  background: "#0f160f"
+  background: "default"
   ui_accent: "#18e000"
   banner_accent: "#18e000"
   banner_title: "#73f990"
@@ -50,15 +50,15 @@ branding:
   help_header: "╔═ ALIENBLOOD LINK ═╗"
 
 spinner:
-  waiting_faces: ["[::]", "[::]", "[::]"]
-  thinking_faces: ["[>>]", "[<>]", "[<<]"]
+  waiting_faces: ["󱚟 ", "󱜙 ", "󱚣 "]
+  thinking_faces: ["󰚩 ", "󱚝 ", "󱚡 "]
   thinking_verbs:
     - decoding
     - tracing the signal
     - following the node
     - compiling the construct
 
-tool_prefix: "»"
+tool_prefix: "󱜙 "
 
 banner_logo: |
   [bold #73f990]███╗   ███╗ █████╗ ████████╗██████╗ ██╗██╗  ██╗[/]

@@ -1,16 +1,17 @@
 #:schema https://yazi-rs.github.io/schemas/theme.json
 
-# Matrix palette: black surfaces with layered green accents. Warning and error
-# states intentionally retain amber/red contrast for safe interaction.
+# Matrix palette: transparent dark base with layered green accents. Ordinary
+# text uses a light muted neutral, while warning and error states retain
+# amber/red contrast for safe interaction.
 
 [app]
-overall = { bg = "#000000" }
+overall = { fg = "#C7CDD6", bg = "reset" }
 
 [mgr]
-cwd = { fg = "#00FF66", bold = true }
-find_keyword = { fg = "#00FF66", bold = true, italic = true, underline = true }
-find_position = { fg = "#66FFB2", bg = "#001100", bold = true }
-symlink_target = { fg = "#66FFB2", italic = true }
+cwd = { fg = "#00E676", bold = true }
+find_keyword = { fg = "#FFCC00", bold = true, italic = true, underline = true }
+find_position = { fg = "#8FD9B0", bg = "#001100", bold = true }
+symlink_target = { fg = "#8FD9B0", italic = true }
 
 marker_copied = { fg = "#000000", bg = "#00CC55", bold = true }
 marker_cut = { fg = "#000000", bg = "#FF5555", bold = true }
@@ -28,63 +29,63 @@ syntect_theme = ""
 
 [tabs]
 active = { fg = "#000000", bg = "#00FF66", bold = true }
-inactive = { fg = "#005522", bg = "#001100" }
+inactive = { fg = "#AAB3BF", bg = "#001100" }
 sep_inner = { open = "", close = "" }
 sep_outer = { open = "", close = "" }
 
 [mode]
 normal_main = { fg = "#000000", bg = "#00FF66", bold = true }
-normal_alt = { fg = "#00FF66", bg = "#002200" }
+normal_alt = { fg = "#00E676", bg = "#002200" }
 select_main = { fg = "#000000", bg = "#00CC55", bold = true }
-select_alt = { fg = "#00CC55", bg = "#002200" }
+select_alt = { fg = "#35B879", bg = "#002200" }
 unset_main = { fg = "#000000", bg = "#008833", bold = true }
 unset_alt = { fg = "#008833", bg = "#002200" }
 
 [indicator]
-parent = { fg = "#00CC55", bg = "#003311" }
-current = { fg = "#000000", bg = "#00FF66", bold = true }
-preview = { fg = "#00FF66", underline = true }
+parent = { fg = "#35B879", bg = "#003311" }
+current = { fg = "#002200", bg = "#008833", bold = true }
+preview = { fg = "#00E676", underline = true }
 padding = { open = "", close = "" }
 
 [status]
-overall = { fg = "#00CC55", bg = "#001100" }
+overall = { fg = "#C7CDD6", bg = "#001100" }
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
 perm_sep = { fg = "#005522" }
-perm_type = { fg = "#00FF66" }
-perm_read = { fg = "#00CC55" }
+perm_type = { fg = "#00E676" }
+perm_read = { fg = "#35B879" }
 perm_write = { fg = "#FFCC00" }
-perm_exec = { fg = "#39FF14", bold = true }
-progress_label = { fg = "#00FF66", bold = true }
-progress_normal = { fg = "#00CC55", bg = "#000000" }
+perm_exec = { fg = "#5BD47A", bold = true }
+progress_label = { fg = "#00E676", bold = true }
+progress_normal = { fg = "#AAB3BF", bg = "reset" }
 progress_error = { fg = "#FFFFFF", bg = "#AA2222", bold = true }
 
 [which]
 cols = 3
 mask = { bg = "#001100" }
-cand = { fg = "#00FF66", bold = true }
-rest = { fg = "#008833" }
-desc = { fg = "#00CC55" }
+cand = { fg = "#00E676", bold = true }
+rest = { fg = "#AAB3BF" }
+desc = { fg = "#C7CDD6" }
 separator = "  "
 separator_style = { fg = "#008833" }
 
 [confirm]
 border = { fg = "#008833" }
 title = { fg = "#FFCC00", bold = true }
-body = { fg = "#00CC55" }
-list = { fg = "#66FFB2" }
+body = { fg = "#C7CDD6" }
+list = { fg = "#8FD9B0" }
 btn_yes = { fg = "#000000", bg = "#00FF66", bold = true }
 btn_no = { fg = "#FFFFFF", bg = "#AA2222", bold = true }
-btn_labels = [ "  [Y]es  ", "  (N)o  " ]
+btn_labels = ["  [Y]es  ", "  (N)o  "]
 
 [spot]
 border = { fg = "#008833" }
-title = { fg = "#00FF66", bold = true }
-tbl_col = { fg = "#00CC55" }
+title = { fg = "#00E676", bold = true }
+tbl_col = { fg = "#35B879" }
 tbl_cell = { fg = "#000000", bg = "#00FF66", bold = true }
 
 [notify]
-title_info = { fg = "#00FF66", bold = true }
+title_info = { fg = "#00E676", bold = true }
 title_warn = { fg = "#FFCC00", bold = true }
 title_error = { fg = "#FF5555", bold = true }
 
@@ -95,8 +96,8 @@ inactive = { fg = "#005522" }
 
 [input]
 border = { fg = "#008833" }
-title = { fg = "#00FF66", bold = true }
-value = { fg = "#00CC55" }
+title = { fg = "#00E676", bold = true }
+value = { fg = "#C7CDD6" }
 selected = { fg = "#000000", bg = "#00FF66", bold = true }
 
 [cmp]
@@ -106,53 +107,53 @@ inactive = { fg = "#005522" }
 
 [tasks]
 border = { fg = "#008833" }
-title = { fg = "#00FF66", bold = true }
+title = { fg = "#00E676", bold = true }
 hovered = { fg = "#000000", bg = "#00FF66", bold = true }
 
 [help]
-on = { fg = "#00FF66", bold = true }
-run = { fg = "#66FFB2" }
-desc = { fg = "#00CC55" }
+on = { fg = "#00E676", bold = true }
+run = { fg = "#8FD9B0" }
+desc = { fg = "#C7CDD6" }
 hovered = { fg = "#000000", bg = "#00FF66", bold = true }
 footer = { fg = "#000000", bg = "#00CC55", bold = true }
 
 [icon]
 prepend_conds = [
   # Hovered folder icon (Black icon for contrast)
-  { if = "dir", text = "󰉋", fg = "#00FF66" },
+  { if = "dir", text = "󰉋", fg = "#00E676" },
   # Open folder icon (Primary Matrix Green)
-  { if = "dir", is_open = true, text = "󰝰", fg = "#00FF66" },
+  { if = "dir", is_open = true, text = "󰝰", fg = "#00E676" },
 
 ]
 
 [filetype]
 rules = [
-  # Directories: Bright Glowing Emerald Matrix Green
-  { url = "*/", fg = "#00FF66", bold = true },
+  # Directories: Soft Emerald Matrix Green
+  { url = "*/", fg = "#00E676", bold = true },
 
   # Symbolic Links: Bright Cyan/Teal (Italicized for clear pointer distinction)
-  {url="*", is_link = true, fg = "#00E5FF", italic = true },
+  { url = "*", is_link = true, fg = "#00E5FF", italic = true },
 
-  # Executables & Scripts: Neon Lime / Laser Green
-  {url="*", is_exec = true, fg = "#76FF03", bold = true },
+  # Executables & Scripts: Muted Lime Green
+  { url = "*", is_exec = true, fg = "#9ACD65", bold = true },
 
   # Broken and dummy files remain visibly destructive/error states.
   { url = "*", is = "orphan", fg = "#FF5555", bg = "#330000", bold = true },
   { url = "*", is = "dummy", fg = "#FF5555", bg = "#330000", bold = true },
 
   # Links, executables, archives, and media retain a clear hierarchy.
-  { url = "*", is = "link", fg = "#66FFB2", italic = true },
-  { url = "*", is = "exec", fg = "#39FF14", bold = true },
-  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#A3FF00", bold = true },
-  { mime = "{audio,video}/*", fg = "#00CC55" },
-  { mime = "image/*", fg = "#66FFB2" },
-  { mime = "application/{pdf,doc,rtf}", fg = "#00CC55" },
-  { mime = "text/*", fg = "#00CC55" },
+  { url = "*", is = "link", fg = "#8FD9B0", italic = true },
+  { url = "*", is = "exec", fg = "#5BD47A", bold = true },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#A6C96A", bold = true },
+  { mime = "{audio,video}/*", fg = "#AAB3BF" },
+  { mime = "image/*", fg = "#8FD9B0" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#C7CDD6" },
+  { mime = "text/*", fg = "#C7CDD6" },
 
   # Hidden-name matching is supported by the current URL matcher.
   { url = "*/.*", fg = "#005522", dim = true },
 
   # Directory and regular-file fallbacks.
-  { url = "*/", fg = "#00FF66", bold = true },
-  { url = "*", fg = "#00CC55" }
+  { url = "*/", fg = "#00E676", bold = true },
+  { url = "*", fg = "#C7CDD6" },
 ]

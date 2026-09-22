@@ -1,159 +1,158 @@
 #:schema https://yazi-rs.github.io/schemas/theme.json
 
-# Matrix palette: transparent dark base with layered green accents. Ordinary
-# text uses a light muted neutral, while warning and error states retain
-# amber/red contrast for safe interaction.
+# VS Code Dark palette: charcoal surfaces, blue navigation, and shared
+# semantic colors for status and file types.
 
 [app]
-overall = { fg = "#C7CDD6", bg = "reset" }
+overall = { fg = "#CCCCCC", bg = "reset" }
 
 [mgr]
-cwd = { fg = "#00E676", bold = true }
-find_keyword = { fg = "#FFCC00", bold = true, italic = true, underline = true }
-find_position = { fg = "#8FD9B0", bg = "#001100", bold = true }
-symlink_target = { fg = "#8FD9B0", italic = true }
+cwd = { fg = "#569CD6", bold = true }
+find_keyword = { fg = "#DCDCAA", bold = true, italic = true, underline = true }
+find_position = { fg = "#4EC9B0", bg = "#252526", bold = true }
+symlink_target = { fg = "#4EC9B0", italic = true }
 
-marker_copied = { fg = "#000000", bg = "#00CC55", bold = true }
-marker_cut = { fg = "#000000", bg = "#FF5555", bold = true }
-marker_marked = { fg = "#000000", bg = "#66FFB2", bold = true }
-marker_selected = { fg = "#000000", bg = "#00FF66", bold = true }
+marker_copied = { fg = "#000000", bg = "#23D18B", bold = true }
+marker_cut = { fg = "#000000", bg = "#F14C4C", bold = true }
+marker_marked = { fg = "#000000", bg = "#4EC9B0", bold = true }
+marker_selected = { fg = "#000000", bg = "#569CD6", bold = true }
 marker_symbol = "│"
 
-count_copied = { fg = "#000000", bg = "#00CC55", bold = true }
-count_cut = { fg = "#FFFFFF", bg = "#AA2222", bold = true }
-count_selected = { fg = "#000000", bg = "#00FF66", bold = true }
+count_copied = { fg = "#000000", bg = "#23D18B", bold = true }
+count_cut = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
+count_selected = { fg = "#000000", bg = "#569CD6", bold = true }
 
 border_symbol = "│"
-border_style = { fg = "#008833" }
+border_style = { fg = "#414140" }
 syntect_theme = ""
 
 [tabs]
-active = { fg = "#000000", bg = "#00FF66", bold = true }
-inactive = { fg = "#AAB3BF", bg = "#001100" }
+active = { fg = "#000000", bg = "#569CD6", bold = true }
+inactive = { fg = "#858585", bg = "#252526" }
 sep_inner = { open = "", close = "" }
 sep_outer = { open = "", close = "" }
 
 [mode]
-normal_main = { fg = "#000000", bg = "#00FF66", bold = true }
-normal_alt = { fg = "#00E676", bg = "#002200" }
-select_main = { fg = "#000000", bg = "#00CC55", bold = true }
-select_alt = { fg = "#35B879", bg = "#002200" }
-unset_main = { fg = "#000000", bg = "#008833", bold = true }
-unset_alt = { fg = "#008833", bg = "#002200" }
+normal_main = { fg = "#000000", bg = "#569CD6", bold = true }
+normal_alt = { fg = "#569CD6", bg = "#2D2D30" }
+select_main = { fg = "#000000", bg = "#23D18B", bold = true }
+select_alt = { fg = "#4EC9B0", bg = "#2D2D30" }
+unset_main = { fg = "#000000", bg = "#414140", bold = true }
+unset_alt = { fg = "#414140", bg = "#2D2D30" }
 
 [indicator]
-parent = { fg = "#35B879", bg = "#003311" }
-current = { fg = "#002200", bg = "#008833", bold = true }
-preview = { fg = "#00E676", underline = true }
+parent = { fg = "#4EC9B0", bg = "#3A3D41" }
+current = { fg = "#2D2D30", bg = "#414140", bold = true }
+preview = { fg = "#569CD6", underline = true }
 padding = { open = "", close = "" }
 
 [status]
-overall = { fg = "#C7CDD6", bg = "#001100" }
+overall = { fg = "#CCCCCC", bg = "#252526" }
 sep_left = { open = "", close = "" }
 sep_right = { open = "", close = "" }
-perm_sep = { fg = "#005522" }
-perm_type = { fg = "#00E676" }
-perm_read = { fg = "#35B879" }
-perm_write = { fg = "#FFCC00" }
-perm_exec = { fg = "#5BD47A", bold = true }
-progress_label = { fg = "#00E676", bold = true }
-progress_normal = { fg = "#AAB3BF", bg = "reset" }
-progress_error = { fg = "#FFFFFF", bg = "#AA2222", bold = true }
+perm_sep = { fg = "#858585" }
+perm_type = { fg = "#569CD6" }
+perm_read = { fg = "#4EC9B0" }
+perm_write = { fg = "#DCDCAA" }
+perm_exec = { fg = "#23D18B", bold = true }
+progress_label = { fg = "#569CD6", bold = true }
+progress_normal = { fg = "#858585", bg = "reset" }
+progress_error = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
 
 [which]
 cols = 3
-mask = { bg = "#001100" }
-cand = { fg = "#00E676", bold = true }
-rest = { fg = "#AAB3BF" }
-desc = { fg = "#C7CDD6" }
+mask = { bg = "#252526" }
+cand = { fg = "#569CD6", bold = true }
+rest = { fg = "#858585" }
+desc = { fg = "#CCCCCC" }
 separator = "  "
-separator_style = { fg = "#008833" }
+separator_style = { fg = "#414140" }
 
 [confirm]
-border = { fg = "#008833" }
-title = { fg = "#FFCC00", bold = true }
-body = { fg = "#C7CDD6" }
-list = { fg = "#8FD9B0" }
-btn_yes = { fg = "#000000", bg = "#00FF66", bold = true }
-btn_no = { fg = "#FFFFFF", bg = "#AA2222", bold = true }
+border = { fg = "#414140" }
+title = { fg = "#DCDCAA", bold = true }
+body = { fg = "#CCCCCC" }
+list = { fg = "#4EC9B0" }
+btn_yes = { fg = "#000000", bg = "#569CD6", bold = true }
+btn_no = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
 btn_labels = ["  [Y]es  ", "  (N)o  "]
 
 [spot]
-border = { fg = "#008833" }
-title = { fg = "#00E676", bold = true }
-tbl_col = { fg = "#35B879" }
-tbl_cell = { fg = "#000000", bg = "#00FF66", bold = true }
+border = { fg = "#414140" }
+title = { fg = "#569CD6", bold = true }
+tbl_col = { fg = "#4EC9B0" }
+tbl_cell = { fg = "#000000", bg = "#569CD6", bold = true }
 
 [notify]
-title_info = { fg = "#00E676", bold = true }
-title_warn = { fg = "#FFCC00", bold = true }
-title_error = { fg = "#FF5555", bold = true }
+title_info = { fg = "#569CD6", bold = true }
+title_warn = { fg = "#DCDCAA", bold = true }
+title_error = { fg = "#F14C4C", bold = true }
 
 [pick]
-border = { fg = "#008833" }
-active = { fg = "#000000", bg = "#00FF66", bold = true }
-inactive = { fg = "#005522" }
+border = { fg = "#414140" }
+active = { fg = "#000000", bg = "#569CD6", bold = true }
+inactive = { fg = "#858585" }
 
 [input]
-border = { fg = "#008833" }
-title = { fg = "#00E676", bold = true }
-value = { fg = "#C7CDD6" }
-selected = { fg = "#000000", bg = "#00FF66", bold = true }
+border = { fg = "#414140" }
+title = { fg = "#569CD6", bold = true }
+value = { fg = "#CCCCCC" }
+selected = { fg = "#000000", bg = "#569CD6", bold = true }
 
 [cmp]
-border = { fg = "#008833" }
-active = { fg = "#000000", bg = "#00FF66", bold = true }
-inactive = { fg = "#005522" }
+border = { fg = "#414140" }
+active = { fg = "#000000", bg = "#569CD6", bold = true }
+inactive = { fg = "#858585" }
 
 [tasks]
-border = { fg = "#008833" }
-title = { fg = "#00E676", bold = true }
-hovered = { fg = "#000000", bg = "#00FF66", bold = true }
+border = { fg = "#414140" }
+title = { fg = "#569CD6", bold = true }
+hovered = { fg = "#000000", bg = "#569CD6", bold = true }
 
 [help]
-on = { fg = "#00E676", bold = true }
-run = { fg = "#8FD9B0" }
-desc = { fg = "#C7CDD6" }
-hovered = { fg = "#000000", bg = "#00FF66", bold = true }
-footer = { fg = "#000000", bg = "#00CC55", bold = true }
+on = { fg = "#569CD6", bold = true }
+run = { fg = "#4EC9B0" }
+desc = { fg = "#CCCCCC" }
+hovered = { fg = "#000000", bg = "#569CD6", bold = true }
+footer = { fg = "#000000", bg = "#23D18B", bold = true }
 
 [icon]
 prepend_conds = [
-  # Hovered folder icon (Black icon for contrast)
-  { if = "dir", text = "󰉋", fg = "#00E676" },
-  # Open folder icon (Primary Matrix Green)
-  { if = "dir", is_open = true, text = "󰝰", fg = "#00E676" },
+  # Folder icons use VS Code blue.
+  { if = "dir", text = "󰉋", fg = "#569CD6" },
+  # Open folder icon
+  { if = "dir", is_open = true, text = "󰝰", fg = "#569CD6" },
 
 ]
 
 [filetype]
 rules = [
-  # Directories: Soft Emerald Matrix Green
-  { url = "*/", fg = "#00E676", bold = true },
+  # Directories: VS Code blue
+  { url = "*/", fg = "#569CD6", bold = true },
 
   # Symbolic Links: Bright Cyan/Teal (Italicized for clear pointer distinction)
-  { url = "*", is_link = true, fg = "#00E5FF", italic = true },
+  { url = "*", is_link = true, fg = "#4EC9B0", italic = true },
 
-  # Executables & Scripts: Muted Lime Green
-  { url = "*", is_exec = true, fg = "#9ACD65", bold = true },
+  # Executables and scripts: semantic yellow
+  { url = "*", is_exec = true, fg = "#DCDCAA", bold = true },
 
   # Broken and dummy files remain visibly destructive/error states.
-  { url = "*", is = "orphan", fg = "#FF5555", bg = "#330000", bold = true },
-  { url = "*", is = "dummy", fg = "#FF5555", bg = "#330000", bold = true },
+  { url = "*", is = "orphan", fg = "#F14C4C", bg = "#3A1F24", bold = true },
+  { url = "*", is = "dummy", fg = "#F14C4C", bg = "#3A1F24", bold = true },
 
   # Links, executables, archives, and media retain a clear hierarchy.
-  { url = "*", is = "link", fg = "#8FD9B0", italic = true },
-  { url = "*", is = "exec", fg = "#5BD47A", bold = true },
-  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#A6C96A", bold = true },
-  { mime = "{audio,video}/*", fg = "#AAB3BF" },
-  { mime = "image/*", fg = "#8FD9B0" },
-  { mime = "application/{pdf,doc,rtf}", fg = "#C7CDD6" },
-  { mime = "text/*", fg = "#C7CDD6" },
+  { url = "*", is = "link", fg = "#4EC9B0", italic = true },
+  { url = "*", is = "exec", fg = "#23D18B", bold = true },
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#C586C0", bold = true },
+  { mime = "{audio,video}/*", fg = "#858585" },
+  { mime = "image/*", fg = "#4EC9B0" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#CCCCCC" },
+  { mime = "text/*", fg = "#CCCCCC" },
 
   # Hidden-name matching is supported by the current URL matcher.
-  { url = "*/.*", fg = "#005522", dim = true },
+  { url = "*/.*", fg = "#858585", dim = true },
 
   # Directory and regular-file fallbacks.
-  { url = "*/", fg = "#00E676", bold = true },
-  { url = "*", fg = "#C7CDD6" },
+  { url = "*/", fg = "#569CD6", bold = true },
+  { url = "*", fg = "#CCCCCC" },
 ]

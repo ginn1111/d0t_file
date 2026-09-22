@@ -1,20 +1,24 @@
 {
   "main": {
-    "id": "5841daf99e4977d6",
+    "id": "696e58631575b19a",
     "type": "split",
     "children": [
       {
-        "id": "33956a6ecdf8ff8a",
+        "id": "ebb274ce6b5e241d",
         "type": "tabs",
         "children": [
           {
-            "id": "10e9c88ac1f7cbf0",
+            "id": "473985de0f3ab5b2",
             "type": "leaf",
             "state": {
-              "type": "empty",
-              "state": {},
+              "type": "markdown",
+              "state": {
+                "file": ".hermes/plans/2026-09-21_170554-editor-clip-sync-export.md",
+                "mode": "source",
+                "source": false
+              },
               "icon": "lucide-file",
-              "title": "New tab"
+              "title": "2026-09-21_170554-editor-clip-sync-export"
             }
           }
         ]
@@ -23,15 +27,15 @@
     "direction": "vertical"
   },
   "left": {
-    "id": "b13031fc724af9fa",
+    "id": "98acbbecd78ec710",
     "type": "split",
     "children": [
       {
-        "id": "02f3901699d505b3",
+        "id": "3400fbcb0df94530",
         "type": "tabs",
         "children": [
           {
-            "id": "ab4bf8fe0afbf4b1",
+            "id": "a706f895c796a536",
             "type": "leaf",
             "state": {
               "type": "file-explorer",
@@ -46,7 +50,7 @@
             }
           },
           {
-            "id": "3987a78d290b16a6",
+            "id": "fbfc4cce6df144b9",
             "type": "leaf",
             "state": {
               "type": "search",
@@ -63,7 +67,7 @@
             }
           },
           {
-            "id": "647db34148c7bb88",
+            "id": "fe376748efc6bcd7",
             "type": "leaf",
             "state": {
               "type": "bookmarks",
@@ -79,18 +83,18 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 274.5
   },
   "right": {
-    "id": "623f2b4e91fdca1f",
+    "id": "fb51c5356fea336e",
     "type": "split",
     "children": [
       {
-        "id": "11fba23d2cbe1983",
+        "id": "e48e94e6d9067412",
         "type": "tabs",
         "children": [
           {
-            "id": "822d10f9ab73e072",
+            "id": "3bba0992864c89e9",
             "type": "leaf",
             "state": {
               "type": "backlink",
@@ -108,7 +112,7 @@
             }
           },
           {
-            "id": "d4d8cf49a84768ac",
+            "id": "b5b43e07d2aa1c9d",
             "type": "leaf",
             "state": {
               "type": "outgoing-link",
@@ -121,7 +125,7 @@
             }
           },
           {
-            "id": "4b1122ebc1310e80",
+            "id": "c667b97688da6c16",
             "type": "leaf",
             "state": {
               "type": "tag",
@@ -136,7 +140,7 @@
             }
           },
           {
-            "id": "4184ea13ea1125f9",
+            "id": "c2562339ea45f49d",
             "type": "leaf",
             "state": {
               "type": "all-properties",
@@ -150,11 +154,12 @@
             }
           },
           {
-            "id": "a9f0d232a2e05570",
+            "id": "058d59b69fe9bae7",
             "type": "leaf",
             "state": {
               "type": "outline",
               "state": {
+                "file": ".hermes/plans/2026-09-21_170554-editor-clip-sync-export.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
@@ -162,13 +167,33 @@
               "icon": "lucide-list",
               "title": "Outline"
             }
+          },
+          {
+            "id": "542e98de26be1c49",
+            "type": "leaf",
+            "state": {
+              "type": "quiet-outline",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "quiet-outline"
+            }
+          },
+          {
+            "id": "de4132677d04e30f",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "lucide-ghost",
+              "title": "git-view"
+            }
           }
-        ]
+        ],
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -178,14 +203,60 @@
       "daily-notes:Open today's daily note": false,
       "templates:Insert template": false,
       "command-palette:Open command palette": false,
-      "bases:Create new base": false
+      "bases:Create new base": false,
+      "obsidian-git:Open Git source control": false,
+      "omnisearch:Omnisearch": false,
+      "iconic:Open rulebook": false
     }
   },
-  "active": "10e9c88ac1f7cbf0",
+  "active": "473985de0f3ab5b2",
   "lastOpenFiles": [
-    "scripts/link_obsidian.sh",
-    "claude/ide/36982.lock",
-    "claude/ide",
-    "configs/fish/completions/copilot.fish"
+    ".git/index.lock",
+    ".git/modules/mediamtx/index.lock",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/770b968a-78c7-49a8-a2b6-b68665eca2ec",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/f58d8f9d-f60a-4ae0-9f91-2c010b1567e4",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/9560fb01-a3bf-4dc7-9947-1760bdd3cf3b",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/bb38bbe4-0934-4f7e-9240-d8b9ff294eb4",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/099c9c0e-61d8-4bc2-b894-ec32ca91e163",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/537b3eae-9c79-4ea6-b283-60f99c02c0f0",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/16dac4a4-874f-473c-83a5-a10ebdce1ee6",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/78e96655-484d-4436-ae57-f98d57be196b",
+    "static/media/highlight/chunk/2712c676-e3b7-4759-a768-94635d039e59/b586778c-645b-4f99-88ee-42c222c9cffa",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_289.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_288.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_287.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_286.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_285.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_284.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_283.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_282.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_281.jpg",
+    "static/media/highlight/thumbnail/5245f644-446a-4161-97dc-30b13cd6ca9e/30/thumbnail_280.jpg",
+    ".worktree/hold/docs/LINTING.md",
+    ".worktree/hold/README.md",
+    "docs/TOKEN_KEYS.md",
+    "docs/SECURITY_CONTROLS.md",
+    "docs/SDK_RELEASE.md",
+    "docs/DEPLOYMENT.md",
+    "SOURCE_STRUCTURE.md",
+    ".hermes/plans/EDITOR-ASSET-2.md",
+    ".hermes/plans/2026-09-21_170554-editor-clip-sync-export.md",
+    ".hermes/plans/2026-09-18_120000-editor-clip-multipart-assets.md",
+    ".hermes/plans/STREAM-1-highlight-upload-speed-test.md",
+    ".hermes/plans/2026-09-16_134941-delete-editor-clip-asset.md",
+    ".hermes/plans/2026-09-16_115745-semantic-timeline-asset-tracks.md",
+    ".hermes/plans/2026-09-16_095812-editor-clip-asset-upload.md",
+    ".hermes/plans/2026-09-14_151741-transition-client-id-resolution.md",
+    ".hermes/plans/2026-09-14_134609-move-editor-clip-save-orchestration.md",
+    ".hermes/plans/2026-09-14_000000-batch-nested-track-mutation.md",
+    ".hermes/plans/2026-09-11_160944-track-item-order.md",
+    ".hermes/plans/2026-09-11_160901-delete-track-item-transition.md",
+    ".hermes/plans/2026-09-11_000001-editor-clip-track-item-revision-followup.md",
+    ".hermes/plans/2026-09-11_000000-track-item-create-response-revision.md",
+    ".hermes/plans/2026-09-11_000000-track-item-collection-post-routes.md",
+    ".hermes/plans/2026-09-11_000000-patch-track-item-partial-update.md",
+    ".hermes/plans/2026-09-10_091706-editor-track-add-delete.md",
+    ".hermes/plans/2026-09-10_000000-track-item.md",
+    "Untitled.canvas"
   ]
 }

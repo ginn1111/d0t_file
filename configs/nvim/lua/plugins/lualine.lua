@@ -7,17 +7,17 @@ return {
     -- Credit: glepnir
     local lualine = require("lualine")
 
-    -- Keep the statusline in sync with the-matrix.nvim overrides.
+    -- Keep statusline in sync with VS Code Dark.
     -- stylua: ignore
     local colors = {
-      bg       = "#0f160f",
-      fg       = "#83f5c8",
-      green    = "#18e000",
-      cyan     = "#1ad6b0",
-      blue     = "#00a9df",
-      lime     = "#bde000",
-      orange   = "#df8008",
-      muted    = "#5f887f",
+      bg       = "#1e1e1e",
+      fg       = "#cccccc",
+      green    = "#6a9955",
+      cyan     = "#4ec9b0",
+      blue     = "#569cd6",
+      lime     = "#dcdcaa",
+      orange   = "#ce9178",
+      muted    = "#858585",
     }
 
     local conditions = {

@@ -1,33 +1,35 @@
 
-format = "(bold matrix_green)$username$hostname $directory$git_branch$git_status $character"
+format = "$username$hostname $directory$git_branch$git_status $character"
 right_format = "$nodejs$golang$python$rust$java$ruby$php$dotnet$elixir$haskell$kotlin$lua$swift$zig$cmd_duration$time"
-palette = "matrix"
+palette = "vscode"
 
-[palettes.matrix]
-matrix_dim = "#8FFFE0"
-matrix_green = "#39FF88"
-matrix_bright = "#E6FFF7"
-matrix_teal = "#00F5D4"
-matrix_lime = "#D7FF4F"
-matrix_amber = "#FFD166"
+[palettes.vscode]
+vscode_muted = "#858585"
+vscode_text = "#CCCCCC"
+vscode_blue = "#569CD6"
+vscode_cyan = "#4EC9B0"
+vscode_green = "#23D18B"
+vscode_yellow = "#DCDCAA"
+vscode_orange = "#CE9178"
+vscode_red = "#F14C4C"
 
 [character]
-success_symbol = "[◈](bold matrix_green)"
-error_symbol = "[✗](bold matrix_amber)"
-vimcmd_symbol = "[◀](bold matrix_green)"
+success_symbol = "[◈](bold vscode_green)"
+error_symbol = "[✗](bold vscode_red)"
+vimcmd_symbol = "[◀](bold vscode_green)"
 
 [hostname]
 ssh_only = false
-style = "matrix_teal"
+style = "vscode_cyan"
 format = "[\\[@$hostname\\]]($style)"
 
 [directory]
-style = "bold matrix_green"
+style = "bold vscode_blue"
 format = "[\\[$path\\]]($style)$read_only"
 truncation_length = 2
 truncate_to_repo = false
 read_only = " "
-read_only_style = "matrix_amber"
+read_only_style = "vscode_red"
 
 [aws]
 format = '\[[$symbol($profile)(\($region\))(\[$duration\])]($style)\]'
@@ -47,7 +49,7 @@ symbol = " "
 
 [cmd_duration]
 format = '\[[⏱ $duration]($style)\]'
-style = "matrix_amber"
+style = "vscode_yellow"
 
 [cobol]
 format = '\[[$symbol($version)]($style)\]'
@@ -100,11 +102,11 @@ symbol = " "
 [git_branch]
 format = '\[[$symbol$branch]($style)\]'
 symbol = " "
-style = "bold matrix_lime"
+style = "bold vscode_yellow"
 
 [git_status]
 format = '([\[$all_status$ahead_behind\]]($style))'
-style = "bold matrix_amber"
+style = "bold vscode_orange"
 
 [golang]
 format = '\[[$symbol($version)]($style)\]'
@@ -237,12 +239,12 @@ symbol = " "
 [time]
 disabled = false
 time_format = "%H:%M"
-style = "matrix_green"
+style = "vscode_muted"
 format = "[\\[$time ◇\\]]($style)"
 
 [username]
-style_user = "bold matrix_green"
-style_root = "bold matrix_amber"
+style_user = "bold vscode_blue"
+style_root = "bold vscode_red"
 show_always = true
 format = "[\\[$user\\]]($style)"
 

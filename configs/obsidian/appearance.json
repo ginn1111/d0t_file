@@ -1,9 +1,9 @@
 {
-  "theme": "system",
-  "cssTheme": "Matrix",
+  "theme": "obsidian",
+  "cssTheme": "VSCode Dark Modern",
   "interfaceFontFamily": "Roboto Condensed",
-  "textFontFamily": "PragmataPro Mono Liga,Apple Symbols",
-  "monospaceFontFamily": "PragmataPro Mono Liga",
-  "baseFontSize": 15,
+  "textFontFamily": "Hack Nerd Font Propo",
+  "monospaceFontFamily": "Hack Nerd Font",
+  "baseFontSize": 22,
   "baseFontSizeAction": true
 }

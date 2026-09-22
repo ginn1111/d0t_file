@@ -50,6 +50,6 @@ return {
     }
   end,
   config = function()
-    vim.cmd.colorscheme("thematrix")
+    --vim.cmd.colorscheme("thematrix")
   end,
 }

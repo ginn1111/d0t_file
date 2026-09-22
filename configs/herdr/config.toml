@@ -29,26 +29,26 @@ onboarding = false
 name = "vesper"
 auto_switch = false
 light_name = "catppuccin-latte"
-dark_name = "solarized"
+dark_name = "vesper"
 
-# Matrix custom theme: derived from the Yazi Matrix palette.
+# VS Code Dark-inspired palette.
 [theme.custom]
-panel_bg = "#000000"
-surface0 = "#002200"
-surface1 = "#003311"
-surface_dim = "#001100"
-overlay0 = "#005522"
-overlay1 = "#008833"
-text = "#FFFFFF"
-subtext0 = "#66FFB2"
-mauve = "#39FF14"
-accent = "#00FF66"
-green = "#00CC55"
-yellow = "#FFCC00"
-red = "#FF5555"
-blue = "#66FFB2"
-teal = "#00CC55"
-peach = "#FFCC00"
+panel_bg = "#1e1e1e"
+surface0 = "#252526"
+surface1 = "#2d2d30"
+surface_dim = "#181818"
+overlay0 = "#3a3d41"
+overlay1 = "#4f4f4f"
+text = "#cccccc"
+subtext0 = "#9d9d9d"
+mauve = "#c586c0"
+accent = "#569cd6"
+green = "#6a9955"
+yellow = "#dcdcaa"
+red = "#f14c4c"
+blue = "#569cd6"
+teal = "#4ec9b0"
+peach = "#ce9178"
 
 [terminal]
 # Executable used for new interactive panes.

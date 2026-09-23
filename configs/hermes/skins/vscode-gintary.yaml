@@ -1,0 +1,64 @@
+name: vscode-gintary
+description: VS Code Dark coordinator skin for Gintary
+
+colors:
+  background: "#1E1E1E"
+  ui_accent: "#569CD6"
+  ui_label: "#4EC9B0"
+  banner_accent: "#4EC9B0"
+  banner_title: "#569CD6"
+  banner_text: "#CCCCCC"
+  banner_dim: "#858585"
+  banner_border: "#414140"
+  ui_text: "#CCCCCC"
+  ui_border: "#414140"
+  ui_ok: "#23D18B"
+  ui_warn: "#DCDCAA"
+  ui_error: "#F14C4C"
+  prompt: "#569CD6"
+  input_rule: "#414140"
+  response_border: "#569CD6"
+  status_bar_bg: "#252526"
+  status_bar_text: "#CCCCCC"
+  status_bar_strong: "#569CD6"
+  status_bar_dim: "#858585"
+  status_bar_good: "#23D18B"
+  status_bar_warn: "#DCDCAA"
+  status_bar_bad: "#CE9178"
+  status_bar_critical: "#F14C4C"
+  session_label: "#569CD6"
+  session_border: "#414140"
+  shell_dollar: "#4EC9B0"
+  voice_status_bg: "#252526"
+  selection_bg: "#264F78"
+  completion_menu_bg: "#252526"
+  completion_menu_current_bg: "#264F78"
+  completion_menu_meta_bg: "#2D2D30"
+  completion_menu_meta_current_bg: "#3A3D41"
+  diff_added: "#1E2E24"
+  diff_removed: "#3A1F24"
+  diff_added_word: "#23D18B"
+  diff_removed_word: "#F14C4C"
+  syntax_string: "#CE9178"
+  syntax_number: "#B5CEA8"
+  syntax_keyword: "#C586C0"
+  syntax_comment: "#6A9955"
+
+branding:
+  agent_name: Gintary
+  response_label: " ◇ Gintary "
+  prompt_symbol: "◇"
+  help_header: "◇ Gintary Command Palette"
+  welcome: "Gintary coordinator ready. Type /help for commands."
+  goodbye: "Gintary offline."
+
+spinner:
+  waiting_faces: ["◇", "◈", "◆"]
+  thinking_faces: ["◇", "◈", "◆"]
+  thinking_verbs:
+    - coordinating
+    - reviewing context
+    - resolving dependencies
+    - preparing decision
+
+tool_prefix: "│"

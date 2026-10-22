@@ -1,0 +1,74 @@
+# Solarized Osaka skin for gintary (coordinator, blue accent).
+# Palette: configs/theme/solarized-osaka.palette
+name: solarized-osaka-gintary
+description: Solarized Osaka coordinator skin for Gintary
+
+colors:
+  background: "#001419"
+  ui_accent: "#268bd3"
+  ui_label: "#29a298"
+  banner_accent: "#29a298"
+  banner_title: "#268bd3"
+  banner_text: "#9eabac"
+  banner_dim: "#576d74"
+  banner_border: "#063540"
+  ui_text: "#9eabac"
+  ui_border: "#063540"
+  ui_ok: "#849900"
+  ui_warn: "#b28500"
+  ui_error: "#db302d"
+  prompt: "#268bd3"
+  input_rule: "#063540"
+  response_border: "#268bd3"
+  status_bar_bg: "#002c38"
+  status_bar_text: "#9eabac"
+  status_bar_strong: "#268bd3"
+  status_bar_dim: "#576d74"
+  status_bar_good: "#849900"
+  status_bar_warn: "#b28500"
+  status_bar_bad: "#c94c16"
+  status_bar_critical: "#db302d"
+  session_label: "#268bd3"
+  session_border: "#063540"
+  shell_dollar: "#29a298"
+  voice_status_bg: "#002c38"
+  selection_bg: "#063540"
+  completion_menu_bg: "#002c38"
+  completion_menu_current_bg: "#1a6397"
+  completion_menu_meta_bg: "#063540"
+  completion_menu_meta_current_bg: "#0f3856"
+  diff_added: "#103a3c"
+  diff_removed: "#380605"
+  diff_added_word: "#849900"
+  diff_removed_word: "#db302d"
+  syntax_string: "#29a298"
+  syntax_number: "#c94c16"
+  syntax_keyword: "#849900"
+  syntax_comment: "#576d74"
+
+branding:
+  agent_name: Gintary
+  response_label: " ◇ Gintary "
+  prompt_symbol: "◇"
+  help_header: "◇ Gintary Command Palette"
+  welcome: "Gintary coordinator ready. Type /help for commands."
+  goodbye: "Gintary offline."
+
+spinner:
+  waiting_faces: ["◇", "◈", "◆"]
+  thinking_faces: ["◇", "◈", "◆"]
+  thinking_verbs:
+    - coordinating
+    - reviewing context
+    - resolving dependencies
+    - preparing decision
+
+tool_prefix: "│"
+
+banner_logo: |
+  [bold #46acf5] ██████╗ ██╗███╗   ██╗████████╗ █████╗ ██████╗ ██╗   ██╗[/]
+  [bold #268bd3]██╔════╝ ██║████╗  ██║╚══██╔══╝██╔══██╗██╔══██╗╚██╗ ██╔╝[/]
+  [bold #268bd3]██║  ███╗██║██╔██╗ ██║   ██║   ███████║██████╔╝ ╚████╔╝ [/]
+  [bold #1a6397]██║   ██║██║██║╚██╗██║   ██║   ██╔══██║██╔══██╗  ╚██╔╝  [/]
+  [bold #1a6397]╚██████╔╝██║██║ ╚████║   ██║   ██║  ██║██║  ██║   ██║   [/]
+  [#576d74] ╚═════╝ ╚═╝╚═╝  ╚═══╝   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═╝   ╚═╝   [/]

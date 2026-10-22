@@ -1,0 +1,29 @@
+# Solarized Osaka (dark) — resolved from craftzdog/solarized-osaka.nvim @ a21176e
+# via: nvim --headless -c 'lua ... require("solarized-osaka.colors").setup() ...'
+# Format: <name> <hex> <nvim source>. Every hex in themed configs must appear here.
+bg          #001419  base04 / Normal bg
+surface     #002c38  base03 / StatusLine, CursorLine
+border      #063540  base02 / WinSeparator, Visual
+dim         #576d74  base01 / Comment
+subtle      #637981  base00
+fg          #839395  fg
+text        #9eabac  base0 / Normal fg
+text_bright #adb7b7  base1
+text_light  #fdf5e2  base3
+yellow      #b28500  yellow500 / Type, warning
+orange      #c94c16  orange500 / Special
+red         #db302d  red500 / error
+magenta     #d23681  magenta500
+violet      #6d71c4  violet500 / todo
+blue        #268bd3  blue500 / Function, info
+cyan        #29a298  cyan500 / String, hint
+green       #849900  green500 / Keyword
+blue300     #46acf5  blue300
+blue700     #1a6397  blue700
+blue900     #0f3856  blue900
+cyan900     #103a3c  cyan900 / DiffAdd
+red950      #380605  red950 / DiffDelete
+green300    #b7f900  green300
+red300      #f55350  red300
+yellow700   #664c00  yellow700
+white       #ffffff  upstream kitty active_tab_foreground

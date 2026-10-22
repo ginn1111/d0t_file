@@ -1,158 +1,157 @@
 #:schema https://yazi-rs.github.io/schemas/theme.json
 
-# VS Code Dark palette: charcoal surfaces, blue navigation, and shared
-# semantic colors for status and file types.
+# Solarized Osaka palette (configs/theme/solarized-osaka.palette), derived
+# from craftzdog/solarized-osaka.nvim. Structure uses yazi 26 keys.
 
 [app]
-overall = { fg = "#CCCCCC", bg = "reset" }
+overall = { fg = "#9eabac", bg = "reset" }
 
 [mgr]
-cwd = { fg = "#569CD6", bold = true }
-find_keyword = { fg = "#DCDCAA", bold = true, italic = true, underline = true }
-find_position = { fg = "#4EC9B0", bg = "#252526", bold = true }
-symlink_target = { fg = "#4EC9B0", italic = true }
+cwd = { fg = "#268bd3", bold = true }
+find_keyword = { fg = "#b28500", bold = true, italic = true, underline = true }
+find_position = { fg = "#29a298", bg = "#002c38", bold = true }
+symlink_target = { fg = "#29a298", italic = true }
 
-marker_copied = { fg = "#000000", bg = "#23D18B", bold = true }
-marker_cut = { fg = "#000000", bg = "#F14C4C", bold = true }
-marker_marked = { fg = "#000000", bg = "#4EC9B0", bold = true }
-marker_selected = { fg = "#000000", bg = "#569CD6", bold = true }
+marker_copied = { fg = "#001419", bg = "#849900", bold = true }
+marker_cut = { fg = "#001419", bg = "#db302d", bold = true }
+marker_marked = { fg = "#001419", bg = "#d23681", bold = true }
+marker_selected = { fg = "#001419", bg = "#268bd3", bold = true }
 marker_symbol = "│"
 
-count_copied = { fg = "#000000", bg = "#23D18B", bold = true }
-count_cut = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
-count_selected = { fg = "#000000", bg = "#569CD6", bold = true }
+count_copied = { fg = "#001419", bg = "#849900", bold = true }
+count_cut = { fg = "#fdf5e2", bg = "#db302d", bold = true }
+count_selected = { fg = "#001419", bg = "#268bd3", bold = true }
 
 border_symbol = "│"
-border_style = { fg = "#414140" }
+border_style = { fg = "#063540" }
 syntect_theme = ""
 
 [tabs]
-active = { fg = "#000000", bg = "#569CD6", bold = true }
-inactive = { fg = "#858585", bg = "#252526" }
-sep_inner = { open = "", close = "" }
-sep_outer = { open = "", close = "" }
+active = { fg = "#001419", bg = "#268bd3", bold = true }
+inactive = { fg = "#576d74", bg = "#002c38" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
 
 [mode]
-normal_main = { fg = "#000000", bg = "#569CD6", bold = true }
-normal_alt = { fg = "#569CD6", bg = "#2D2D30" }
-select_main = { fg = "#000000", bg = "#23D18B", bold = true }
-select_alt = { fg = "#4EC9B0", bg = "#2D2D30" }
-unset_main = { fg = "#000000", bg = "#414140", bold = true }
-unset_alt = { fg = "#414140", bg = "#2D2D30" }
+normal_main = { fg = "#001419", bg = "#268bd3", bold = true }
+normal_alt = { fg = "#268bd3", bg = "#063540" }
+select_main = { fg = "#001419", bg = "#d23681", bold = true }
+select_alt = { fg = "#d23681", bg = "#063540" }
+unset_main = { fg = "#001419", bg = "#6d71c4", bold = true }
+unset_alt = { fg = "#6d71c4", bg = "#063540" }
 
 [indicator]
-parent = { fg = "#4EC9B0", bg = "#3A3D41" }
-current = { fg = "#2D2D30", bg = "#414140", bold = true }
-preview = { fg = "#569CD6", underline = true }
-padding = { open = "", close = "" }
+parent = { fg = "#29a298", bg = "#063540" }
+current = { fg = "#adb7b7", bg = "#063540", bold = true }
+preview = { fg = "#268bd3", underline = true }
+padding = { open = "", close = "" }
 
 [status]
-overall = { fg = "#CCCCCC", bg = "#252526" }
-sep_left = { open = "", close = "" }
-sep_right = { open = "", close = "" }
-perm_sep = { fg = "#858585" }
-perm_type = { fg = "#569CD6" }
-perm_read = { fg = "#4EC9B0" }
-perm_write = { fg = "#DCDCAA" }
-perm_exec = { fg = "#23D18B", bold = true }
-progress_label = { fg = "#569CD6", bold = true }
-progress_normal = { fg = "#858585", bg = "reset" }
-progress_error = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
+overall = { fg = "#9eabac", bg = "#002c38" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_sep = { fg = "#576d74" }
+perm_type = { fg = "#268bd3" }
+perm_read = { fg = "#b28500" }
+perm_write = { fg = "#db302d" }
+perm_exec = { fg = "#849900", bold = true }
+progress_label = { fg = "#268bd3", bold = true }
+progress_normal = { fg = "#576d74", bg = "reset" }
+progress_error = { fg = "#fdf5e2", bg = "#db302d", bold = true }
 
 [which]
 cols = 3
-mask = { bg = "#252526" }
-cand = { fg = "#569CD6", bold = true }
-rest = { fg = "#858585" }
-desc = { fg = "#CCCCCC" }
-separator = "  "
-separator_style = { fg = "#414140" }
+mask = { bg = "#002c38" }
+cand = { fg = "#29a298", bold = true }
+rest = { fg = "#576d74" }
+desc = { fg = "#9eabac" }
+separator = "  "
+separator_style = { fg = "#063540" }
 
 [confirm]
-border = { fg = "#414140" }
-title = { fg = "#DCDCAA", bold = true }
-body = { fg = "#CCCCCC" }
-list = { fg = "#4EC9B0" }
-btn_yes = { fg = "#000000", bg = "#569CD6", bold = true }
-btn_no = { fg = "#FFFFFF", bg = "#A1262F", bold = true }
+border = { fg = "#46acf5" }
+title = { fg = "#b28500", bold = true }
+body = { fg = "#9eabac" }
+list = { fg = "#29a298" }
+btn_yes = { fg = "#001419", bg = "#268bd3", bold = true }
+btn_no = { fg = "#fdf5e2", bg = "#db302d", bold = true }
 btn_labels = ["  [Y]es  ", "  (N)o  "]
 
 [spot]
-border = { fg = "#414140" }
-title = { fg = "#569CD6", bold = true }
-tbl_col = { fg = "#4EC9B0" }
-tbl_cell = { fg = "#000000", bg = "#569CD6", bold = true }
+border = { fg = "#063540" }
+title = { fg = "#268bd3", bold = true }
+tbl_col = { fg = "#29a298" }
+tbl_cell = { fg = "#001419", bg = "#268bd3", bold = true }
 
 [notify]
-title_info = { fg = "#569CD6", bold = true }
-title_warn = { fg = "#DCDCAA", bold = true }
-title_error = { fg = "#F14C4C", bold = true }
+title_info = { fg = "#268bd3", bold = true }
+title_warn = { fg = "#b28500", bold = true }
+title_error = { fg = "#db302d", bold = true }
 
 [pick]
-border = { fg = "#414140" }
-active = { fg = "#000000", bg = "#569CD6", bold = true }
-inactive = { fg = "#858585" }
+border = { fg = "#063540" }
+active = { fg = "#9eabac", bg = "#1a6397", bold = true }
+inactive = { fg = "#576d74" }
 
 [input]
-border = { fg = "#414140" }
-title = { fg = "#569CD6", bold = true }
-value = { fg = "#CCCCCC" }
-selected = { fg = "#000000", bg = "#569CD6", bold = true }
+border = { fg = "#46acf5" }
+title = { fg = "#46acf5", bold = true }
+value = { fg = "#9eabac" }
+selected = { fg = "#9eabac", bg = "#1a6397", bold = true }
 
 [cmp]
-border = { fg = "#414140" }
-active = { fg = "#000000", bg = "#569CD6", bold = true }
-inactive = { fg = "#858585" }
+border = { fg = "#46acf5" }
+active = { fg = "#9eabac", bg = "#1a6397", bold = true }
+inactive = { fg = "#576d74" }
 
 [tasks]
-border = { fg = "#414140" }
-title = { fg = "#569CD6", bold = true }
-hovered = { fg = "#000000", bg = "#569CD6", bold = true }
+border = { fg = "#063540" }
+title = { fg = "#268bd3", bold = true }
+hovered = { fg = "#9eabac", bg = "#1a6397", bold = true }
 
 [help]
-on = { fg = "#569CD6", bold = true }
-run = { fg = "#4EC9B0" }
-desc = { fg = "#CCCCCC" }
-hovered = { fg = "#000000", bg = "#569CD6", bold = true }
-footer = { fg = "#000000", bg = "#23D18B", bold = true }
+on = { fg = "#849900", bold = true }
+run = { fg = "#d23681" }
+desc = { fg = "#9eabac" }
+hovered = { fg = "#adb7b7", bg = "#002c38", bold = true }
+footer = { fg = "#001419", bg = "#29a298", bold = true }
 
 [icon]
 prepend_conds = [
-  # Folder icons use VS Code blue.
-  { if = "dir", text = "󰉋", fg = "#569CD6" },
+  # Folder icons use Osaka blue.
+  { if = "dir", text = "󰉋", fg = "#268bd3" },
   # Open folder icon
-  { if = "dir", is_open = true, text = "󰝰", fg = "#569CD6" },
-
+  { if = "dir", is_open = true, text = "󰝰", fg = "#268bd3" },
 ]
 
 [filetype]
 rules = [
-  # Directories: VS Code blue
-  { url = "*/", fg = "#569CD6", bold = true },
+  # Directories: blue (nvim Directory/Function)
+  { url = "*/", fg = "#268bd3", bold = true },
 
-  # Symbolic Links: Bright Cyan/Teal (Italicized for clear pointer distinction)
-  { url = "*", is_link = true, fg = "#4EC9B0", italic = true },
+  # Symbolic links: cyan, italic
+  { url = "*", is_link = true, fg = "#29a298", italic = true },
 
-  # Executables and scripts: semantic yellow
-  { url = "*", is_exec = true, fg = "#DCDCAA", bold = true },
+  # Executables: green (upstream Osaka yazi)
+  { url = "*", is_exec = true, fg = "#849900", bold = true },
 
-  # Broken and dummy files remain visibly destructive/error states.
-  { url = "*", is = "orphan", fg = "#F14C4C", bg = "#3A1F24", bold = true },
-  { url = "*", is = "dummy", fg = "#F14C4C", bg = "#3A1F24", bold = true },
+  # Broken and dummy files: error red on DiffDelete bg
+  { url = "*", is = "orphan", fg = "#db302d", bg = "#380605", bold = true },
+  { url = "*", is = "dummy", fg = "#db302d", bg = "#380605", bold = true },
 
-  # Links, executables, archives, and media retain a clear hierarchy.
-  { url = "*", is = "link", fg = "#4EC9B0", italic = true },
-  { url = "*", is = "exec", fg = "#23D18B", bold = true },
-  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#C586C0", bold = true },
-  { mime = "{audio,video}/*", fg = "#858585" },
-  { mime = "image/*", fg = "#4EC9B0" },
-  { mime = "application/{pdf,doc,rtf}", fg = "#CCCCCC" },
-  { mime = "text/*", fg = "#CCCCCC" },
+  { url = "*", is = "link", fg = "#29a298", italic = true },
+  { url = "*", is = "exec", fg = "#849900", bold = true },
+  # Archives: orange (not red, so archives do not look like errors)
+  { mime = "application/{zip,rar,7z*,tar,gzip,xz,zstd,bzip*,lzma,compress,archive,cpio,arj,xar,ms-cab*}", fg = "#c94c16", bold = true },
+  { mime = "{audio,video}/*", fg = "#d23681" },
+  { mime = "image/*", fg = "#b28500" },
+  { mime = "application/{pdf,doc,rtf}", fg = "#29a298" },
+  { mime = "text/*", fg = "#9eabac" },
 
-  # Hidden-name matching is supported by the current URL matcher.
-  { url = "*/.*", fg = "#858585", dim = true },
+  # Hidden files: comment gray
+  { url = "*/.*", fg = "#576d74", dim = true },
 
-  # Directory and regular-file fallbacks.
-  { url = "*/", fg = "#569CD6", bold = true },
-  { url = "*", fg = "#CCCCCC" },
+  # Fallbacks
+  { url = "*/", fg = "#268bd3", bold = true },
+  { url = "*", fg = "#9eabac" },
 ]

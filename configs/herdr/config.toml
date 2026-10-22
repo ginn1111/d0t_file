@@ -26,29 +26,29 @@ onboarding = false
 # red = "#ff6188"
 # green = "#a6e3a1"
 
-name = "vesper"
+name = "solarized"
 auto_switch = false
 light_name = "catppuccin-latte"
-dark_name = "vesper"
+dark_name = "solarized"
 
-# VS Code Dark-inspired palette.
+# Solarized Osaka palette (configs/theme/solarized-osaka.palette).
 [theme.custom]
-panel_bg = "#1e1e1e"
-surface0 = "#252526"
-surface1 = "#2d2d30"
-surface_dim = "#181818"
-overlay0 = "#3a3d41"
-overlay1 = "#4f4f4f"
-text = "#cccccc"
-subtext0 = "#9d9d9d"
-mauve = "#c586c0"
-accent = "#569cd6"
-green = "#6a9955"
-yellow = "#dcdcaa"
-red = "#f14c4c"
-blue = "#569cd6"
-teal = "#4ec9b0"
-peach = "#ce9178"
+panel_bg = "#001419"
+surface0 = "#002c38"
+surface1 = "#063540"
+surface_dim = "#001419"
+overlay0 = "#576d74"
+overlay1 = "#637981"
+text = "#9eabac"
+subtext0 = "#839395"
+mauve = "#d23681"
+accent = "#268bd3"
+green = "#849900"
+yellow = "#b28500"
+red = "#db302d"
+blue = "#268bd3"
+teal = "#29a298"
+peach = "#c94c16"
 
 [terminal]
 # Executable used for new interactive panes.

@@ -14,7 +14,7 @@ vscode_orange = "#CE9178"
 vscode_red = "#F14C4C"
 
 [character]
-success_symbol = "[◈](bold vscode_green)"
+success_symbol = "[⟐](bold vscode_green)"
 error_symbol = "[✗](bold vscode_red)"
 vimcmd_symbol = "[◀](bold vscode_green)"
 

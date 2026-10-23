@@ -46,9 +46,9 @@ colors:
 
 branding:
   agent_name: Gintary
-  response_label: " ◇ Gintary "
-  prompt_symbol: "◇"
-  help_header: "◇ Gintary Command Palette"
+  response_label: " ⟐ Gintary "
+  prompt_symbol: "⟐"
+  help_header: "⟐ Gintary Command Palette"
   welcome: "Gintary coordinator ready. Type /help for commands."
   goodbye: "Gintary offline."
 

@@ -1,9 +1,9 @@
 {
   "theme": "obsidian",
-  "cssTheme": "VSCode Dark Modern",
+  "cssTheme": "Typewriter",
   "interfaceFontFamily": "Roboto Condensed",
-  "textFontFamily": "Hack Nerd Font Propo",
-  "monospaceFontFamily": "Hack Nerd Font",
-  "baseFontSize": 22,
+  "textFontFamily": "Ioskeley Mono",
+  "monospaceFontFamily": "Ioskeley Mono",
+  "baseFontSize": 16,
   "baseFontSizeAction": true
 }

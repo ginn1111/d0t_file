@@ -152,6 +152,12 @@ width = "90%"
 height = "90%"
 
 [[keys.command]]
+key = "prefix+cmd+k"
+type = "plugin_action"
+command = "herdr-bar.open"
+description = "command bar"
+
+[[keys.command]]
 key = "prefix+e"
 type = "plugin_action"
 command = "chmarax.herdr-nvim.toggle"
@@ -164,16 +170,16 @@ command = "chmarax.herdr-nvim.pick-file"
 description = "open file from agent output"
 
 [[keys.command]]
-key = "prefix+cmd+r"
+key = "prefix+alt+r"
 type = "plugin_action"
-command = "persiyanov.reviewr.toggle"   # <plugin_id>.<action_id> — note the id, not the name
+command = "persiyanov.reviewr.toggle" # <plugin_id>.<action_id> — note the id, not the name
 
-[[keys.command]]              # open in a split beside your work
+[[keys.command]] # open in a split beside your work
 key = "prefix+f"
 type = "shell"
 command = "herdr plugin action invoke open-file-viewer --plugin herdr-file-viewer"
 
-[[keys.command]]              # …or in its own tab
+[[keys.command]] # …or in its own tab
 key = "prefix+shift+f"
 type = "shell"
 command = "herdr plugin action invoke open-file-viewer-tab --plugin herdr-file-viewer"
@@ -288,6 +294,7 @@ delivery = "herdr"
 # manage_ssh_config = true
 
 [experimental]
+kitty_graphics = true
 # Allow launching herdr from inside a herdr-managed pane.
 # allow_nested = false
 # Experimental local Kitty graphics rendering for attached clients.
@@ -321,8 +328,29 @@ switch_ascii_input_source_in_prefix = true
 # Matches Ghostty's default scrollback-limit behavior.
 # scrollback_limit_bytes = 10000000
 [ui.sidebar.agents]
-rows = [
-  ["state_icon", "agent", "$model"],
-  ["$summary"],
-  ["workspace", "tab"],
-]
+rows = [["state_icon", "agent", "$model"], ["$summary"], ["workspace", "tab"]]
+
+# >>> furkankly.zoetrope keys (managed: `setup-keys` writes this block, `remove-keys` deletes it)
+[[keys.command]]
+key = "prefix+shift+z"
+type = "plugin_action"
+command = "furkankly.zoetrope.open"
+description = "zoetrope: session graph (overlay)"
+
+# The graph opens over the focused pane and gives the layout back when
+# it closes. The same key closes it. Two other placements, if you would
+# rather keep the graph on screen: uncomment one, or point the binding
+# above at its action. Then: herdr server reload-config
+# [[keys.command]]
+# key = "prefix+shift+v"
+# type = "plugin_action"
+# command = "furkankly.zoetrope.open-split"
+# description = "zoetrope: session graph (split)"
+
+# [[keys.command]]
+# key = "prefix+shift+c"
+# type = "plugin_action"
+# command = "furkankly.zoetrope.open-tab"
+# description = "zoetrope: session graph (tab)"
+
+# <<< furkankly.zoetrope keys

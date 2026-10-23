@@ -1,5 +1,5 @@
 set fish_greeting ""
-export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin
+export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/snap/bin
 
 # get env-vars
 # for line in (cat .env | grep -v '^#')
@@ -72,6 +72,7 @@ set -gx PATH $ANDROID_HOME/cmdline-tools/latest/bin $PATH
 
 set -gx PATH $MSSQL_SCRIPTER_CONNECTION_STRING $PATH
 set -gx PATH $MSSQL_SCRIPTER_PASSWORD $PATH
+set -gx PATH ~/.dbx/bin $PATH
 
 # NodeJS
 set -gx PATH node_modules/.bin $PATH
@@ -154,3 +155,4 @@ set -gx PATH "/Users/gin/.local/bin" $PATH
 
 # Added by Antigravity IDE
 fish_add_path /Users/gin/.antigravity-ide/antigravity-ide/bin
+

@@ -1,0 +1,681 @@
+{
+  "version": 3,
+  "workspaces": [
+    {
+      "id": "wA",
+      "custom_name": "aiozstream-2l-contract",
+      "identity_cwd": "/home/aioz/workspace/contract-aiozstream-2l",
+      "public_pane_numbers": {
+        "2": 3,
+        "1": 1
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 1
+              },
+              "second": {
+                "Pane": 2
+              }
+            }
+          },
+          "panes": {
+            "1": {
+              "cwd": "/home/aioz/workspace/contract-aiozstream-2l"
+            },
+            "2": {
+              "cwd": "/home/aioz/workspace/contract-aiozstream-2l"
+            }
+          },
+          "zoomed": false,
+          "focused": 2,
+          "root_pane": 1
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w9",
+      "custom_name": null,
+      "identity_cwd": "/home/aioz/workspace/aioz-stream-be",
+      "public_pane_numbers": {
+        "144": 134,
+        "169": 148,
+        "25": 118,
+        "150": 139,
+        "168": 147,
+        "20": 103,
+        "140": 132,
+        "21": 63,
+        "138": 131,
+        "137": 130,
+        "22": 121
+      },
+      "next_public_pane_number": 149,
+      "public_tab_numbers": [
+        3,
+        2,
+        1,
+        5
+      ],
+      "next_public_tab_number": 16,
+      "tabs": [
+        {
+          "custom_name": "agents",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.502439,
+              "first": {
+                "Pane": 140
+              },
+              "second": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.5,
+                  "first": {
+                    "Pane": 138
+                  },
+                  "second": {
+                    "Pane": 168
+                  }
+                }
+              }
+            }
+          },
+          "panes": {
+            "168": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            },
+            "138": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            },
+            "140": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            }
+          },
+          "zoomed": false,
+          "focused": 140,
+          "root_pane": 140
+        },
+        {
+          "custom_name": "nvim",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 20
+              },
+              "second": {
+                "Pane": 137
+              }
+            }
+          },
+          "panes": {
+            "137": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be/.worktree/hold"
+            },
+            "20": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            }
+          },
+          "zoomed": true,
+          "focused": 20,
+          "root_pane": 20
+        },
+        {
+          "custom_name": "tools",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5219512,
+              "first": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.5,
+                  "first": {
+                    "Pane": 150
+                  },
+                  "second": {
+                    "Pane": 21
+                  }
+                }
+              },
+              "second": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.5,
+                  "first": {
+                    "Pane": 22
+                  },
+                  "second": {
+                    "Pane": 169
+                  }
+                }
+              }
+            }
+          },
+          "panes": {
+            "22": {
+              "cwd": "/home/aioz/workspace/test-aiozstream-be"
+            },
+            "169": {
+              "cwd": "/home/aioz/workspace/evaluate-loki"
+            },
+            "21": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            },
+            "150": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be"
+            }
+          },
+          "zoomed": true,
+          "focused": 169,
+          "root_pane": 21
+        },
+        {
+          "custom_name": "db-cli",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 25
+              },
+              "second": {
+                "Pane": 144
+              }
+            }
+          },
+          "panes": {
+            "144": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be/.worktree/hold"
+            },
+            "25": {
+              "cwd": "/home/aioz/workspace/aioz-stream-be/.worktree/hold"
+            }
+          },
+          "zoomed": false,
+          "focused": 25,
+          "root_pane": 25
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wR",
+      "custom_name": null,
+      "identity_cwd": "/home/aioz/workspace/aiozstream-fe",
+      "public_pane_numbers": {
+        "134": 2,
+        "136": 3
+      },
+      "next_public_pane_number": 4,
+      "public_tab_numbers": [
+        1,
+        2
+      ],
+      "next_public_tab_number": 3,
+      "tabs": [
+        {
+          "custom_name": "agents",
+          "layout": {
+            "Pane": 134
+          },
+          "panes": {
+            "134": {
+              "cwd": "/home/aioz/workspace/aiozstream-fe"
+            }
+          },
+          "zoomed": false,
+          "focused": 134,
+          "root_pane": 134
+        },
+        {
+          "custom_name": "nvim",
+          "layout": {
+            "Pane": 136
+          },
+          "panes": {
+            "136": {
+              "cwd": "/home/aioz/workspace/aiozstream-fe"
+            }
+          },
+          "zoomed": false,
+          "focused": 136,
+          "root_pane": 136
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w8",
+      "custom_name": "aioz-2l-agents",
+      "identity_cwd": "/home/aioz/workspace/aioz-stream-2-light",
+      "public_pane_numbers": {
+        "145": 155,
+        "128": 152,
+        "35": 20,
+        "129": 153,
+        "36": 113,
+        "29": 144,
+        "34": 19
+      },
+      "next_public_pane_number": 156,
+      "public_tab_numbers": [
+        1,
+        8,
+        12,
+        7,
+        13
+      ],
+      "next_public_tab_number": 14,
+      "tabs": [
+        {
+          "custom_name": "agents",
+          "layout": {
+            "Pane": 129
+          },
+          "panes": {
+            "129": {
+              "cwd": "/home/aioz/workspace/aioz-stream-2-light"
+            }
+          },
+          "zoomed": false,
+          "focused": 129,
+          "root_pane": 129
+        },
+        {
+          "custom_name": "nvim",
+          "layout": {
+            "Pane": 29
+          },
+          "panes": {
+            "29": {
+              "cwd": "/home/aioz/workspace/aioz-stream-2-light"
+            }
+          },
+          "zoomed": false,
+          "focused": 29,
+          "root_pane": 29
+        },
+        {
+          "custom_name": "tools",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 128
+              },
+              "second": {
+                "Pane": 145
+              }
+            }
+          },
+          "panes": {
+            "128": {
+              "cwd": "/home/aioz/workspace/aioz-stream-2-light"
+            },
+            "145": {
+              "cwd": "/home/aioz/workspace/aioz-stream-2-light"
+            }
+          },
+          "zoomed": false,
+          "focused": 128,
+          "root_pane": 128
+        },
+        {
+          "custom_name": "supoclip",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 34
+              },
+              "second": {
+                "Pane": 35
+              }
+            }
+          },
+          "panes": {
+            "34": {
+              "cwd": "/home/aioz/workspace/supoclip"
+            },
+            "35": {
+              "cwd": "/home/aioz/workspace/supoclip"
+            }
+          },
+          "zoomed": false,
+          "focused": 34,
+          "root_pane": 34
+        },
+        {
+          "custom_name": "nfs-server",
+          "layout": {
+            "Pane": 36
+          },
+          "panes": {
+            "36": {
+              "cwd": "/home/aioz/workspace/aioz-stream-2-light"
+            }
+          },
+          "zoomed": false,
+          "focused": 36,
+          "root_pane": 36
+        }
+      ],
+      "active_tab": 2
+    },
+    {
+      "id": "wE",
+      "custom_name": "infras",
+      "identity_cwd": "/home/aioz/.hermes/hermes-agent",
+      "public_pane_numbers": {
+        "51": 3,
+        "116": 20,
+        "123": 21,
+        "141": 22,
+        "104": 18,
+        "105": 19
+      },
+      "next_public_pane_number": 23,
+      "public_tab_numbers": [
+        1,
+        10,
+        11
+      ],
+      "next_public_tab_number": 12,
+      "tabs": [
+        {
+          "custom_name": "hermes-dashboard",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 51
+              },
+              "second": {
+                "Pane": 141
+              }
+            }
+          },
+          "panes": {
+            "51": {
+              "cwd": "/home/aioz/.hermes/hermes-agent",
+              "agent_session": {
+                "source": "herdr:hermes",
+                "agent": "hermes",
+                "kind": "id",
+                "value": "20261020_142958_4400b5"
+              }
+            },
+            "141": {
+              "cwd": "/home/aioz/.hermes/hermes-agent"
+            }
+          },
+          "zoomed": false,
+          "focused": 141,
+          "root_pane": 51
+        },
+        {
+          "custom_name": "notebooklm",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.502439,
+              "first": {
+                "Pane": 104
+              },
+              "second": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.5,
+                  "first": {
+                    "Pane": 105
+                  },
+                  "second": {
+                    "Pane": 116
+                  }
+                }
+              }
+            }
+          },
+          "panes": {
+            "105": {
+              "cwd": "/home/aioz/.hermes/hermes-agent"
+            },
+            "116": {
+              "cwd": "/home/aioz/.hermes/hermes-agent"
+            },
+            "104": {
+              "cwd": "/home/aioz/.hermes/hermes-agent"
+            }
+          },
+          "zoomed": false,
+          "focused": 116,
+          "root_pane": 104
+        },
+        {
+          "custom_name": "monitoring",
+          "layout": {
+            "Pane": 123
+          },
+          "panes": {
+            "123": {
+              "cwd": "/home/aioz/workspace/evaluate-loki"
+            }
+          },
+          "zoomed": false,
+          "focused": 123,
+          "root_pane": 123
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "wH",
+      "custom_name": "worklogs",
+      "identity_cwd": "/home/aioz/personal/worklogs",
+      "public_pane_numbers": {
+        "44": 1
+      },
+      "next_public_pane_number": 2,
+      "public_tab_numbers": [
+        1
+      ],
+      "next_public_tab_number": 2,
+      "tabs": [
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 44
+          },
+          "panes": {
+            "44": {
+              "cwd": "/home/aioz/personal/worklogs"
+            }
+          },
+          "zoomed": false,
+          "focused": 44,
+          "root_pane": 44
+        }
+      ],
+      "active_tab": 0
+    },
+    {
+      "id": "w7",
+      "custom_name": "d0tfile",
+      "identity_cwd": "/home/aioz/personal/gin-harness",
+      "public_pane_numbers": {
+        "50": 48,
+        "47": 41,
+        "89": 56,
+        "46": 45,
+        "88": 55,
+        "122": 59,
+        "82": 52,
+        "49": 49,
+        "48": 47
+      },
+      "next_public_pane_number": 60,
+      "public_tab_numbers": [
+        8,
+        16,
+        12,
+        14,
+        17
+      ],
+      "next_public_tab_number": 18,
+      "tabs": [
+        {
+          "custom_name": "ginharness",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 46
+              },
+              "second": {
+                "Pane": 88
+              }
+            }
+          },
+          "panes": {
+            "88": {
+              "cwd": "/home/aioz/personal/gin-harness"
+            },
+            "46": {
+              "cwd": "/home/aioz/personal/gin-harness"
+            }
+          },
+          "zoomed": false,
+          "focused": 46,
+          "root_pane": 46
+        },
+        {
+          "custom_name": "mip",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Pane": 82
+              },
+              "second": {
+                "Pane": 122
+              }
+            }
+          },
+          "panes": {
+            "82": {
+              "cwd": "/home/aioz/personal/mip"
+            },
+            "122": {
+              "cwd": "/home/aioz/personal/mip",
+              "label": "reviewr",
+              "launch_argv": [
+                "/home/aioz/tools/d0t_file/configs/herdr/plugins/github/persiyanov.reviewr-e87b654a74f8/bin/herdr-reviewr"
+              ]
+            }
+          },
+          "zoomed": false,
+          "focused": 82,
+          "root_pane": 82
+        },
+        {
+          "custom_name": "c2c",
+          "layout": {
+            "Pane": 47
+          },
+          "panes": {
+            "47": {
+              "cwd": "/home/aioz/personal/agent-d0tfile/skills"
+            }
+          },
+          "zoomed": false,
+          "focused": 47,
+          "root_pane": 47
+        },
+        {
+          "custom_name": "ports",
+          "layout": {
+            "Split": {
+              "direction": "Horizontal",
+              "ratio": 0.5,
+              "first": {
+                "Split": {
+                  "direction": "Vertical",
+                  "ratio": 0.55,
+                  "first": {
+                    "Pane": 48
+                  },
+                  "second": {
+                    "Pane": 49
+                  }
+                }
+              },
+              "second": {
+                "Pane": 50
+              }
+            }
+          },
+          "panes": {
+            "48": {
+              "cwd": "/home/aioz/personal/maxtrix-portfolio"
+            },
+            "49": {
+              "cwd": "/home/aioz/personal/maxtrix-portfolio"
+            },
+            "50": {
+              "cwd": "/home/aioz/personal/maxtrix-portfolio",
+              "agent_session": {
+                "source": "herdr:claude",
+                "agent": "claude",
+                "kind": "id",
+                "value": "d8a772ab-0db1-48b0-ad9c-76c0e90d6a60"
+              }
+            }
+          },
+          "zoomed": false,
+          "focused": 48,
+          "root_pane": 48
+        },
+        {
+          "custom_name": null,
+          "layout": {
+            "Pane": 89
+          },
+          "panes": {
+            "89": {
+              "cwd": "/home/aioz/personal/gin-harness"
+            }
+          },
+          "zoomed": false,
+          "focused": 89,
+          "root_pane": 89
+        }
+      ],
+      "active_tab": 1
+    }
+  ],
+  "active": 1,
+  "selected": 1,
+  "sidebar_width": null,
+  "sidebar_section_split": null,
+  "collapsed_space_keys": []
+}

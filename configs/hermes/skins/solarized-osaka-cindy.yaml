@@ -1,0 +1,74 @@
+# Solarized Osaka skin for cindy (secretary, red accent).
+# Palette: configs/theme/solarized-osaka.palette (red/orange/magenta family)
+name: solarized-osaka-cindy
+description: Solarized Osaka secretary skin for Cindy
+
+colors:
+  background: "#001419"
+  ui_accent: "#db302d"
+  ui_label: "#c94c16"
+  banner_accent: "#c94c16"
+  banner_title: "#db302d"
+  banner_text: "#9eabac"
+  banner_dim: "#576d74"
+  banner_border: "#3a0d0c"
+  ui_text: "#9eabac"
+  ui_border: "#3a0d0c"
+  ui_ok: "#849900"
+  ui_warn: "#b28500"
+  ui_error: "#d33682"
+  prompt: "#db302d"
+  input_rule: "#3a0d0c"
+  response_border: "#db302d"
+  status_bar_bg: "#1f0a0a"
+  status_bar_text: "#9eabac"
+  status_bar_strong: "#db302d"
+  status_bar_dim: "#576d74"
+  status_bar_good: "#849900"
+  status_bar_warn: "#b28500"
+  status_bar_bad: "#c94c16"
+  status_bar_critical: "#d33682"
+  session_label: "#db302d"
+  session_border: "#3a0d0c"
+  shell_dollar: "#c94c16"
+  voice_status_bg: "#1f0a0a"
+  selection_bg: "#3a0d0c"
+  completion_menu_bg: "#1f0a0a"
+  completion_menu_current_bg: "#8a1f1d"
+  completion_menu_meta_bg: "#3a0d0c"
+  completion_menu_meta_current_bg: "#5a1413"
+  diff_added: "#103a3c"
+  diff_removed: "#380605"
+  diff_added_word: "#849900"
+  diff_removed_word: "#db302d"
+  syntax_string: "#c94c16"
+  syntax_number: "#d33682"
+  syntax_keyword: "#db302d"
+  syntax_comment: "#576d74"
+
+branding:
+  agent_name: Cindy
+  response_label: " ◇ Cindy "
+  prompt_symbol: "◇"
+  help_header: "◇ Cindy Command Palette"
+  welcome: "Cindy secretary ready. Type /help for commands."
+  goodbye: "Cindy offline."
+
+spinner:
+  waiting_faces: ["◇", "◈", "◆"]
+  thinking_faces: ["◇", "◈", "◆"]
+  thinking_verbs:
+    - organizing
+    - triaging
+    - drafting
+    - scheduling
+
+tool_prefix: "│"
+
+banner_logo: |
+  [bold #f25c59] ██████╗██╗███╗   ██╗██████╗ ██╗   ██╗[/]
+  [bold #db302d]██╔════╝██║████╗  ██║██╔══██╗╚██╗ ██╔╝[/]
+  [bold #db302d]██║     ██║██╔██╗ ██║██║  ██║ ╚████╔╝ [/]
+  [bold #a3221f]██║     ██║██║╚██╗██║██║  ██║  ╚██╔╝  [/]
+  [bold #a3221f]╚██████╗██║██║ ╚████║██████╔╝   ██║   [/]
+  [#576d74] ╚═════╝╚═╝╚═╝  ╚═══╝╚═════╝    ╚═╝   [/]

@@ -32,23 +32,28 @@ light_name = "catppuccin-latte"
 dark_name = "solarized"
 
 # Solarized Osaka palette (configs/theme/solarized-osaka.palette).
+# >>> cindy theme
+# Cindy Black & Ruby (themes/cindy/black-ruby.palette); managed by `make theme-cindy`.
 [theme.custom]
-panel_bg = "#001419"
-surface0 = "#002c38"
-surface1 = "#063540"
-surface_dim = "#001419"
-overlay0 = "#576d74"
-overlay1 = "#637981"
-text = "#9eabac"
-subtext0 = "#839395"
-mauve = "#d23681"
-accent = "#268bd3"
-green = "#849900"
-yellow = "#b28500"
-red = "#db302d"
-blue = "#268bd3"
-teal = "#29a298"
-peach = "#c94c16"
+panel_bg = "#111418"
+surface0 = "#1c2027"
+surface1 = "#3a1a26"
+surface_dim = "#0c0f11"
+active_row_bg = "#1a0f14"  # focused agent / active space row: ruby-tinted bar
+selection_bg = "#3a1a26"   # navigate-mode cursor row: ruby rule
+overlay0 = "#475262"
+overlay1 = "#6b7686"
+text = "#bec6d0"
+subtext0 = "#a0acbb"
+mauve = "#a85ff1"
+accent = "#c62f52"
+green = "#00a884"
+yellow = "#c7910c"
+red = "#e35535"
+blue = "#11b7d4"
+teal = "#38c7bd"
+peach = "#d4770c"
+# <<< cindy theme
 
 [terminal]
 # Executable used for new interactive panes.

@@ -38,3 +38,6 @@ configs/tmux/plugins/tokyo-night-tmux/
 
 # make theme-cindy backups (agent-d0tfile)
 *.pre-cindy.*
+
+# herdr runtime state (rewritten every session)
+configs/herdr/session-snapshots/

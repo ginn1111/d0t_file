@@ -35,3 +35,6 @@ configs/tmux/plugins/tokyo-night-tmux/
 
 # Local codegraph artifacts
 .codegraph/
+
+# make theme-cindy backups (agent-d0tfile)
+*.pre-cindy.*

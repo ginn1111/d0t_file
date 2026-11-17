@@ -17,11 +17,9 @@ set -g theme_hostname always
 
 # aliases
 alias ag agent-browser
-alias gintaryu "gintary --tui"
+alias cindyu "cindy --tui"
 alias ginbu "ginb --tui"
-alias gindesignu "gindesign --tui"
 alias hr herdr
-alias clawdock "docker compose run --rm openclaw-cli"
 alias python "python3.13"
 alias dp docker-compose
 alias dk docker
@@ -111,7 +109,7 @@ set --export BUN_INSTALL "$HOME/.bun"
 set --export PATH $BUN_INSTALL/bin $PATH
 
 # pnpm
-set -gx PNPM_HOME /home/aioz/Library/pnpm
+set -gx PNPM_HOME /home/thuan-aioz/Library/pnpm
 if not string match -q -- $PNPM_HOME $PATH
     set -gx PATH "$PNPM_HOME" $PATH
 end
@@ -155,4 +153,11 @@ set -gx PATH "/Users/gin/.local/bin" $PATH
 
 # Added by Antigravity IDE
 fish_add_path /Users/gin/.antigravity-ide/antigravity-ide/bin
+
+# Default Node version for new interactive shells
+set -g nvm_default_version 24
+if status is-interactive
+    set -e nvm_current_version
+    nvm use --silent $nvm_default_version
+end
 

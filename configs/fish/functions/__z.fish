@@ -122,11 +122,8 @@ function __z -d "Jump to a recent directory."
     set -l qs
     for arg in $argv
         set -l escaped $arg
-        if string escape --style=regex '' >/dev/null 2>&1 # use builtin escape if available
-            set escaped (string escape --style=regex $escaped)
-        else
-            set escaped (__z_legacy_escape_regex $escaped)
-        end
+        # Keep compatibility with fish versions that lack string escape --style=regex.
+        set escaped (__z_legacy_escape_regex $escaped)
         # Need to escape twice, see https://www.math.utah.edu/docs/info/gawk_5.html#SEC32
         set escaped (string replace --all \\ \\\\ $escaped)
         set qs $qs $escaped

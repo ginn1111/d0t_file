@@ -11,11 +11,12 @@ exec_always --no-startup-id setxkbmap -option caps:swapescape
 exec_always --no-startup-id picom
 
 # xborders: Cindy ruby (#c62f52, black-ruby-cindy skin) at ~90% opacity
-exec_always --no-startup-id env GDK_BACKEND=x11 ~/.local/bin/xborders \
+# pkill first: exec_always re-runs on every reload and would stack overlays.
+exec_always --no-startup-id sh -c 'pkill -x xborders; exec env GDK_BACKEND=x11 ~/.local/bin/xborders \
   --border-radius 8 \
   --border-width 3 \
   --border-mode outside \
-  --border-rgba '#c62f52e6'
+  --border-rgba "#c62f52e6"'
 
 # setup monitors
 exec_always xrandr \

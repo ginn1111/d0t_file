@@ -19,11 +19,11 @@ exec_always --no-startup-id env GDK_BACKEND=x11 ~/.local/bin/xborders \
 
 # setup monitors
 exec_always xrandr \
-  --output DisplayPort-1 --primary --mode 1920x1080 --rate 60 \
-  --output HDMI-A-0 --mode 1920x1080 --rate 100 --right-of DisplayPort-1
+  --output DP-2 --primary --mode 1920x1080 --rate 100 \
+  --output HDMI-1 --mode 1920x1080 --rate 100 --right-of DP-2
 
 
-exec --no-startup-id ~/.config/polybar-themes/simple/shapes/launch.sh
+exec_always --no-startup-id ~/.config/polybar/launch.sh
 
 #workspace 2 output LVDS-1
 #workspace 1 output VGA-1

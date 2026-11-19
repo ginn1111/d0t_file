@@ -16,8 +16,8 @@ set -g theme_hide_hostname no
 set -g theme_hostname always
 
 # aliases
-alias ag agent-browser
 alias cindyu "cindy --tui"
+alias gsub "git submodule"
 alias ginbu "ginb --tui"
 alias hr herdr
 alias python "python3.13"
@@ -37,6 +37,7 @@ alias gl "git log"
 alias gp "git push"
 alias gpull "git pull"
 alias lzg lazygit
+alias lzd lazydocker
 alias g git
 alias v nvim
 alias ll "exa -l -g --icons --git"

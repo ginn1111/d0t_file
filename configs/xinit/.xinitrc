@@ -7,6 +7,23 @@ export PATH="$HOME/.local/bin:$PATH"
 # exists, so they fail with "cannot open display" here. Keep them on this X server.
 export DISABLE_WAYLAND=1
 
+# Input method (fcitx5 + unikey for Vietnamese).
+# fcitx5 itself is started from ~/.config/i3/config; these variables tell each
+# kind of X app how to find it. They must be exported before i3 starts so every
+# app launched from i3 inherits them. Changes need a logout/login to apply.
+#
+#   XMODIFIERS      legacy XIM protocol: plain X11 apps (xterm, etc.)
+#   GTK_IM_MODULE   GTK apps (Firefox, Slack, ...) load fcitx5's GTK im-module
+#   QT_IM_MODULE    Qt apps load fcitx5's Qt platform-input-context plugin
+#   GLFW_IM_MODULE  kitty on X11 only supports the ibus protocol (no "fcitx"
+#                   value exists); fcitx5 ships an ibus frontend
+#                   (libibusfrontend.so) that answers it, so kitty, and Neovim
+#                   inside it, can type through unikey.
+export XMODIFIERS=@im=fcitx
+export GTK_IM_MODULE=fcitx
+export QT_IM_MODULE=fcitx
+export GLFW_IM_MODULE=ibus
+
 LOGDIR="${XDG_STATE_HOME:-$HOME/.local/state}/i3"
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/i3.log"

@@ -401,7 +401,7 @@ bindsym $mod+m bar mode toggle
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
 # Black & Ruby (matches kitty black_ruby.conf)
-  client.focused          #c62f52 #c62f52 #111418 #e35535 #c62f52
+  client.focused          #c62f52 #c62f52 #ffffff #e35535 #c62f52
   client.focused_inactive #1c2027 #1c2027 #a0acbb #1c2027 #1c2027
   client.unfocused        #0c0f11 #0c0f11 #475262 #0c0f11 #0c0f11
   client.urgent           #e35535 #e35535 #111418 #e35535 #e35535
@@ -415,10 +415,10 @@ bindsym $mod+m bar mode toggle
 
 # Set inner/outer gaps
 gaps inner 14
-gaps outer -2
-# tighter top/bottom: ~8px between windows and the polybar top/bottom bars
-gaps top -10
-gaps bottom -10
+gaps outer -9
+# match polybar: window edges align with bar edges (5px), 14px gap to bars = inner gap
+gaps top -5
+gaps bottom -5
 
 # Additionally, you can issue commands with the following syntax. This is useful to bind keys to changing the gap size.
 # gaps inner|outer current|all set|plus|minus <px>

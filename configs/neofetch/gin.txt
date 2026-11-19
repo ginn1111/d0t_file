@@ -1,0 +1,20 @@
+${c1}            .-/+oossssoo+\-.
+        ´:+ssssssssssssssssss+:`
+      -+ssssssssssssssssssssssss+-
+    .osssssssssssssssssssssssssssso.
+   /ssssssssssssssssssssssssssssssss\
+  +ssss${c2}dMMMNy${c1}ssss${c2}dMMMNy${c1}ss${c2}hMy${c1}ssss${c2}hMy${c1}ss+
+ /ssss${c2}hMy${c1}ss${c2}hMy${c1}sssss${c2}MM${c1}ssss${c2}hMMy${c1}sss${c2}hMy${c1}sss\
+.ssss${c2}hMy${c1}sssssssssss${c2}MM${c1}ssss${c2}dMMNy${c1}ss${c2}hMy${c1}ssss.
++ssss${c2}hMy${c1}sssssssssss${c2}MM${c1}ssss${c2}hMy${c1}s${c2}MM${c1}s${c2}hMy${c1}ssss+
+ossss${c2}hMy${c1}ss${c2}dMMNy${c1}ssss${c2}MM${c1}ssss${c2}hMy${c1}s${c2}MM${c1}s${c2}hMy${c1}sssso
+ossss${c2}hMy${c1}ssss${c2}hMy${c1}ssss${c2}MM${c1}ssss${c2}hMy${c1}ss${c2}dMMNy${c1}sssso
++ssss${c2}hMy${c1}ssss${c2}hMy${c1}ssss${c2}MM${c1}ssss${c2}hMy${c1}sss${c2}hMMy${c1}ssss+
+.sssss${c2}hMy${c1}ss${c2}hMy${c1}sssss${c2}MM${c1}ssss${c2}hMy${c1}ssss${c2}hMy${c1}ssss.
+ \sssss${c2}dMMMNy${c1}ssss${c2}dMMMNy${c1}ss${c2}hMy${c1}ssss${c2}hMy${c1}sss/
+  +ssssssssssssssssssssssssssssssssss+
+   \ssssssssssssssssssssssssssssssss/
+    .osssssssssssssssssssssssssssso.
+      -+ssssssssssssssssssssssss+-
+        `:+ssssssssssssssssss+:`
+            .-\+oossssoo+/-.

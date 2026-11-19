@@ -347,7 +347,7 @@ exec --no-startup-id betterlockscreen -w dim
 # [example]
 # If you want your bar to have the same background color as your 
 # terminal background change the line 362 from:
-# background #14191D
+# background #111418
 # to:
 # background $term_background
 # Same logic applied to everything else.
@@ -409,8 +409,8 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-# Black & Ruby (matches kitty black_ruby.conf)
-  client.focused          #c62f52 #c62f52 #ffffff #e35535 #c62f52
+# Black & Ruby. Roles + mapping: ~/tools/agent-d0tfile/themes/cindy/REGISTRY.md
+  client.focused          #c62f52 #c62f52 #111418 #e35535 #c62f52
   client.focused_inactive #1c2027 #1c2027 #a0acbb #1c2027 #1c2027
   client.unfocused        #0c0f11 #0c0f11 #475262 #0c0f11 #0c0f11
   client.urgent           #e35535 #e35535 #111418 #e35535 #e35535

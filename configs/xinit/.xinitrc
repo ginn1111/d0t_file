@@ -3,6 +3,11 @@
 export LD_LIBRARY_PATH="$HOME/.local/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 export PATH="$HOME/.local/bin:$PATH"
 
+# The locally extracted imlib2 (used by feh) looks for its image loaders in the
+# compiled-in /usr/lib/x86_64-linux-gnu/imlib2, which does not exist here, so
+# feh fails with "No Imlib2 loader for that file format". Point it at our copy.
+export IMLIB2_LOADER_PATH="$HOME/.local/opt/i3-tools/usr/lib/x86_64-linux-gnu/imlib2/loaders"
+
 # Snap apps (firefox) force GDK_BACKEND=wayland whenever GNOME's wayland-0 socket
 # exists, so they fail with "cannot open display" here. Keep them on this X server.
 export DISABLE_WAYLAND=1

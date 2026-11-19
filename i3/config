@@ -16,8 +16,8 @@ exec --no-startup-id sh -c 'pkill -f org.gnome.Shell.Notifications; exec dunst'
 # pkill first: exec_always re-runs on every reload and would stack overlays.
 exec_always --no-startup-id sh -c 'pkill -x xborders; exec env GDK_BACKEND=x11 ~/.local/bin/xborders \
   --border-radius 0 \
-  --border-width 3 \
-  --border-mode outside \
+  --border-width 2 \
+  --border-mode inside \
   --border-rgba "#c62f52e6"'
 
 # setup monitors

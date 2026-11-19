@@ -1,1 +1,1 @@
-/home/aioz/personal/agent-d0tfile/themes/cindy/nvim/bearded.lua
+/home/thuan-aioz/tools/agent-d0tfile/themes/cindy/nvim/bearded.lua

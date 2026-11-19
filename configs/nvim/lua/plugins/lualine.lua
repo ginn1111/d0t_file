@@ -1,1 +1,1 @@
-/home/aioz/personal/agent-d0tfile/themes/cindy/nvim/lualine.lua
+/home/thuan-aioz/tools/agent-d0tfile/themes/cindy/nvim/lualine.lua

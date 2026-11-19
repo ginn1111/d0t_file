@@ -3,7 +3,7 @@
 set -u
 
 # Tool directories under configs/ that should be linked into the user's config home.
-SYM_LINKS=("aerospace" "fish" "kitty" "neofetch" "nvim" "tmux" "zk" "borders" "herdr" "yazi" "picom" "polybar")
+SYM_LINKS=("aerospace" "fish" "kitty" "neofetch" "nvim" "tmux" "zk" "borders" "herdr" "yazi" "picom" "polybar" "rofi")
 
 # Resolve the script's directory so the installer works from any current directory.
 SCRIPT_DIR="$(cd -- "$(dirname -- "${BASH_SOURCE[0]}")" && pwd)"

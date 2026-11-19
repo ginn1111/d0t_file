@@ -10,7 +10,9 @@ for i in $(seq 1 20); do pgrep -u "$UID" -x polybar >/dev/null || break; sleep 0
 
 primary=$(xrandr --query | awk '/ connected primary/{print $1}')
 for m in $(xrandr --query | awk '/ connected/{print $1}'); do
-  MONITOR="$m" "$POLYBAR" --reload example >>"$LOG-$m.log" 2>&1 &
-  disown
+  for bar in top bottom; do
+    MONITOR="$m" "$POLYBAR" --reload "$bar" >>"$LOG-$m-$bar.log" 2>&1 &
+    disown
+  done
 done
 echo "polybar launched on: $(xrandr --query | awk '/ connected/{printf "%s ", $1}') (primary: $primary)"

@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>picom v12.5 — every animation preset</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --bg: #0f1115; --panel: #171a21; --line: #262b36; --fg: #e6e8ee; --muted: #8a93a6;
+    --accent: #36f499; /* xborders colour from i3 config: 54,244,153 */
+    --win: #1f2430; --title: #2a3040;
+  }
+  body { background: var(--bg); color: var(--fg); font: 14px/1.5 "JetBrainsMono Nerd Font", ui-monospace, "SFMono-Regular", Menlo, monospace; padding: 28px; }
+  header { display: flex; align-items: end; justify-content: space-between; gap: 24px; flex-wrap: wrap; margin-bottom: 22px; }
+  h1 { font-size: 20px; font-weight: 600; }
+  h1 span { color: var(--accent); }
+  .sub { color: var(--muted); font-size: 12px; margin-top: 4px; }
+  .global { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; font-size: 12px; color: var(--muted); }
+  .global button, .chip { background: var(--panel); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px 10px; font: inherit; cursor: pointer; }
+  .global button:hover, .chip:hover { border-color: var(--accent); }
+  .chip.on { background: var(--accent); color: #07140d; border-color: var(--accent); }
+
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(330px, 1fr)); gap: 16px; }
+  .card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; overflow: hidden; display: flex; flex-direction: column; transition: border-color .15s; }
+  .card:hover { border-color: #3a4152; }
+  .card.mine { border-color: var(--accent); }
+  .head { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px 6px; }
+  .name { font-weight: 600; white-space: nowrap; }
+  .head { gap: 8px; } .tag { text-align: right; }
+  .ctrl { margin-top: auto; }
+  .tag { font-size: 10px; padding: 2px 6px; border-radius: 4px; background: #222838; color: var(--muted); }
+  .tag.used { background: rgba(54,244,153,.15); color: var(--accent); }
+  .desc { color: var(--muted); font-size: 12px; padding: 0 14px 10px; min-height: 36px; }
+
+  /* mini monitor */
+  .mon { position: relative; height: 170px; margin: 0 14px; border-radius: 6px; overflow: hidden;
+         background: radial-gradient(circle at 30% 20%, #23304a, #121620 70%); border: 1px solid var(--line); }
+  .bar { position: absolute; inset: 0 0 auto 0; height: 14px; background: #0b0d12; font-size: 9px; color: var(--muted); padding: 0 6px; display: flex; gap: 6px; align-items: center; z-index: 2; }
+  .bar b { color: var(--accent); font-weight: 400; }
+  .win { position: absolute; }
+  .body { width: 100%; height: 100%; background: var(--win); border-radius: 3px; box-shadow: -4px -4px 14px rgba(0,0,0,.5);
+          outline: 1px solid rgba(54,244,153,.5); overflow: hidden; position: relative; }
+  .body::after { content: ""; position: absolute; inset: 0; background: repeating-linear-gradient(45deg, rgba(255,255,255,.06) 0 6px, transparent 6px 12px); opacity: var(--blend, 0); pointer-events: none; }
+  .tb { height: 12px; background: var(--title); font-size: 8px; color: var(--muted); padding: 0 5px; line-height: 12px; }
+  .ln { height: 4px; margin: 6px 6px 0; background: #343b4d; border-radius: 2px; }
+  .ln.s { width: 55%; } .ln.a { background: rgba(54,244,153,.45); width: 35%; }
+  .ghost { position: absolute; border: 1px dashed rgba(255,255,255,.25); border-radius: 3px; pointer-events: none; }
+
+  .ctrl { display: grid; grid-template-columns: 1fr 1fr; gap: 8px 12px; padding: 12px 14px; font-size: 11px; color: var(--muted); }
+  .ctrl label { display: flex; flex-direction: column; gap: 3px; }
+  .ctrl input[type=range] { accent-color: var(--accent); }
+  .ctrl select { background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 4px; padding: 3px; font: inherit; }
+  .ctrl .val { color: var(--fg); }
+  .actions { display: flex; gap: 8px; padding: 0 14px 12px; }
+  .actions button { flex: 1; background: var(--bg); color: var(--fg); border: 1px solid var(--line); border-radius: 6px; padding: 6px; font: inherit; font-size: 12px; cursor: pointer; }
+  .actions button:hover { border-color: var(--accent); color: var(--accent); }
+  pre { margin: 0 14px 14px; background: #0b0d12; border: 1px solid var(--line); border-radius: 6px; padding: 8px 10px; font-size: 11px; color: #b7c0d4; white-space: pre-wrap; display: none; }
+  .card.show-code pre { display: block; }
+  .toast { position: fixed; bottom: 20px; left: 50%; transform: translateX(-50%) translateY(20px); background: var(--accent); color: #07140d; padding: 8px 14px; border-radius: 6px; opacity: 0; transition: .2s; font-size: 12px; }
+  .toast.on { opacity: 1; transform: translateX(-50%); }
+  footer { margin-top: 22px; color: var(--muted); font-size: 11px; }
+  footer a { color: var(--accent); }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>picom <span>v12.5</span> — every animation preset</h1>
+    <div class="sub">Curves &amp; maths ported 1:1 from picom's <code>animation_presets.conf</code>. Green border = used in your <code>configs/picom/picom.conf</code>.</div>
+  </div>
+  <div class="global">
+    <span>Playback</span>
+    <button class="chip" data-speed="1">1×</button>
+    <button class="chip on" data-speed="0.5">0.5×</button>
+    <button class="chip" data-speed="0.2">0.2× slow-mo</button>
+    <button id="playAll">▶ Play all</button>
+    <button id="loop" class="chip on">Loop</button>
+  </div>
+</header>
+
+<main class="grid" id="grid"></main>
+
+<footer>
+  Triggers in picom: <b>open</b> new window · <b>close</b> destroyed · <b>show</b> mapped again (i3 workspace switch-in) · <b>hide</b> unmapped (workspace switch-out) ·
+  <b>increase/decrease-opacity</b> · <b>geometry</b> move/resize (experimental). Presets are only knobs over these scripts.
+</footer>
+<div class="toast" id="toast"></div>
+
+<script src="../shared/picom-anim.js"></script>
+<script>
+const INFO = {
+  "appear":          { d: "Scale up from <i>scale</i> + fade in. Anchored at the centre.", used: "your open/show (scale 0.92, 0.18s)" },
+  "disappear":       { d: "Scale down to <i>scale</i> + fade out.", used: "your close/hide (scale 0.92, 0.14s)" },
+  "slide-in":        { d: "Slides in from an edge of its <b>own</b> box — cropped, so it never leaves the window frame.", used: "your Rofi open (down, 0.15s)" },
+  "slide-out":       { d: "Slides out inside its own box (cropped). No fade — the window stays opaque until it's gone." },
+  "fly-in":          { d: "Flies in from the <b>screen edge</b> (distance = window position + size). Slight overshoot curve.", used: "your notifications (left, 0.2s)" },
+  "fly-out":         { d: "Flies off to the screen edge, accelerating (ease-in with a tiny anticipation)." , used: "your notifications (right, 0.2s)" },
+  "geometry-change": { d: "Animates move/resize from the old rect; old image is blended out (hatched). EXPERIMENTAL.", used: "your tiled windows (0.15s)" },
+  "opacity-fade":    { cfg: { duration: .15 }, d: "Not a built-in preset — a custom script for opacity triggers (picom-trans, rules).", used: "your increase/decrease-opacity (0.15s)" },
+};
+// start sliders at the values from configs/picom/picom.conf
+const MINE = { "appear": { scale: .92, duration: .18 }, "disappear": { scale: .92, duration: .14 },
+  "slide-in": { direction: "down", duration: .15 }, "fly-in": { direction: "left", duration: .2 },
+  "fly-out": { direction: "right", duration: .2 }, "geometry-change": { duration: .15 }, "opacity-fade": { duration: .15 } };
+const grid = document.getElementById("grid");
+let speed = 0.5, loop = true;
+const cards = [];
+
+function makeCard(name) {
+  const meta = Picom.PRESETS[name], o = { ...meta.knobs, ...(MINE[name] || {}) };
+  if (name === "opacity-fade") Object.assign(o, { from: 0.4, to: 1 });
+  const el = document.createElement("section");
+  el.className = "card" + (INFO[name].used ? " mine" : "");
+  el.innerHTML = `
+    <div class="head"><span class="name">${name}</span>
+      <span class="tag ${INFO[name].used ? "used" : ""}">${meta.triggers.join(" · ")}</span></div>
+    <div class="desc">${INFO[name].d}${INFO[name].used ? `<br><span style="color:var(--accent)">● ${INFO[name].used}</span>` : ""}</div>
+    <div class="mon"><div class="bar"><b>1</b>2 3<span style="margin-left:auto">polybar</span></div></div>
+    <div class="ctrl"></div>
+    <div class="actions"><button data-a="play">▶ Play</button><button data-a="code">{ } Config</button><button data-a="copy">Copy</button></div>
+    <pre></pre>`;
+  const mon = el.querySelector(".mon"), ctrl = el.querySelector(".ctrl"), pre = el.querySelector("pre");
+
+  // window geometry inside the 170px-tall monitor
+  const W = { x: 70, y: 40, w: 160, h: 100 };
+  const outer = document.createElement("div"); outer.className = "win";
+  const inner = document.createElement("div"); inner.className = "body";
+  inner.innerHTML = `<div class="tb">kitty — ~/tools/d0t_file</div><div class="ln"></div><div class="ln s"></div><div class="ln a"></div><div class="ln s"></div>`;
+  outer.appendChild(inner); mon.appendChild(outer);
+  let ghost;
+  const place = r => Object.assign(outer.style, { left: r.x + "px", top: r.y + "px", width: r.w + "px", height: r.h + "px" });
+  place(W);
+  if (name === "geometry-change") {
+    ghost = document.createElement("div"); ghost.className = "ghost"; mon.appendChild(ghost);
+  }
+
+  // controls
+  const add = (label, html, key, fmt = v => v) => {
+    const l = document.createElement("label");
+    l.innerHTML = `<span>${label} <span class="val"></span></span>${html}`;
+    const input = l.querySelector("input,select"), val = l.querySelector(".val");
+    const sync = () => { o[key] = input.type === "range" ? +input.value : input.value; val.textContent = fmt(o[key]); pre.textContent = Picom.snippet(name, o); };
+    input.addEventListener("input", () => { sync(); play(); });
+    sync(); ctrl.appendChild(l);
+  };
+  add("duration", `<input type="range" min="0.05" max="1" step="0.01" value="${o.duration}">`, "duration", v => v + "s");
+  if ("scale" in o) add("scale", `<input type="range" min="0.5" max="1" step="0.01" value="${o.scale}">`, "scale");
+  if ("direction" in o) add("direction", `<select>${Picom.DIRS.map(d => `<option ${d === o.direction ? "selected" : ""}>${d}</option>`).join("")}</select>`, "direction");
+  if (name === "opacity-fade") add("target opacity", `<input type="range" min="0.1" max="1" step="0.05" value="1">`, "to");
+
+  let anim, timer, flip = false;
+  async function play() {
+    anim && anim.cancel(); clearTimeout(timer);
+    let win = { ...W };
+    if (name === "geometry-change") {
+      // alternate between a half-tile and full-tile, like i3 split/close
+      const A = { x: 12, y: 22, w: 140, h: 136 }, B = { x: 12, y: 22, w: mon.clientWidth - 24, h: 136 };
+      const [from, to] = flip ? [B, A] : [A, B]; flip = !flip;
+      win = { ...to, before: from }; place(to);
+      Object.assign(ghost.style, { left: from.x + "px", top: from.y + "px", width: from.w + "px", height: from.h + "px" });
+    } else if (name === "opacity-fade") {
+      const from = flip ? o.to : 0.4, to = flip ? 0.4 : o.to; flip = !flip;
+      anim = Picom.run(outer, inner, name, { ...o, from, to }, win, { speed });
+      const ok = await anim.promise;
+      if (ok && loop) timer = setTimeout(play, 700);
+      return;
+    } else place(W);
+    anim = Picom.run(outer, inner, name, o, win, { speed });
+    const ok = await anim.promise;
+    if (!ok) return;
+    if (meta.kind === "out") {          // window gone: show empty for a beat, then reset
+      inner.style.visibility = "hidden";
+      timer = setTimeout(() => { Picom.reset(outer, inner); inner.style.visibility = ""; if (loop) timer = setTimeout(play, 350); }, 450);
+    } else {
+      timer = setTimeout(() => { Picom.reset(outer, inner); if (loop) play(); }, 900);
+    }
+  }
+  el.querySelector('[data-a=play]').onclick = play;
+  el.querySelector('[data-a=code]').onclick = () => el.classList.toggle("show-code");
+  el.querySelector('[data-a=copy]').onclick = () => { navigator.clipboard?.writeText(pre.textContent); toast("Copied " + name + " snippet"); };
+  grid.appendChild(el);
+  cards.push({ play });
+}
+Object.keys(Picom.PRESETS).forEach(makeCard);
+
+function toast(t) { const el = document.getElementById("toast"); el.textContent = t; el.classList.add("on"); setTimeout(() => el.classList.remove("on"), 1400); }
+document.querySelectorAll("[data-speed]").forEach(b => b.onclick = () => {
+  document.querySelectorAll("[data-speed]").forEach(x => x.classList.remove("on")); b.classList.add("on"); speed = +b.dataset.speed; cards.forEach(c => c.play());
+});
+document.getElementById("playAll").onclick = () => cards.forEach((c, i) => setTimeout(c.play, i * 60));
+document.getElementById("loop").onclick = e => { loop = !loop; e.target.classList.toggle("on", loop); if (loop) cards.forEach(c => c.play()); };
+cards.forEach((c, i) => setTimeout(c.play, 200 + i * 120));
+</script>
+</body>
+</html>

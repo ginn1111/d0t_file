@@ -363,41 +363,42 @@ set_from_resource $term_color13    color13
 set_from_resource $term_color14    color14
 set_from_resource $term_color15    color15
 
+# i3bar disabled — polybar is the status bar (launched at top of file)
 # Start i3bar to display a workspace bar (plus the system information i3status if available)
-bar {
-	i3bar_command i3bar
-	status_command i3status
-  mode hide
-  hidden_state hide
-  # modifier $mod
-	position bottom
-
-## please set your primary output first. Example: 'xrandr --output eDP1 --primary'
-#	tray_output primary
-#	tray_output eDP1
-
-	bindsym button4 nop
-	bindsym button5 nop
-#   font xft:URWGothic-Book 11
-	strip_workspace_numbers yes
-
-    # Black & Ruby (matches kitty black_ruby.conf)
-    colors {
-        background #0c0f11
-        statusline #bec6d0
-        separator  #1c2027
-
-#                      border  backgr. text
-        focused_workspace  #c62f52 #c62f52 #111418
-        active_workspace   #1c2027 #1c2027 #bec6d0
-        inactive_workspace #0c0f11 #0c0f11 #475262
-        binding_mode       #c7910c #c7910c #111418
-        urgent_workspace   #e35535 #e35535 #111418
-    }
-}
+#bar {
+#	i3bar_command i3bar
+#	status_command i3status
+#  mode hide
+#  hidden_state hide
+#  # modifier $mod
+#	position bottom
+#
+### please set your primary output first. Example: 'xrandr --output eDP1 --primary'
+##	tray_output primary
+##	tray_output eDP1
+#
+#	bindsym button4 nop
+#	bindsym button5 nop
+##   font xft:URWGothic-Book 11
+#	strip_workspace_numbers yes
+#
+#    # Black & Ruby (matches kitty black_ruby.conf)
+#    colors {
+#        background #0c0f11
+#        statusline #bec6d0
+#        separator  #1c2027
+#
+##                      border  backgr. text
+#        focused_workspace  #c62f52 #c62f52 #111418
+#        active_workspace   #1c2027 #1c2027 #bec6d0
+#        inactive_workspace #0c0f11 #0c0f11 #475262
+#        binding_mode       #c7910c #c7910c #111418
+#        urgent_workspace   #e35535 #e35535 #111418
+#    }
+#}
 
 # hide/unhide i3status bar
-bindsym $mod+m bar mode toggle
+#bindsym $mod+m bar mode toggle
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
@@ -415,9 +416,9 @@ bindsym $mod+m bar mode toggle
 #############################
 
 # Set inner/outer gaps
-gaps inner 14
-gaps outer -9
-# match polybar: window edges align with bar edges (5px), 14px gap to bars = inner gap
+gaps inner 8
+gaps outer -3
+# match polybar: window edges align with bar edges (5px = inner + outer), gap to bars = inner gap
 gaps top -5
 gaps bottom -5
 

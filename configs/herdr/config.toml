@@ -149,6 +149,7 @@ prefix = "ctrl+space"
 
 focus_agent = "prefix+shift+1..9"
 
+
 [[keys.command]]
 key = "prefix+cmd+g"
 type = "popup"
@@ -168,11 +169,11 @@ type = "plugin_action"
 command = "chmarax.herdr-nvim.toggle"
 description = "nvim sidebar"
 
-[[keys.command]]
-key = "prefix+o"
-type = "plugin_action"
-command = "chmarax.herdr-nvim.pick-file"
-description = "open file from agent output"
+# [[keys.command]]
+# key = "prefix+o"
+# type = "plugin_action"
+# command = "chmarax.herdr-nvim.pick-file"
+# description = "open file from agent output"
 
 [[keys.command]]
 key = "prefix+alt+r"

@@ -9,6 +9,11 @@ set $mod Mod4
 exec_always --no-startup-id setxkbmap -option caps:swapescape
 
 exec_always --no-startup-id picom
+
+# Cursor: Bibata-Original-Ice, size 24 (user-local theme in ~/.local/share/icons).
+# xrdb loads Xcursor.* from ~/.Xresources; xsetroot applies it to the root window
+# so the desktop background doesn't fall back to the X "X" cursor.
+exec_always --no-startup-id sh -c 'xrdb -merge ~/.Xresources; XCURSOR_THEME=Bibata-Original-Ice XCURSOR_SIZE=24 xsetroot -cursor_name left_ptr'
 # Notifications: dunst (config ~/.config/dunst/dunstrc). Evict GNOME's notifier first.
 exec --no-startup-id sh -c 'pkill -f org.gnome.Shell.Notifications; exec dunst'
 

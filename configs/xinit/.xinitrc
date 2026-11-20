@@ -29,6 +29,13 @@ export GTK_IM_MODULE=fcitx
 export QT_IM_MODULE=fcitx
 export GLFW_IM_MODULE=ibus
 
+# Cursor theme (user-local, ~/.local/share/icons). Exported so every app
+# launched from i3 (GTK, Qt, kitty, Electron) picks the same theme and size.
+export XCURSOR_THEME=Bibata-Original-Ice
+export XCURSOR_SIZE=24
+export XCURSOR_PATH="$HOME/.icons:$HOME/.local/share/icons:/usr/share/icons"
+[ -f "$HOME/.Xresources" ] && xrdb -merge "$HOME/.Xresources"
+
 LOGDIR="${XDG_STATE_HOME:-$HOME/.local/state}/i3"
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/i3.log"

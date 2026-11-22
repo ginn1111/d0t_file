@@ -1,0 +1,88 @@
+#!/bin/bash
+# xdg-open wrapper that follows the display you are actually looking at.
+#
+# GDM autologins GNOME (Wayland, tty2) and i3 runs via startx (Xorg, tty3).
+# Background services (hermes-gateway, plannotator, ...) start with no display,
+# or with whatever stale DISPLAY/WAYLAND_DISPLAY the shared systemd --user
+# environment held at boot, so a plain xdg-open lands on GNOME even while you
+# sit in i3.
+#
+# Behaviour: open on the session that is active on seat0 right now
+# (i3 on tty3 -> its X display, GNOME on tty2 -> wayland-0). If the active
+# session is not graphical, keep the caller's own environment.
+#
+# Installed as ~/.local/bin/xdg-open (ahead of /usr/bin in PATH).
+
+set -u
+
+find_real_xdg_open() {
+  local self dir
+  self="$(readlink -f -- "${BASH_SOURCE[0]}")"
+  IFS=: read -ra dirs <<<"${PATH:-/usr/bin:/bin}"
+  for dir in "${dirs[@]}" /usr/bin /bin; do
+    [ -x "$dir/xdg-open" ] || continue
+    [ "$(readlink -f -- "$dir/xdg-open")" = "$self" ] && continue
+    printf '%s\n' "$dir/xdg-open"
+    return 0
+  done
+  return 1
+}
+
+REAL="$(find_real_xdg_open)" || {
+  echo "xdg-open wrapper: real xdg-open not found" >&2
+  exit 3
+}
+
+# Print selected display variables (KEY=VALUE per line) from a pid's environ.
+display_env_of() {
+  { tr '\0' '\n' <"/proc/$1/environ"; } 2>/dev/null |
+    grep -E '^(DISPLAY|WAYLAND_DISPLAY|XAUTHORITY|XDG_SESSION_TYPE|XDG_CURRENT_DESKTOP)='
+}
+
+has_display() { grep -qE '^(DISPLAY|WAYLAND_DISPLAY)=.' <<<"$1"; }
+
+# Display env for the session currently active on seat0.
+active_display_env() {
+  local sid stype pid env uid
+  uid="$(id -u)"
+  sid="$(loginctl show-seat seat0 -p ActiveSession --value 2>/dev/null)"
+  [ -n "$sid" ] || return 1
+  [ "$(loginctl show-session "$sid" -p User --value 2>/dev/null)" = "$uid" ] || return 1
+  stype="$(loginctl show-session "$sid" -p Type --value 2>/dev/null)"
+
+  # 1) Processes audited into that session (startx/xinit: i3 and its children).
+  for pid in $(pgrep -u "$uid"); do
+    [ "$(cat "/proc/$pid/sessionid" 2>/dev/null)" = "$sid" ] || continue
+    env="$(display_env_of "$pid")"
+    if has_display "$env"; then printf '%s\n' "$env"; return 0; fi
+  done
+
+  # 2) GDM Wayland sessions: the compositor's clients live in the systemd
+  #    --user manager, not the login session. Use any client of the user's
+  #    Wayland compositor.
+  if [ "$stype" = wayland ]; then
+    for pid in $(pgrep -u "$uid"); do
+      env="$(display_env_of "$pid")"
+      grep -qE '^WAYLAND_DISPLAY=.' <<<"$env" || continue
+      printf '%s\n' "$env"
+      return 0
+    done
+  fi
+  return 1
+}
+
+if env_lines="$(active_display_env)"; then
+  unset DISPLAY WAYLAND_DISPLAY XAUTHORITY XDG_SESSION_TYPE XDG_CURRENT_DESKTOP
+  while IFS= read -r line; do
+    [ -n "$line" ] && export "${line?}"
+  done <<<"$env_lines"
+  # startx sessions inherit XDG_SESSION_TYPE=tty from the console login;
+  # report what the borrowed display really is so apps pick the right backend.
+  if [ -n "${WAYLAND_DISPLAY:-}" ]; then
+    export XDG_SESSION_TYPE=wayland
+  else
+    export XDG_SESSION_TYPE=x11
+  fi
+fi
+
+exec "$REAL" "$@"

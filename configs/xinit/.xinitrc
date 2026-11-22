@@ -36,9 +36,22 @@ export XCURSOR_SIZE=24
 export XCURSOR_PATH="$HOME/.icons:$HOME/.local/share/icons:/usr/share/icons"
 [ -f "$HOME/.Xresources" ] && xrdb -merge "$HOME/.Xresources"
 
+# Tell apps launched from i3 what kind of session this is. Links opened by
+# background services follow the session active on seat0 via scripts/xdg-open.
+export XDG_SESSION_TYPE=x11
+export XDG_CURRENT_DESKTOP=i3
+
 LOGDIR="${XDG_STATE_HOME:-$HOME/.local/state}/i3"
 mkdir -p "$LOGDIR"
 LOG="$LOGDIR/i3.log"
+
+# Hand this X display to systemd --user services at i3 login. hermes-gateway
+# starts at boot (before startx) with no DISPLAY, so restart it once here to
+# pick up :N. Drop GNOME's WAYLAND_DISPLAY so Chromium/GTK don't jump to it.
+# Runs in the background so i3 startup isn't delayed; no-op if not running.
+systemctl --user import-environment DISPLAY XAUTHORITY 2>/dev/null
+systemctl --user unset-environment WAYLAND_DISPLAY 2>/dev/null
+(systemctl --user try-restart hermes-gateway >>"$LOGDIR/gateway-handoff.log" 2>&1 &)
 
 # Keep the previous session's log
 [ -f "$LOG" ] && mv -f "$LOG" "$LOG.old"

@@ -45,3 +45,6 @@ end
 
 -- Create a user command :ToggleBg
 vim.api.nvim_create_user_command("ToggleBg", toggle_background, {})
+
+-- floating windows: slight rounded border (matches desktop corner-radius)
+opt.winborder = "rounded"

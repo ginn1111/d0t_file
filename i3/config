@@ -17,10 +17,10 @@ exec_always --no-startup-id sh -c 'xrdb -merge ~/.Xresources; XCURSOR_THEME=Biba
 # Notifications: dunst (config ~/.config/dunst/dunstrc). Evict GNOME's notifier first.
 exec --no-startup-id sh -c 'pkill -f org.gnome.Shell.Notifications; exec dunst'
 
-# xborders: square corners (no radius). Cindy honey accent (#d9a05b) at ~90% opacity
+# xborders: slight rounding (6px, matches picom corner-radius). Cindy honey accent (#d9a05b) at ~90% opacity
 # pkill first: exec_always re-runs on every reload and would stack overlays.
-exec_always --no-startup-id sh -c 'pkill -x xborders; exec env GDK_BACKEND=x11 ~/.local/bin/xborders \
-  --border-radius 0 \
+exec_always --no-startup-id sh -c 'pkill -f "[p]ython3 .*/xborders"; sleep 0.5; exec env GDK_BACKEND=x11 ~/.local/bin/xborders \
+  --border-radius 6 \
   --border-width 2 \
   --border-mode inside \
   --border-rgba "#d9a05be6"'

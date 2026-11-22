@@ -1,17 +1,111 @@
-# TokyoNight colors for dunst
-# For more configuration options see https://github.com/dunst-project/dunst/blob/master/dunstrc
+# dunst 1.12 — variant 002 "accent rail" (sketch ~/sketches/002-accent-rail)
+# Airy borderless cards; urgency shown by coloured APP header; picom shadow lifts cards.
+# Reload: dunstctl reload   (or $mod+Shift+d)
+
+[global]
+    ### Placement ###
+    monitor = 0
+    follow = mouse                 # show on the monitor with the cursor
+    origin = bottom-left
+    offset = (12, 36)              # clear the bottom polybar
+    width = (280, 340)             # min/max — grows with content
+    height = (0, 220)
+    notification_limit = 5
+    indicate_hidden = yes
+    stack_duplicates = true
+    hide_duplicate_count = false
+    sort = urgency_descending
+
+    ### Progress bar (volume/brightness via -h int:value:N) ###
+    progress_bar = true
+    progress_bar_height = 4
+    progress_bar_frame_width = 1   # draws the empty track (uses frame_color)
+    progress_bar_min_width = 150
+    progress_bar_max_width = 304
+    progress_bar_corner_radius = 2
+    highlight = "#d9a05b"
+
+    ### Look ###
+    transparency = 0
+    separator_height = 1
+    separator_color = "#3b332a"
+    gap_size = 10                  # space between stacked popups
+    padding = 10
+    horizontal_padding = 18           # 4px rail (picom shader) + 14px
+    text_icon_padding = 12
+    frame_width = 0                # borderless; urgency lives in the header colour
+    corner_radius = 6              # slight rounding (matches picom corner-radius 6)
+
+    font = Terminess Nerd Font 10      # body; header 8.5pt, title 11pt (set in format)
+    line_height = 1
+    markup = full
+    # header: APP (small caps, coloured per urgency) / title / body
+    format = "<span size='8.5pt' text_transform='uppercase' letter_spacing='1024' foreground='#807663'>%a</span>\n<span size='11pt' weight='600' foreground='#ebe2d2'>%s</span>\n%b"
+    alignment = left
+    vertical_alignment = center
+    show_age_threshold = 60
+    ellipsize = middle
+    ignore_newline = no
+    word_wrap = yes
+    show_indicators = yes
+
+    ### Icons ###
+    enable_recursive_icon_lookup = true
+    icon_theme = "Adwaita"
+    icon_position = left
+    min_icon_size = 0
+    max_icon_size = 28
+
+    ### Behaviour ###
+    idle_threshold = 120           # don't expire while away from keyboard
+    sticky_history = yes
+    history_length = 30
+    browser = /usr/bin/xdg-open
+    always_run_script = true
+    title = Dunst
+    class = Dunst
+    ignore_dbusclose = false
+
+    ### Mouse ###
+    mouse_left_click = do_action, close_current
+    mouse_middle_click = close_all
+    mouse_right_click = close_current
 
 [urgency_low]
-    background = "#1e2030"
-    foreground = "#c8d3f5"
-    frame_color = "#c8d3f5"
+    frame_color = "#3a342c"
+    background = "#211e1a"
+    foreground = "#b3a894"
+    highlight = "#5c5447"
+    format = "<span size='8.5pt' text_transform='uppercase' letter_spacing='1024' foreground='#5c5447'>%a</span>\n<span foreground='#b3a894'>%s</span>\n%b"
+    timeout = 8
 
 [urgency_normal]
-    background = "#222436"
-    foreground = "#c8d3f5"
-    frame_color = "#c8d3f5"
+    frame_color = "#3a342c"
+    background = "#2a2520"
+    foreground = "#b3a894"
+    highlight = "#d9a05b"
+    timeout = 15
 
 [urgency_critical]
-    background = "#2f334d"
-    foreground = "#c53b53"
-    frame_color = "#c53b53"
+    frame_color = "#533530"
+    background = "#2e211e"
+    foreground = "#d6cbb8"
+    highlight = "#cf6b6b"
+    format = "<span size='8.5pt' text_transform='uppercase' letter_spacing='1024' foreground='#cf6b6b'>%a · urgent</span>\n<span size='11pt' weight='600' foreground='#ebe2d2'>%s</span>\n%b"
+    timeout = 0                    # stay until dismissed
+
+### App rules ###
+[slack]
+    appname = Slack
+    background = "#26221d"          # rail key -> info
+    format = "<span size='8.5pt' text_transform='uppercase' letter_spacing='1024' foreground='#807663'>%a</span>\n<span size='11pt' weight='600' foreground='#ebe2d2'>%s</span>\n%b"
+
+[volume_brightness]
+    # notify-send -h string:x-dunst-stack-tag:osd -h int:value:40 "Volume"
+    stack_tag = osd
+    background = "#24201c"          # rail key -> grey
+    timeout = 2
+    format = "<span size='8.5pt' text_transform='uppercase' letter_spacing='1024' foreground='#807663'>%s</span>   <span size='9.5pt' foreground='#d6cbb8'>%b</span>"
+
+[fullscreen_delay]
+    fullscreen = delay             # hold notifications while a window is fullscreen

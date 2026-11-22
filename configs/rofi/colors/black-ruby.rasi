@@ -1,14 +1,14 @@
 /**
- * Cindy Black & Ruby
- * Source palette: ~/tools/agent-d0tfile/themes/cindy/black-ruby.palette
+ * Cindy Warm Dusk
+ * Source palette: ~/tools/agent-d0tfile/themes/cindy/warm-dusk.palette
  * Rule: ruby = focus/accent only; errors/urgent use err.
  **/
 
 * {
-    background:     #111418FF;   /* bg      */
-    background-alt: #1c2027FF;   /* surface */
-    foreground:     #bec6d0FF;   /* fg      */
-    selected:       #c62f52FF;   /* accent (ruby) */
-    active:         #a0acbbFF;   /* sub     */
-    urgent:         #e35535FF;   /* err     */
+    background:     #1d1a17FF;   /* bg      */
+    background-alt: #2a2520FF;   /* surface */
+    foreground:     #d6cbb8FF;   /* fg      */
+    selected:       #d9a05bFF;   /* accent (ruby) */
+    active:         #b3a894FF;   /* sub     */
+    urgent:         #cf6b6bFF;   /* err     */
 }

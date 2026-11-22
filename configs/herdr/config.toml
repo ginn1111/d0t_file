@@ -33,26 +33,26 @@ dark_name = "solarized"
 
 # Solarized Osaka palette (configs/theme/solarized-osaka.palette).
 # >>> cindy theme
-# Cindy Black & Ruby (themes/cindy/black-ruby.palette); managed by `make theme-cindy`.
+# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); managed by `make theme-cindy`.
 [theme.custom]
-panel_bg = "#111418"
-surface0 = "#1c2027"
-surface1 = "#3a1a26"
-surface_dim = "#0c0f11"
-active_row_bg = "#1a0f14"  # focused agent / active space row: ruby-tinted bar
-selection_bg = "#3a1a26"   # navigate-mode cursor row: ruby rule
-overlay0 = "#475262"
-overlay1 = "#6b7686"
-text = "#bec6d0"
-subtext0 = "#a0acbb"
-mauve = "#a85ff1"
-accent = "#c62f52"
-green = "#00a884"
-yellow = "#c7910c"
-red = "#e35535"
-blue = "#11b7d4"
-teal = "#38c7bd"
-peach = "#d4770c"
+panel_bg = "#1d1a17"
+surface0 = "#2a2520"
+surface1 = "#3b332a"
+surface_dim = "#181614"
+active_row_bg = "#26211c"  # focused agent / active space row: warm-tinted bar
+selection_bg = "#3b332a"   # navigate-mode cursor row: warm rule
+overlay0 = "#5c5447"
+overlay1 = "#807663"
+text = "#d6cbb8"
+subtext0 = "#b3a894"
+mauve = "#b896b8"
+accent = "#d9a05b"
+green = "#a3b371"
+yellow = "#d8c37a"
+red = "#cf6b6b"
+blue = "#8fb3b0"
+teal = "#86b8a0"
+peach = "#e3876a"
 # <<< cindy theme
 
 [terminal]

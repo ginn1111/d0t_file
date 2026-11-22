@@ -12,24 +12,24 @@ add_newline = false
 command_timeout = 800
 palette = "cindy"
 
-# Cindy Black & Ruby. Hex source: ~/tools/agent-d0tfile/themes/cindy/black-ruby.palette
+# Cindy Warm Dusk. Hex source: ~/tools/agent-d0tfile/themes/cindy/warm-dusk.palette
 # Roles + mapping: ~/tools/agent-d0tfile/themes/cindy/REGISTRY.md (starship)
 # Keys are Colour names; pick by Role. accent = focus only, err = errors only.
 [palettes.cindy]
-fg = "#bec6d0"
-sub = "#a0acbb"
-dim = "#6b7686"
-ghost = "#475262"
-accent = "#c62f52"
-err = "#e35535"
-warn = "#d4770c"
-ok = "#00a884"
-info = "#11b7d4"
-purple = "#a85ff1"
-pink = "#d46ec0"
-yellow = "#c7910c"
-turquoise = "#38c7bd"
-green_alt = "#3585bb"
+fg = "#d6cbb8"
+sub = "#b3a894"
+dim = "#807663"
+ghost = "#5c5447"
+accent = "#d9a05b"
+err = "#cf6b6b"
+warn = "#e3876a"
+ok = "#a3b371"
+info = "#8fb3b0"
+purple = "#b896b8"
+pink = "#d39aa6"
+yellow = "#d8c37a"
+turquoise = "#86b8a0"
+green_alt = "#8aa6c1"
 
 # ── Left ────────────────────────────────────────────────────────────
 [character]

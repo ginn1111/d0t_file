@@ -28,11 +28,11 @@ vec4 window_shader() {
     vec3 b = bg.rgb / bg.a;                               // un-premultiply
 
     vec3 rail; float w = 4.0;
-    if      (near(b, vec3(0x24, 0x15, 0x1a))) { rail = vec3(0xe3, 0x55, 0x35); w = 6.0; } // critical
-    else if (near(b, vec3(0x1c, 0x20, 0x27)))   rail = vec3(0xc6, 0x2f, 0x52);              // normal
-    else if (near(b, vec3(0x1b, 0x20, 0x29)))   rail = vec3(0x11, 0xb7, 0xd4);              // slack
-    else if (near(b, vec3(0x17, 0x1b, 0x21)))   rail = vec3(0x47, 0x52, 0x62);              // low
-    else if (near(b, vec3(0x1a, 0x1e, 0x25)))   rail = vec3(0x47, 0x52, 0x62);              // osd
+    if      (near(b, vec3(0x2e, 0x21, 0x1e))) { rail = vec3(0xcf, 0x6b, 0x6b); w = 6.0; } // critical: alert_card -> err
+    else if (near(b, vec3(0x2a, 0x25, 0x20)))   rail = vec3(0xd9, 0xa0, 0x5b);              // normal: surface -> accent
+    else if (near(b, vec3(0x26, 0x22, 0x1d)))   rail = vec3(0x8f, 0xb3, 0xb0);              // slack: card_raised -> info
+    else if (near(b, vec3(0x21, 0x1e, 0x1a)))   rail = vec3(0x5c, 0x54, 0x47);              // low: card -> ghost
+    else if (near(b, vec3(0x24, 0x20, 0x1c)))   rail = vec3(0x5c, 0x54, 0x47);              // osd: card_muted -> ghost
     else return default_post_processing(c);
 
     if (texcoord.x >= w) return default_post_processing(c);

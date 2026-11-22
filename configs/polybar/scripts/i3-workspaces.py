@@ -15,15 +15,15 @@ import struct
 import sys
 import time
 
-# ---- look (Cindy Black & Ruby) ------------------------------------------
-C_ACTIVE_BG = "#3a1a26"   # colors.rule
-C_ACTIVE_FG = "#bec6d0"   # colors.foreground
-C_UNDERLINE = "#c62f52"   # colors.primary
-C_VISIBLE_FG = "#bec6d0"
-C_OCCUPIED_FG = "#a0acbb"  # colors.sub
-C_ICON_DIM = "#6b7686"     # colors.dim (icons on unfocused workspaces)
-C_URGENT_BG = "#e35535"    # colors.alert
-C_URGENT_FG = "#111418"
+# ---- look (Cindy Warm Dusk) ------------------------------------------
+C_ACTIVE_BG = "#3b332a"   # colors.rule
+C_ACTIVE_FG = "#d6cbb8"   # colors.foreground
+C_UNDERLINE = "#d9a05b"   # colors.primary
+C_VISIBLE_FG = "#d6cbb8"
+C_OCCUPIED_FG = "#b3a894"  # colors.sub
+C_ICON_DIM = "#807663"     # colors.dim (icons on unfocused workspaces)
+C_URGENT_BG = "#cf6b6b"    # colors.alert
+C_URGENT_FG = "#1d1a17"
 BOLD_FONT = 2              # polybar font-1 (1-based %{T2})
 PAD = 1                    # spaces inside each workspace pill (left/right)
 GAP = 6                    # px between workspace pills

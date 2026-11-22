@@ -17,13 +17,13 @@ exec_always --no-startup-id sh -c 'xrdb -merge ~/.Xresources; XCURSOR_THEME=Biba
 # Notifications: dunst (config ~/.config/dunst/dunstrc). Evict GNOME's notifier first.
 exec --no-startup-id sh -c 'pkill -f org.gnome.Shell.Notifications; exec dunst'
 
-# xborders: square corners (no radius). Cindy ruby (#c62f52, black-ruby-cindy skin) at ~90% opacity
+# xborders: square corners (no radius). Cindy honey accent (#d9a05b) at ~90% opacity
 # pkill first: exec_always re-runs on every reload and would stack overlays.
 exec_always --no-startup-id sh -c 'pkill -x xborders; exec env GDK_BACKEND=x11 ~/.local/bin/xborders \
   --border-radius 0 \
   --border-width 2 \
   --border-mode inside \
-  --border-rgba "#c62f52e6"'
+  --border-rgba "#d9a05be6"'
 
 # setup monitors
 exec_always xrandr \
@@ -352,7 +352,7 @@ exec --no-startup-id betterlockscreen -w dim
 # [example]
 # If you want your bar to have the same background color as your 
 # terminal background change the line 362 from:
-# background #111418
+# background #1d1a17
 # to:
 # background $term_background
 # Same logic applied to everything else.
@@ -394,18 +394,18 @@ set_from_resource $term_color15    color15
 ##   font xft:URWGothic-Book 11
 #	strip_workspace_numbers yes
 #
-#    # Black & Ruby (matches kitty black_ruby.conf)
+#    # Warm Dusk (matches kitty black_ruby.conf)
 #    colors {
-#        background #0c0f11
-#        statusline #bec6d0
-#        separator  #1c2027
+#        background #181614
+#        statusline #d6cbb8
+#        separator  #2a2520
 #
 ##                      border  backgr. text
-#        focused_workspace  #c62f52 #c62f52 #111418
-#        active_workspace   #1c2027 #1c2027 #bec6d0
-#        inactive_workspace #0c0f11 #0c0f11 #475262
-#        binding_mode       #c7910c #c7910c #111418
-#        urgent_workspace   #e35535 #e35535 #111418
+#        focused_workspace  #d9a05b #d9a05b #1d1a17
+#        active_workspace   #2a2520 #2a2520 #d6cbb8
+#        inactive_workspace #181614 #181614 #5c5447
+#        binding_mode       #d8c37a #d8c37a #1d1a17
+#        urgent_workspace   #cf6b6b #cf6b6b #1d1a17
 #    }
 #}
 
@@ -414,14 +414,14 @@ set_from_resource $term_color15    color15
 
 # Theme colors
 # class                   border  backgr. text    indic.   child_border
-# Black & Ruby. Roles + mapping: ~/tools/agent-d0tfile/themes/cindy/REGISTRY.md
-  client.focused          #c62f52 #c62f52 #111418 #e35535 #c62f52
-  client.focused_inactive #1c2027 #1c2027 #a0acbb #1c2027 #1c2027
-  client.unfocused        #0c0f11 #0c0f11 #475262 #0c0f11 #0c0f11
-  client.urgent           #e35535 #e35535 #111418 #e35535 #e35535
-  client.placeholder      #0c0f11 #111418 #bec6d0 #0c0f11 #111418
+# Warm Dusk. Roles + mapping: ~/tools/agent-d0tfile/themes/cindy/REGISTRY.md
+  client.focused          #d9a05b #d9a05b #1d1a17 #cf6b6b #d9a05b
+  client.focused_inactive #2a2520 #2a2520 #b3a894 #2a2520 #2a2520
+  client.unfocused        #181614 #181614 #5c5447 #181614 #181614
+  client.urgent           #cf6b6b #cf6b6b #1d1a17 #cf6b6b #cf6b6b
+  client.placeholder      #181614 #1d1a17 #d6cbb8 #181614 #1d1a17
 
-  client.background       #111418
+  client.background       #1d1a17
 
 #############################
 ### settings for i3-gaps: ###

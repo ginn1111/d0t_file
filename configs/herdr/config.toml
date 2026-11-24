@@ -26,34 +26,33 @@ onboarding = false
 # red = "#ff6188"
 # green = "#a6e3a1"
 
-name = "solarized"
+name = "dracula"
 auto_switch = false
 light_name = "catppuccin-latte"
 dark_name = "solarized"
 
-# Solarized Osaka palette (configs/theme/solarized-osaka.palette).
-# >>> cindy theme
-# Cindy Warm Dusk (themes/cindy/warm-dusk.palette); managed by `make theme-cindy`.
+# >>> evondev-dracula theme
 [theme.custom]
-panel_bg = "#1d1a17"
-surface0 = "#2a2520"
-surface1 = "#3b332a"
-surface_dim = "#181614"
-active_row_bg = "#26211c"  # focused agent / active space row: warm-tinted bar
-selection_bg = "#3b332a"   # navigate-mode cursor row: warm rule
-overlay0 = "#5c5447"
-overlay1 = "#807663"
-text = "#d6cbb8"
-subtext0 = "#b3a894"
-mauve = "#b896b8"
-accent = "#d9a05b"
-green = "#a3b371"
-yellow = "#d8c37a"
-red = "#cf6b6b"
-blue = "#8fb3b0"
-teal = "#86b8a0"
-peach = "#e3876a"
-# <<< cindy theme
+panel_bg = "#141523"
+sidebar_bg = "#141523"
+surface0 = "#191a21"
+surface1 = "#282a36"
+surface_dim = "#141523"
+active_row_bg = "#44475a"
+selection_bg = "#44475a"
+overlay0 = "#44475a"
+overlay1 = "#6272a4"
+text = "#f8f8f2"
+subtext0 = "#7f848e"
+mauve = "#bd93f9"
+accent = "#bd93f9"
+green = "#20e3b2"
+yellow = "#fde181"
+red = "#ff5555"
+blue = "#8be9fd"
+teal = "#20e3b2"
+peach = "#ffb86c"
+# <<< evondev-dracula theme
 
 [terminal]
 # Executable used for new interactive panes.

@@ -1,11 +1,6 @@
 set fish_greeting ""
 export PATH=/opt/homebrew/bin:/usr/local/bin:/System/Cryptexes/App/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/local/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/bin:/var/run/com.apple.security.cryptexd/codex.system/bootstrap/usr/appleinternal/bin:/snap/bin
 
-# get env-vars
-# for line in (cat .env | grep -v '^#')
-#     set -gx (string split -m 1 = $line)
-# end
-
 set -gx X_TERM xterm-256color
 set -gx TERM xterm-kitty
 # theme
@@ -156,9 +151,10 @@ set -gx PATH "/Users/gin/.local/bin" $PATH
 fish_add_path /Users/gin/.antigravity-ide/antigravity-ide/bin
 
 # Default Node version for new interactive shells
-set -g nvm_default_version 24
-if status is-interactive
-    set -e nvm_current_version
-    nvm use --silent $nvm_default_version
-end
+# set -g nvm_default_version 24
+# if status is-interactive
+#     set -e nvm_current_version
+#     nvm use --silent $nvm_default_version
+# end
 
+/opt/homebrew/bin/mise activate fish | source

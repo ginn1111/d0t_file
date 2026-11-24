@@ -1,1 +1,7 @@
-/home/thuan-aioz/tools/agent-d0tfile/themes/cindy/nvim/lualine.lua
+return {
+  "nvim-lualine/lualine.nvim",
+  opts = function(_, opts)
+    opts.options = opts.options or {}
+    opts.options.theme = "evondev_dracula"
+  end,
+}

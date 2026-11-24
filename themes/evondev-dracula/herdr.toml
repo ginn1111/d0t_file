@@ -1,0 +1,26 @@
+# Theme-only fragment. Merge [theme] and [theme.custom] into your config;
+# never replace the whole config (keys, panes, and integrations live there).
+[theme]
+name = "dracula"
+auto_switch = false
+
+[theme.custom]
+panel_bg = "#141523"
+sidebar_bg = "#141523"
+surface0 = "#191a21"
+surface1 = "#282a36"
+surface_dim = "#141523"
+active_row_bg = "#44475a"
+selection_bg = "#44475a"
+overlay0 = "#44475a"
+overlay1 = "#6272a4"
+text = "#f8f8f2"
+subtext0 = "#7f848e"
+mauve = "#bd93f9"
+accent = "#bd93f9"
+green = "#20e3b2"
+yellow = "#fde181"
+red = "#ff5555"
+blue = "#8be9fd"
+teal = "#20e3b2"
+peach = "#ffb86c"

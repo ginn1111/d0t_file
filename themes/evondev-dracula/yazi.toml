@@ -1,0 +1,34 @@
+# Theme-only TOML for Yazi; copy/merge into a separate theme.toml to opt in.
+[app]
+overall = { bg = "#141523" }
+
+[mgr]
+cwd = { fg = "#bd93f9", bold = true }
+find_keyword = { fg = "#fde181", bold = true }
+find_position = { fg = "#7f848e" }
+symlink_target = { fg = "#8be9fd" }
+marker_copied = { fg = "#20e3b2", bg = "#20e3b2" }
+marker_cut = { fg = "#ff5555", bg = "#ff5555" }
+marker_selected = { fg = "#bd93f9", bg = "#bd93f9" }
+border_style = { fg = "#44475a" }
+
+[tabs]
+active = { fg = "#f8f8f2", bg = "#7f5cdf", bold = true }
+inactive = { fg = "#7f848e", bg = "#191a21" }
+
+[mode]
+normal_main = { fg = "#141523", bg = "#bd93f9", bold = true }
+select_main = { fg = "#141523", bg = "#20e3b2", bold = true }
+unset_main = { fg = "#141523", bg = "#ff5555", bold = true }
+
+[status]
+overall = { fg = "#f8f8f2", bg = "#191a21" }
+perm_read = { fg = "#20e3b2" }
+perm_write = { fg = "#fde181" }
+perm_exec = { fg = "#ff5555" }
+
+[filetype]
+rules = [
+  { url = "*/", fg = "#bd93f9" },
+  { url = "*", fg = "#f8f8f2" },
+]

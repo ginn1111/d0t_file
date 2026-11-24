@@ -1,0 +1,40 @@
+# Single-line prompt: directory · branch/status · glyph. Nothing on the right.
+format = '$directory$git_branch$git_status$character'
+right_format = ''
+add_newline = false
+palette = 'evondev'
+
+[palettes.evondev]
+text = '#f8f8f2'
+purple = '#bd93f9'
+mint = '#20e3b2'
+yellow = '#fde181'
+red = '#ff5555'
+
+[directory]
+style = 'bold purple'
+format = '[$path]($style) '
+truncation_length = 3
+truncation_symbol = '…/'
+
+[git_branch]
+symbol = ' '
+style = 'mint'
+format = '[· $symbol$branch]($style)'
+
+[git_status]
+style = 'yellow'
+format = '([ $all_status$ahead_behind]($style))'
+conflicted = '='
+staged = '+${count}'
+modified = '!${count}'
+untracked = '?${count}'
+deleted = 'x${count}'
+renamed = '»${count}'
+stashed = '≡${count}'
+ahead = '⇡${count}'
+behind = '⇣${count}'
+
+[character]
+success_symbol = '[ ❯](bold purple)'
+error_symbol = '[ ❯](bold red)'

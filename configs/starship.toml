@@ -12,30 +12,31 @@ add_newline = false
 command_timeout = 800
 palette = "cindy"
 
-# Cindy Warm Dusk. Hex source: ~/tools/agent-d0tfile/themes/cindy/warm-dusk.palette
+# Cindy VS Code Dark Modern. Hex source: ~/tools/agent-d0tfile/themes/cindy/vscode-dark-modern.palette
 # Roles + mapping: ~/tools/agent-d0tfile/themes/cindy/REGISTRY.md (starship)
-# Keys are Colour names; pick by Role. accent = focus only, err = errors only.
+# Keys are Colour names; pick by Role. accent = fill only, accent_text = focus text, err = errors only.
 [palettes.cindy]
-fg = "#d6cbb8"
-sub = "#b3a894"
-dim = "#807663"
-ghost = "#5c5447"
-accent = "#d9a05b"
-err = "#cf6b6b"
-warn = "#e3876a"
-ok = "#a3b371"
-info = "#8fb3b0"
-purple = "#b896b8"
-pink = "#d39aa6"
-yellow = "#d8c37a"
-turquoise = "#86b8a0"
-green_alt = "#8aa6c1"
+fg = "#cccccc"
+sub = "#9d9d9d"
+dim = "#6e7681"
+ghost = "#5a5a5a"
+accent = "#0078d4"
+accent_text = "#4daafc"
+err = "#f85149"
+warn = "#cca700"
+ok = "#2ea043"
+info = "#3794ff"
+purple = "#c586c0"
+pink = "#d16969"
+yellow = "#dcdcaa"
+turquoise = "#4ec9b0"
+green_alt = "#9cdcfe"
 
 # ── Left ────────────────────────────────────────────────────────────
 [character]
-success_symbol = "[❯](bold accent)"
+success_symbol = "[❯](bold accent_text)"
 error_symbol = "[❯](bold err)"
-vimcmd_symbol = "[❮](bold accent)"
+vimcmd_symbol = "[❮](bold accent_text)"
 
 [username]
 show_always = false            # only when root or over SSH
